@@ -1,96 +1,149 @@
 import React from 'react';
-import { Sparkles, Zap, Star } from 'lucide-react';
+import { GraduationCap, School, Award, Briefcase } from 'lucide-react';
 
-const About = () => {
+const Education = () => {
+  const educationItems = [
+    {
+      icon: GraduationCap,
+      title: '👨‍🎓 GLA University, Mathura',
+      institution: 'AIML Undergrad',
+      year: '2024 - 2028',
+      description: 'Bachelor of Technology in Artificial Intelligence & Machine Learning with focus on Deep Learning, NLP, Computer Vision, and MLOps',
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      icon: School,
+      title: '🏫 RCS Memorial Sr. Sec. School, Agra',
+      institution: 'Matriculation',
+      year: '2020 - 2022',
+      description: 'Secondary Education with excellent academic performance in Science and Mathematics',
+      color: 'from-green-500 to-teal-500'
+    },
+    {
+      icon: School,
+      title: "🏫 St. Peter's College, Agra",
+      institution: 'High School',
+      year: '2022 - 2024',
+      description: 'Senior Secondary Education with focus on Science & Mathematics',
+      color: 'from-purple-500 to-pink-500'
+    }
+  ];
+
+  const experiences = [
+    {
+      icon: Briefcase,
+      title: '🤖 Agentic AI Intern',
+      company: 'LinuxWorld Informatics Pvt Ltd',
+      duration: '3 months',
+      description: 'Built LangChain + Gemini AI agents with Docker, Flask, LLMs',
+      achievements: [
+        'Developed autonomous AI systems',
+        'Implemented LangChain workflows',
+        'Docker containerization expertise',
+        'Flask API development'
+      ]
+    },
+    {
+      icon: Briefcase,
+      title: '💼 E-Cell Member',
+      company: 'GLA University',
+      duration: '5 months',
+      description: 'Hands-on startup ideation, pitch prep, entrepreneurship',
+      achievements: [
+        'Startup ideation workshops',
+        'Business pitch preparation',
+        'Entrepreneurship mentoring',
+        'Innovation projects'
+      ]
+    }
+  ];
+
   return (
-    <section
-      id="about"
-      className="py-20 px-4 bg-gradient-to-br from-gray-950 via-black to-gray-900 text-white relative overflow-hidden"
-    >
-      {/* Floating background shapes */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-10 left-10 w-20 h-20 bg-blue-400/10 rounded-full animate-float-slow"></div>
-        <div className="absolute top-32 right-20 w-16 h-16 bg-sky-500/10 rounded-full animate-float-slow" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-20 left-1/4 w-24 h-24 bg-cyan-400/10 rounded-full animate-float-slow" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute bottom-32 right-1/3 w-12 h-12 bg-blue-300/10 rounded-full animate-float-slow" style={{ animationDelay: '0.5s' }}></div>
-
-        {[...Array(15)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-white/30 rounded-full animate-float-particle"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${3 + Math.random() * 2}s`,
-            }}
-          ></div>
-        ))}
-      </div>
-
-      <div className="max-w-4xl mx-auto">
+    <section id="education" className="py-20 px-4 bg-gradient-to-br from-gray-950 via-black to-gray-900 text-white">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-in-up" data-aos="fade-up">
-          <h2 className="text-5xl font-bold text-white mb-4 animate-gradient-text bg-gradient-to-r from-gray-200 via-blue-400 to-gray-100 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300">
-            <Sparkles className="inline w-12 h-12 mr-2 text-blue-500 animate-spin-slow" />
-            Snapshot of Me
-            <Star className="inline w-8 h-8 ml-2 text-blue-400 animate-pulse" />
+          <h2 className="text-5xl font-bold mb-4 animate-gradient-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500 bg-clip-text text-transparent">
+            🎓 Education & Experience
           </h2>
+          <p className="text-xl text-gray-400">My academic journey and professional growth</p>
         </div>
 
-        <div className="group relative p-8 rounded-3xl bg-black/80 backdrop-blur-md shadow-2xl hover:shadow-blue-500/30 transition-all duration-700 hover:scale-105 hover:-translate-y-4 animate-fade-in-up overflow-hidden">
-          {/* Glowing inner background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-400/5 via-gray-600/5 to-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-gradient-shift"></div>
-
-          {/* Floating icons */}
-          <div className="absolute top-4 right-4 opacity-10 group-hover:opacity-30 transition-opacity duration-300">
-            <Zap className="w-6 h-6 text-blue-400 animate-bounce" />
+        {/* Education Timeline */}
+        <div className="mb-20">
+          <h3 className="text-2xl font-bold text-center mb-8">Academic Background</h3>
+          <div className="space-y-8">
+            {educationItems.map((item, index) => (
+              <div
+                key={index}
+                className="animate-bounce-slow education-card flex items-center p-6 rounded-2xl bg-gray-800 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105"
+                data-aos="fade-right"
+                data-aos-delay={index * 200}
+              >
+                <div className={`flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-br ${item.color} flex items-center justify-center text-white mr-6`}>
+                  <item.icon size={32} />
+                </div>
+                <div className="flex-grow">
+                  <h4 className="text-xl font-bold mb-1">{item.title}</h4>
+                  <p className="text-lg text-blue-400 font-semibold mb-1">{item.institution}</p>
+                  <p className="text-gray-400 mb-2">{item.year}</p>
+                  <p className="text-gray-300">{item.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
-          <div className="absolute bottom-4 left-4 opacity-10 group-hover:opacity-30 transition-opacity duration-300">
-            <Star className="w-4 h-4 text-white animate-pulse" />
+        </div>
+
+        {/* Experience & Leadership */}
+        <div className="mb-20">
+          <h3 className="text-2xl font-bold text-center mb-8">🧪 Internship & Leadership</h3>
+          <div className="grid lg:grid-cols-2 gap-8">
+            {experiences.map((exp, index) => (
+              <div
+                key={index}
+                className="animate-bounce-slow experience-card p-6 rounded-2xl bg-gray-800 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105"
+                data-aos="fade-up"
+                data-aos-delay={index * 200}
+              >
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center text-white mr-4">
+                    <exp.icon size={24} />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold">{exp.title}</h4>
+                    <p className="text-blue-400 font-semibold">{exp.company}</p>
+                    <p className="text-gray-400 text-sm">{exp.duration}</p>
+                  </div>
+                </div>
+                <p className="text-gray-300 mb-4">{exp.description}</p>
+                <ul className="space-y-2">
+                  {exp.achievements.map((achievement, achIndex) => (
+                    <li key={achIndex} className="flex items-center text-gray-400">
+                      <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                      {achievement}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
+        </div>
 
-          {/* Main Text */}
-          <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
-            <p className="text-3xl font-bold text-center bg-gradient-to-r from-sky-400 via-gray-100 to-slate-300 bg-clip-text text-transparent animate-gradient-x hover:scale-110 transition-transform duration-300 animate-pulse-glow">
-              Engineer. Builder. Dreamer. Rider.
+        {/* Azure Certification */}
+        <div className="text-center animate-bounce-slow" data-aos="zoom-in">
+          <div className="inline-block p-8 rounded-2xl bg-gradient-to-br from-blue-900/20 to-blue-800/20 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105">
+            <Award size={48} className="mx-auto mb-4 text-blue-400" />
+            <h3 className="text-2xl font-bold mb-2">📜 Azure Certification</h3>
+            <p className="text-xl text-blue-400 font-semibold mb-4">
+              Microsoft Certified: AZ-900 (Azure Fundamentals)
             </p>
-
-            <p className="animate-fade-in-up transition-transform duration-300" style={{ animationDelay: '0.2s' }}>
-              Hey! I'm{' '}
-              <span className="font-bold text-sky-400 animate-text-glow inline-block">
-                Aryan Singh Jadaun
-              </span>{' '}
-              — a tech-obsessed soul since childhood, raised in Agra, schooled at St. Peter's College, now pushing limits at GLA University (AIML, 2028).
-            </p>
-
-            <p className="animate-fade-in-up transition-transform duration-300" style={{ animationDelay: '0.4s' }}>
-              I break, build, and better everything I touch — currently crafting autonomous systems during my internship at{' '}
-              <span className="font-bold text-indigo-400 animate-text-glow inline-block">
-                LinuxWorld Informatics
-              </span>{' '}
-              with focus on Agentic AI, ML/DL, and cloud tech.
-            </p>
-
-            {/* Traits Cards */}
-            <div className="grid md:grid-cols-3 gap-6 mt-8 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-              <div className="text-center p-4 rounded-xl bg-gray-800/70 hover:scale-105 transition-transform duration-300">
-                <div className="text-4xl mb-2 animate-bounce">🚀</div>
-                <div className="font-bold text-white">Innovation</div>
-                <div className="text-sm text-gray-400">Building tomorrow’s tech today</div>
-              </div>
-
-              <div className="text-center p-4 rounded-xl bg-gray-800/70 hover:scale-105 transition-transform duration-300">
-                <div className="text-4xl mb-2 animate-pulse">🧠</div>
-                <div className="font-bold text-white">AI Expertise</div>
-                <div className="text-sm text-gray-400">ML/DL, LLMs & Automation</div>
-              </div>
-
-              <div className="text-center p-4 rounded-xl bg-gray-800/70 hover:scale-105 transition-transform duration-300">
-                <div className="text-4xl mb-2 animate-float">💼</div>
-                <div className="font-bold text-white">Leadership</div>
-                <div className="text-sm text-gray-400">E-Cell & entrepreneurial vision</div>
-              </div>
-            </div>
+            <a
+              href="https://www.credly.com/badges/aa35e7f4-ae7e-4439-ab44-a6f29da85c24"
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-full font-medium hover:shadow-lg transition-all duration-300"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              🔗 Verify on Credly
+            </a>
           </div>
         </div>
       </div>
@@ -98,4 +151,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Education;
