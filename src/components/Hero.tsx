@@ -32,8 +32,8 @@ const Hero = () => {
             AIML Undergrad · Full-Stack Developer · AI/ML Engineer
           </h2>
           <p className="text-base md:text-lg text-gray-400">
-            Intern at LinuxWorld Informatics — diving into Agentic AI, ML/DL, LLMs, and AWS.  
             Passionate about bridging research and real-world systems.
+            Diving into Agentic AI, ML/DL, LLMs, and AWS.
           </p>
           <p className="text-base md:text-lg text-gray-400">
             Skilled in Python, Flask, Streamlit, Docker & NLP —  
