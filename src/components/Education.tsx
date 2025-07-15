@@ -159,7 +159,7 @@ const Education = () => {
             <a
               href="#"
               className="btn-bounce inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-full font-medium hover:shadow-lg transition-all duration-300"
-              onClick={() => window.open('https://www.credly.com/badges/your-badge-id', '_blank')}
+              onClick={() => window.open('https://www.credly.com/badges/aa35e7f4-ae7e-4439-ab44-a6f29da85c24', '_blank')}
             >
               🔗 Verify on Credly
             </a>
