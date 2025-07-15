@@ -10,8 +10,12 @@ const ParticleBackground = () => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+
+    resizeCanvas();
 
     const particles: Array<{
       x: number;
@@ -22,7 +26,7 @@ const ParticleBackground = () => {
       opacity: number;
     }> = [];
 
-    // Create particles
+    // Generate particles
     for (let i = 0; i < 50; i++) {
       particles.push({
         x: Math.random() * canvas.width,
@@ -37,61 +41,54 @@ const ParticleBackground = () => {
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      particles.forEach((particle, index) => {
-        // Update position
-        particle.x += particle.vx;
-        particle.y += particle.vy;
+      particles.forEach((p, i) => {
+        // Move
+        p.x += p.vx;
+        p.y += p.vy;
 
-        // Bounce off edges
-        if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
-        if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
+        // Bounce on edges
+        if (p.x <= 0 || p.x >= canvas.width) p.vx *= -1;
+        if (p.y <= 0 || p.y >= canvas.height) p.vy *= -1;
 
-        // Draw particle
+        // Draw dot
         ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(59, 130, 246, ${particle.opacity})`;
+        ctx.arc(p.x, p.y, p.size, 0, 2 * Math.PI);
+        ctx.fillStyle = `rgba(59, 130, 246, ${p.opacity})`; // Tailwind Blue-500
         ctx.fill();
 
-        // Draw connections
-        particles.forEach((otherParticle, otherIndex) => {
-          if (index !== otherIndex) {
-            const dx = particle.x - otherParticle.x;
-            const dy = particle.y - otherParticle.y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
+        // Draw lines
+        for (let j = i + 1; j < particles.length; j++) {
+          const other = particles[j];
+          const dx = p.x - other.x;
+          const dy = p.y - other.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
 
-            if (distance < 100) {
-              ctx.beginPath();
-              ctx.moveTo(particle.x, particle.y);
-              ctx.lineTo(otherParticle.x, otherParticle.y);
-              ctx.strokeStyle = `rgba(59, 130, 246, ${0.1 * (1 - distance / 100)})`;
-              ctx.lineWidth = 1;
-              ctx.stroke();
-            }
+          if (distance < 100) {
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(other.x, other.y);
+            ctx.strokeStyle = `rgba(59, 130, 246, ${0.1 * (1 - distance / 100)})`;
+            ctx.lineWidth = 1;
+            ctx.stroke();
           }
-        });
+        }
       });
 
       requestAnimationFrame(animate);
     };
 
     animate();
-
-    const handleResize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
-
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', resizeCanvas);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('resize', resizeCanvas);
     };
   }, []);
 
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 pointer-events-none z-0 opacity-30"
+      className="fixed inset-0 pointer-events-none z-0 opacity-20 mix-blend-lighten"
     />
   );
 };
