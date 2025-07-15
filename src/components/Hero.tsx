@@ -1,6 +1,6 @@
 import React from 'react';
 import { Sparkles } from 'lucide-react';
-import myPhoto from '/profile.jpg'; // Adjust path if different
+import myPhoto from '/profile.jpg'; // Adjust if needed
 
 const Hero = () => {
   return (
@@ -13,19 +13,70 @@ const Hero = () => {
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse-slow animation-delay-1000"></div>
 
       {/* Text Content */}
-      <div className="z-10 md:w-1/2" data-aos="fade-right">
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4 animate-slide-up">
-          👋 Hi, I'm Aryan Singh Jadaun
+      <div className="z-10 md:w-1/2 space-y-4" data-aos="fade-right">
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-2 animate-slide-up">
+          Aryan Singh Jadaun
         </h1>
-        <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-6 animate-fade-in">
-          Full-Stack Developer | AI/ML Enthusiast | DevOps | Cloud
+        <p className="text-lg text-gray-700 dark:text-gray-300">
+          AIML Undergrad @ GLA University (2028)
         </p>
-        <a
-          href="#projects"
-          className="inline-block px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
-        >
-          🚀 View My Work
-        </a>
+        <p className="text-md text-gray-700 dark:text-gray-400">
+          Intern @ LinuxWorld (Agentic AI, ML/DL, LLMs, AWS)
+        </p>
+        <p className="text-md text-gray-700 dark:text-gray-400">
+          Python · Flask · Streamlit · Docker · NLP
+        </p>
+        <p className="text-md text-gray-700 dark:text-gray-400">
+          Building <strong>BuildCraft</strong> & <strong>Legally</strong> · Based in Agra · <span className="text-green-600 font-semibold">#OpenToWork</span>
+        </p>
+        <p className="text-lg font-semibold text-blue-600 dark:text-blue-400">
+          Building the future with AI & Code
+        </p>
+        <p className="text-md font-medium text-gray-800 dark:text-gray-300 italic">
+          I don’t just build apps — I build experiences powered by intelligence.
+        </p>
+
+        {/* Buttons */}
+        <div className="flex flex-wrap gap-4 pt-4">
+          <a
+            href="https://drive.google.com/file/d/1c2rcpzT1vCcleujwXQFneWGdgVOmfMTZ/view?usp=drivesdk"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-blue-600 text-white px-6 py-2 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition"
+          >
+            Resume
+          </a>
+          <a
+            href="https://wa.me/919837039028"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-green-600 text-white px-6 py-2 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition"
+          >
+            WhatsApp
+          </a>
+          <a
+            href="mailto:aryansinghjadaun@gmail.com"
+            className="bg-red-600 text-white px-6 py-2 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition"
+          >
+            Email
+          </a>
+          <a
+            href="https://github.com/jadaunaryansingh"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gray-900 text-white px-6 py-2 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://linkedin.com/in/jadaunaryansingh"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-blue-700 text-white px-6 py-2 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition"
+          >
+            LinkedIn
+          </a>
+        </div>
       </div>
 
       {/* Profile Image */}
@@ -33,7 +84,7 @@ const Hero = () => {
         className="z-10 mt-12 md:mt-0 md:w-1/2 flex justify-center md:justify-end"
         data-aos="fade-left"
       >
-        <div className="relative w-64 h-80 border-4 border-blue-500 rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition duration-500 animate-fade-in-up">
+        <div className="relative w-64 h-80 border-4 border-blue-500 rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition duration-500">
           <img
             src={myPhoto}
             alt="Aryan Singh Jadaun"
