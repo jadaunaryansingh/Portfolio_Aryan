@@ -1,0 +1,83 @@
+/* Custom Cursor Styles */
+#custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: all 0.1s ease;
+  mix-blend-mode: difference;
+}
+
+#cursor-follower {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(59, 130, 246, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+
+/* Hide default cursor on interactive elements */
+a, button, input, textarea, select {
+  cursor: none;
+}
+
+/* Cursor hover effects */
+a:hover ~ #custom-cursor,
+button:hover ~ #custom-cursor {
+  transform: translate(-50%, -50%) scale(1.5);
+  background: linear-gradient(45deg, #8b5cf6, #3b82f6);
+}
+
+a:hover ~ #cursor-follower,
+button:hover ~ #cursor-follower {
+  transform: translate(-50%, -50%) scale(1.2);
+  border-color: rgba(139, 92, 246, 0.8);
+}
+
+/* Mobile - hide custom cursor */
+@media (max-width: 768px) {
+  #custom-cursor,
+  #cursor-follower {
+    display: none;
+  }
+  
+  a, button, input, textarea, select {
+    cursor: pointer;
+  }
+}
+
+/* Cursor animations */
+@keyframes cursor-pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.cursor-click {
+  animation: cursor-pulse 0.3s ease;
+}
+
+/* Text selection cursor */
+*::selection {
+  background: rgba(59, 130, 246, 0.3);
+  color: inherit;
+}
+
+*::-moz-selection {
+  background: rgba(59, 130, 246, 0.3);
+  color: inherit;
+}
