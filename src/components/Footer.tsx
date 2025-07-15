@@ -1,115 +1,163 @@
-import React, { useState, useEffect } from 'react';
-import { Heart, Code, Sparkles, Star, Zap } from 'lucide-react';
+import React from 'react';
+import { GraduationCap, School, Award, Briefcase } from 'lucide-react';
 
-const Footer = () => {
-  const [currentQuote, setCurrentQuote] = useState(0);
-  
-  const quotes = [
-    "Build once, scale forever.",
-    "Code is art. Automation is freedom.",
-    "Innovation distinguishes between a leader and a follower.",
-    "The future belongs to those who code it."
+const Education = () => {
+  const educationItems = [
+    {
+      icon: GraduationCap,
+      title: '👨‍🎓 GLA University, Mathura',
+      institution: 'AIML Undergrad',
+      year: '2024 - 2028',
+      description: 'Bachelor of Technology in Artificial Intelligence & Machine Learning with focus on Deep Learning, NLP, Computer Vision, and MLOps',
+      color: 'from-blue-500 to-cyan-500',
+    },
+    {
+      icon: School,
+      title: '🏫 RCS Memorial Sr. Sec. School, Agra',
+      institution: 'Matriculation',
+      year: '2020 - 2022',
+      description: 'Secondary Education with excellent academic performance in Science and Mathematics',
+      color: 'from-green-500 to-teal-500',
+    },
+    {
+      icon: School,
+      title: "🏫 St. Peter's College, Agra",
+      institution: 'High School',
+      year: '2022 - 2024',
+      description: 'Senior Secondary Education with focus on Science & Mathematics',
+      color: 'from-purple-500 to-pink-500',
+    },
   ];
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentQuote((prev) => (prev + 1) % quotes.length);
-    }, 3000);
-
-    return () => clearInterval(timer);
-  }, []);
+  const experiences = [
+    {
+      icon: Briefcase,
+      title: '🤖 Agentic AI Intern',
+      company: 'LinuxWorld Informatics Pvt Ltd',
+      duration: '3 months',
+      description: 'Built LangChain + Gemini AI agents with Docker, Flask, LLMs',
+      achievements: [
+        'Developed autonomous AI systems',
+        'Implemented LangChain workflows',
+        'Docker containerization expertise',
+        'Flask API development',
+      ],
+    },
+    {
+      icon: Briefcase,
+      title: '💼 E-Cell Member',
+      company: 'GLA University',
+      duration: '5 months',
+      description: 'Hands-on startup ideation, pitch prep, entrepreneurship',
+      achievements: [
+        'Startup ideation workshops',
+        'Business pitch preparation',
+        'Entrepreneurship mentoring',
+        'Innovation projects',
+      ],
+    },
+  ];
 
   return (
-    <footer className="bg-gray-900 dark:bg-black text-white py-16 relative overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-10 left-10 w-24 h-24 bg-blue-500/10 rounded-full animate-float-slow"></div>
-        <div className="absolute bottom-10 right-10 w-20 h-20 bg-purple-500/10 rounded-full animate-float-slow" style={{animationDelay: '1s'}}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-full animate-spin-slow"></div>
-        
-        {/* Floating stars */}
-        {[...Array(15)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute animate-float-particle opacity-20"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${4 + Math.random() * 2}s`
-            }}
-          >
-            <Star className="w-2 h-2 text-yellow-400" />
-          </div>
-        ))}
-      </div>
-      
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center">
-          {/* Animated Quote */}
-          <div className="mb-12 animate-fade-in-up">
-            <div className="text-3xl font-bold mb-6 h-20 flex items-center justify-center relative">
-              <Sparkles className="absolute left-4 w-6 h-6 text-blue-400 animate-spin" />
-              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient-x hover:scale-105 transition-transform duration-300 animate-pulse-glow">
-                "{quotes[currentQuote]}"
-              </span>
-              <Zap className="absolute right-4 w-6 h-6 text-purple-400 animate-bounce" />
-            </div>
-          </div>
+    <section id="education" className="py-20 px-4 bg-gradient-to-br from-gray-950 via-black to-gray-900 text-white overflow-hidden">
+      <div className="max-w-7xl mx-auto">
+        {/* Section Header */}
+        <div className="text-center mb-16 animate-fade-in-up" data-aos="fade-up">
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4 animate-gradient-text">
+            🎓 Education & Experience
+          </h2>
+          <p className="text-xl text-gray-400 animate-fade-in-up">
+            My academic journey and professional growth
+          </p>
+        </div>
 
-          {/* Divider */}
-          <div className="w-32 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mx-auto mb-12 rounded-full animate-gradient-x hover:scale-110 transition-transform duration-300 animate-pulse-glow"></div>
-
-          {/* Footer Content */}
-          <div className="space-y-6 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-            <p className="text-xl text-gray-300 hover:scale-105 transition-transform duration-300">
-              Made with <Heart className="inline w-6 h-6 text-red-500 animate-pulse hover:animate-bounce" /> and <Code className="inline w-6 h-6 text-blue-500 animate-float hover:animate-spin" /> by
-            </p>
-            <p className="text-4xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient-x hover:scale-110 transition-transform duration-300 animate-pulse-glow">
-              Aryan Singh Jadaun
-            </p>
-            <p className="text-gray-400 hover:text-gray-300 transition-colors duration-300 hover:scale-105 transform">
-              © 2024 All rights reserved. Built with React, TypeScript & Tailwind CSS
-            </p>
-          </div>
-
-          {/* Social Links */}
-          <div className="flex justify-center space-x-8 mt-12 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
-            {[
-              { name: 'GitHub', href: 'https://github.com/jadaunaryansingh?tab=repositories' },
-              { name: 'LinkedIn', href: 'https://www.linkedin.com/in/aryan-singh-jadaun-4576aa23a' },
-              { name: 'Email', href: 'mailto:aryansinghjadaun@gmail.com' },
-              { name: 'WhatsApp', href: 'https://wa.me/919837039028' }
-            ].map((social) => (
-              <a
-                key={social.name}
-                href={social.href}
-                target={social.href.startsWith('http') ? '_blank' : '_self'}
-                rel={social.href.startsWith('http') ? 'noopener noreferrer' : ''}
-                className="text-gray-400 hover:text-white transition-all duration-500 hover:scale-125 transform hover:-translate-y-2 animate-bounce-subtle hover:animate-pulse font-medium text-lg px-4 py-2 rounded-full hover:bg-gradient-to-r hover:from-blue-600/20 hover:to-purple-600/20 backdrop-blur-sm"
-                style={{animationDelay: `${social.name.length * 0.1}s`}}
+        {/* Education Cards */}
+        <div className="mb-20">
+          <h3 className="text-2xl font-bold text-center text-white mb-8">
+            Academic Background
+          </h3>
+          <div className="space-y-8">
+            {educationItems.map((item, index) => (
+              <div
+                key={index}
+                className="flex items-center p-6 rounded-2xl bg-gray-900/90 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105"
+                data-aos="fade-right"
+                data-aos-delay={index * 200}
               >
-                {social.name}
-              </a>
+                <div className={`flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-br ${item.color} flex items-center justify-center text-white mr-6`}>
+                  <item.icon size={32} />
+                </div>
+                <div className="flex-grow">
+                  <h4 className="text-xl font-bold text-white mb-1">{item.title}</h4>
+                  <p className="text-lg text-cyan-400 font-semibold mb-1">{item.institution}</p>
+                  <p className="text-gray-400 mb-2">{item.year}</p>
+                  <p className="text-gray-300">{item.description}</p>
+                </div>
+              </div>
             ))}
           </div>
+        </div>
 
-          {/* Back to Top */}
-          <div className="mt-16 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
-            <button
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="btn-bounce px-10 py-5 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white rounded-full font-bold hover:shadow-2xl transition-all duration-500 hover:scale-110 hover:-translate-y-3 animate-pulse-glow group relative overflow-hidden text-lg"
+        {/* Experience Cards */}
+        <div className="mb-20">
+          <h3 className="text-2xl font-bold text-center text-white mb-8">
+            🧪 Internship & Leadership
+          </h3>
+          <div className="grid lg:grid-cols-2 gap-8">
+            {experiences.map((exp, index) => (
+              <div
+                key={index}
+                className="p-6 rounded-2xl bg-gray-900/90 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105"
+                data-aos="fade-up"
+                data-aos-delay={index * 200}
+              >
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center text-white mr-4">
+                    <exp.icon size={24} />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-white">{exp.title}</h4>
+                    <p className="text-blue-400 font-semibold">{exp.company}</p>
+                    <p className="text-gray-400 text-sm">{exp.duration}</p>
+                  </div>
+                </div>
+                <p className="text-gray-300 mb-4">{exp.description}</p>
+                <ul className="space-y-2">
+                  {exp.achievements.map((achievement, achIndex) => (
+                    <li key={achIndex} className="flex items-center text-gray-400">
+                      <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                      {achievement}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Certification Block */}
+        <div className="text-center animate-fade-in-up" data-aos="zoom-in">
+          <div className="inline-block p-8 rounded-2xl bg-gray-900/90 shadow-xl hover:shadow-purple-600/20 transition-all duration-500 hover:scale-105 group relative overflow-hidden">
+            <Award size={48} className="mx-auto mb-4 text-blue-500" />
+            <h3 className="text-2xl font-bold text-white mb-2">
+              📜 Azure Certification
+            </h3>
+            <p className="text-xl text-cyan-400 font-semibold mb-4">
+              Microsoft Certified: AZ-900 (Azure Fundamentals)
+            </p>
+            <a
+              href="https://www.credly.com/badges/aa35e7f4-ae7e-4439-ab44-a6f29da85c24"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-medium hover:shadow-lg transition-all duration-300 animate-pulse-glow"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-shimmer"></div>
-              <span className="relative z-10 animate-text-glow">
-              ↑ Back to Top
-              </span>
-            </button>
+              🔗 Verify on Credly
+            </a>
           </div>
         </div>
       </div>
-    </footer>
+    </section>
   );
 };
 
-export default Footer;
+export default Education;
