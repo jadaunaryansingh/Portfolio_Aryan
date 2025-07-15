@@ -1,6 +1,6 @@
 import React from 'react';
 import { Sparkles } from 'lucide-react';
-import myPhoto from '../assets/profile.jpg'; // Adjust path if different
+import myPhoto from '/profile.jpg'; // Adjust path if different
 
 const Hero = () => {
   return (
