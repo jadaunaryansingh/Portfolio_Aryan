@@ -49,7 +49,7 @@ const Hero = () => {
               href="https://drive.google.com/file/d/1c2rcpzT1vCcleujwXQFneWGdgVOmfMTZ/view?usp=drivesdk"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-700 text-white px-5 py-2 rounded-full shadow hover:scale-105 transition"
+              className="bg-gray-700 hover:bg-gray-600 text-white px-5 py-2 rounded-full shadow transition"
             >
               Resume
             </a>
@@ -57,13 +57,13 @@ const Hero = () => {
               href="https://wa.me/919837039028"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-green-600 text-white px-5 py-2 rounded-full shadow hover:scale-105 transition"
+              className="bg-slate-600 hover:bg-slate-500 text-white px-5 py-2 rounded-full shadow transition"
             >
               WhatsApp
             </a>
             <a
               href="mailto:aryansinghjadaun@gmail.com"
-              className="bg-red-600 text-white px-5 py-2 rounded-full shadow hover:scale-105 transition"
+              className="bg-neutral-700 hover:bg-neutral-600 text-white px-5 py-2 rounded-full shadow transition"
             >
               Email
             </a>
@@ -71,7 +71,7 @@ const Hero = () => {
               href="https://github.com/jadaunaryansingh"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-neutral-800 text-white px-5 py-2 rounded-full shadow hover:scale-105 transition"
+              className="bg-gray-800 hover:bg-gray-700 text-white px-5 py-2 rounded-full shadow transition"
             >
               GitHub
             </a>
@@ -79,7 +79,7 @@ const Hero = () => {
               href="https://linkedin.com/in/jadaunaryansingh"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-600 text-white px-5 py-2 rounded-full shadow hover:scale-105 transition"
+              className="bg-indigo-700 hover:bg-indigo-600 text-white px-5 py-2 rounded-full shadow transition"
             >
               LinkedIn
             </a>
