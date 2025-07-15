@@ -22,16 +22,7 @@ declare global {
 
 function App() {
   const [loading, setLoading] = useState(true);
-  const [darkMode, setDarkMode] = useState(true); // ✅ Default to dark mode
-
-  useEffect(() => {
-    // Apply/remove dark class on html tag
-    if (darkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, [darkMode]);
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     // Initialize AOS
@@ -57,7 +48,7 @@ function App() {
       if (cursor && follower) {
         cursor.style.left = e.clientX + 'px';
         cursor.style.top = e.clientY + 'px';
-
+        
         setTimeout(() => {
           follower.style.left = e.clientX + 'px';
           follower.style.top = e.clientY + 'px';
@@ -74,11 +65,9 @@ function App() {
   }, []);
 
   return (
-    <div
-      className={`min-h-screen transition-colors duration-500 ${
-        darkMode ? 'dark bg-gray-900' : 'bg-white'
-      }`}
-    >
+    <div className={`min-h-screen transition-colors duration-500 ${
+      darkMode ? 'dark bg-gray-900' : 'bg-white'
+    }`}>
       <ParticleBackground />
       <ThemeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
       <Navbar />
