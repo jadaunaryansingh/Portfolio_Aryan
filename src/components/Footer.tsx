@@ -16,7 +16,7 @@ const Footer = () => {
 
         <div className="flex justify-center gap-6 mt-4">
           <a
-            href="https://instagram.com/aryansinghjadaun"
+            href="https://www.instagram.com/jadaun_aryansingh?igsh=MWh3em1xOW1nYTkxNg=="
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-pink-500 transition-transform duration-300 hover:scale-125"
