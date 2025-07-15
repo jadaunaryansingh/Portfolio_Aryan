@@ -41,7 +41,7 @@ const Projects = () => {
         'Auto-deployment on container/server',
         'Secure, modular, and scalable RHEL setup'
       ],
-      liveDemo: 'https://github.com/jadaunaryansingh?tab=repositories',
+      liveDemo: 'https://drive.google.com/file/d/1e0BnSPnM1VQZrpanRCEhNHhvRoZYfUE6/view?usp=drive_link',
       github: 'https://github.com/jadaunaryansingh?tab=repositories',
       gradient: 'from-red-600 to-yellow-500'
     }
