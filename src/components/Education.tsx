@@ -79,7 +79,7 @@ const Education = () => {
             {educationItems.map((item, index) => (
               <div
                 key={index}
-                className="education-card flex items-center p-6 rounded-2xl bg-gray-900/90 shadow-lg hover:shadow-blue-500/30 transition-all duration-500 hover:scale-105 hover:-translate-y-2"
+                className="education-card group flex items-center p-6 rounded-2xl bg-gray-900/90 shadow-lg hover:shadow-blue-500/30 transition-all duration-500 hover:scale-105 hover:-translate-y-2"
                 data-aos="fade-right"
                 data-aos-delay={index * 200}
               >
@@ -110,7 +110,7 @@ const Education = () => {
             {experiences.map((exp, index) => (
               <div
                 key={index}
-                className="experience-card p-6 rounded-2xl bg-gray-900/90 shadow-lg hover:shadow-blue-500/30 transition-all duration-500 hover:scale-105 hover:-translate-y-2"
+                className="experience-card group p-6 rounded-2xl bg-gray-900/90 shadow-lg hover:shadow-blue-500/30 transition-all duration-500 hover:scale-105 hover:-translate-y-2"
                 data-aos="fade-up"
                 data-aos-delay={index * 200}
               >
@@ -158,7 +158,7 @@ const Education = () => {
             </p>
             <a
               href="https://www.credly.com/badges/aa35e7f4-ae7e-4439-ab44-a6f29da85c24"
-              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-full font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-full font-medium hover:shadow-lg hover:shadow-purple-600/50 transition-all duration-300 hover:scale-110"
               target="_blank"
               rel="noopener noreferrer"
             >
