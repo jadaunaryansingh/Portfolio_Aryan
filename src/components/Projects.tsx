@@ -30,7 +30,21 @@ const Projects = () => {
       liveDemo: 'https://github.com/jadaunaryansingh?tab=repositories',
       github: 'https://github.com/jadaunaryansingh?tab=repositories',
       gradient: 'from-purple-500 to-pink-500'
-    }
+    },{
+    icon: Rocket, // or ServerIcon, depending on your design library
+    title: '🔁 AutoDeploy Pro — CI/CD Pipeline on RHEL',
+    description: 'Jenkins + GitHub + Docker Hub | Full CI/CD Pipeline on Red Hat Linux',
+    features: [
+      'GitHub-triggered Jenkins pipeline',
+      'Dockerized build and push to Docker Hub',
+      'Auto-deployment on container/server',
+      'Secure, modular, and scalable RHEL setup'
+    ],
+    liveDemo: 'https://github.com/jadaunaryansingh?tab=repositories', // or Netlify/Render URL if hosted
+    github: 'https://github.com/jadaunaryansingh?tab=repositories',
+    gradient: 'from-red-600 to-yellow-500'
+}
+
   ];
 
   return (
