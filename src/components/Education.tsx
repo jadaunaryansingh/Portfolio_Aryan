@@ -21,7 +21,7 @@ const Education = () => {
     },
     {
       icon: School,
-      title: '🏫 St. Peter\'s College, Agra',
+      title: "🏫 St. Peter's College, Agra",
       institution: 'High School',
       year: '2022 - 2024',
       description: 'Senior Secondary Education with focus on Science & Mathematics',
@@ -59,10 +59,10 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="py-20 px-4 bg-gradient-to-b from-gray-950 via-black to-gray-900 text-white">
+    <section id="education" className="py-20 px-4 bg-gradient-to-br from-gray-950 via-black to-gray-900 text-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16" data-aos="fade-up">
-          <h2 className="text-4xl font-bold mb-4 text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text animate-bounce">
+          <h2 className="text-4xl font-bold mb-4 animate-gradient-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
             🎓 Education & Experience
           </h2>
           <p className="text-xl text-gray-400">
@@ -72,14 +72,14 @@ const Education = () => {
 
         {/* Education Timeline */}
         <div className="mb-20">
-          <h3 className="text-2xl font-bold text-center mb-8 text-transparent bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text animate-bounce">
+          <h3 className="text-2xl font-bold mb-8 text-center">
             Academic Background
           </h3>
           <div className="space-y-8">
             {educationItems.map((item, index) => (
               <div
                 key={index}
-                className="education-card flex items-center p-6 rounded-2xl bg-gray-900/80 backdrop-blur shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 animate-bounce"
+                className="education-card flex items-center p-6 rounded-2xl bg-gray-900/90 shadow-lg hover:shadow-blue-500/30 transition-all duration-500 hover:scale-105 hover:-translate-y-2"
                 data-aos="fade-right"
                 data-aos-delay={index * 200}
               >
@@ -101,16 +101,16 @@ const Education = () => {
           </div>
         </div>
 
-        {/* Experience Section */}
+        {/* Experience & Leadership */}
         <div className="mb-20">
-          <h3 className="text-2xl font-bold text-center mb-8 text-transparent bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text animate-bounce">
+          <h3 className="text-2xl font-bold mb-8 text-center">
             🧪 Internship & Leadership
           </h3>
           <div className="grid lg:grid-cols-2 gap-8">
             {experiences.map((exp, index) => (
               <div
                 key={index}
-                className="p-6 rounded-2xl bg-gray-900/80 backdrop-blur shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 animate-bounce"
+                className="experience-card p-6 rounded-2xl bg-gray-900/90 shadow-lg hover:shadow-blue-500/30 transition-all duration-500 hover:scale-105 hover:-translate-y-2"
                 data-aos="fade-up"
                 data-aos-delay={index * 200}
               >
@@ -125,7 +125,7 @@ const Education = () => {
                     <p className="text-blue-400 font-semibold">
                       {exp.company}
                     </p>
-                    <p className="text-sm text-gray-400">
+                    <p className="text-gray-400 text-sm">
                       {exp.duration}
                     </p>
                   </div>
@@ -148,9 +148,9 @@ const Education = () => {
 
         {/* Azure Certification */}
         <div className="text-center" data-aos="zoom-in">
-          <div className="inline-block p-8 rounded-2xl bg-gradient-to-br from-blue-800/50 to-purple-800/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 animate-bounce">
+          <div className="inline-block p-8 rounded-2xl bg-gradient-to-br from-blue-500/10 to-purple-500/10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2">
             <Award size={48} className="mx-auto mb-4 text-blue-400" />
-            <h3 className="text-2xl font-bold text-transparent bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text mb-2">
+            <h3 className="text-2xl font-bold mb-2">
               📜 Azure Certification
             </h3>
             <p className="text-xl text-blue-400 font-semibold mb-4">
@@ -158,9 +158,9 @@ const Education = () => {
             </p>
             <a
               href="https://www.credly.com/badges/aa35e7f4-ae7e-4439-ab44-a6f29da85c24"
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-full font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
               target="_blank"
-              rel="noreferrer"
-              className="btn-bounce inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-medium hover:shadow-xl transition-all duration-300"
+              rel="noopener noreferrer"
             >
               🔗 Verify on Credly
             </a>
