@@ -44,7 +44,7 @@ const Projects = () => {
       liveDemo: 'https://drive.google.com/file/d/1e0BnSPnM1VQZrpanRCEhNHhvRoZYfUE6/view?usp=drive_link',
       github: 'https://github.com/jadaunaryansingh?tab=repositories',
       gradient: 'from-red-600 to-yellow-500'
-    }
+    },
     {
     icon: Car,
     title: '🚖 CAB-I-NET — Smart Cab Fare Comparison',
