@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, Github, Bot, Wrench, Sparkles, Zap, Star, Rocket } from 'lucide-react';
+import { ExternalLink, Github, Bot, Wrench, Sparkles, Zap, Star, Rocket,Car } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
@@ -45,6 +45,22 @@ const Projects = () => {
       github: 'https://github.com/jadaunaryansingh?tab=repositories',
       gradient: 'from-red-600 to-yellow-500'
     }
+    {
+    icon: Car,
+    title: '🚖 CAB-I-NET — Smart Cab Fare Comparison',
+    description: 'Compare Uber, Ola, Rapido & more | Save time, money, and effort',
+    features: [
+    'Real-time fare comparison across multiple cab providers',
+    'Smart filters: cheapest, fastest, premium rides',
+    'Seamless booking with integrated APIs',
+    'Dark + yellow glowing UI with premium glassmorphism design'
+  ],
+  liveDemo: 'https://drive.google.com/file/d/your-demo-link/view?usp=drive_link',
+  github: 'https://github.com/jadaunaryansingh?tab=repositories',
+  gradient: 'from-black to-yellow-500'
+}
+
+    
   ];
 
   return (
