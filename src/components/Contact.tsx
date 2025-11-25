@@ -145,28 +145,30 @@ const Contact: React.FC = () => {
         {/* CTA */}
         <div className="text-center mt-16" data-aos="fade-up" data-aos-delay="800">
           <div className="inline-block p-10 rounded-3xl bg-gray-900/90 shadow-2xl hover:shadow-blue-500/20 transition-all duration-700 hover:scale-105 hover:-translate-y-4 relative overflow-hidden group">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-400/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <h3 className="text-3xl font-bold text-transparent bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text mb-6">
-              Ready to build something amazing together?
-            </h3>
-            <p className="text-gray-400 mb-8 text-lg">
-              I'm always excited to work on innovative projects and collaborate with like-minded individuals.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a
-                href="mailto:aryansinghjadaun@gmail.com"
-                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-bold hover:shadow-xl hover:scale-110 transition-all duration-500"
-              >
-                📧 Let's Talk
-              </a>
-              <a
-                href="https://wa.me/919837039028"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-8 py-4 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-full font-bold hover:shadow-xl hover:scale-110 transition-all duration-500"
-              >
-                💬 WhatsApp Me
-              </a>
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-400/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+            <div className="relative z-10">
+              <h3 className="text-3xl font-bold text-transparent bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text mb-6">
+                Ready to build something amazing together?
+              </h3>
+              <p className="text-gray-400 mb-8 text-lg">
+                I'm always excited to work on innovative projects and collaborate with like-minded individuals.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <a
+                  href="mailto:aryansinghjadaun@gmail.com"
+                  className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-bold hover:shadow-xl hover:scale-110 transition-all duration-500 relative z-20"
+                >
+                  📧 Let's Talk
+                </a>
+                <a
+                  href="https://wa.me/919837039028"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-8 py-4 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-full font-bold hover:shadow-xl hover:scale-110 transition-all duration-500 relative z-20"
+                >
+                  💬 WhatsApp Me
+                </a>
+              </div>
             </div>
           </div>
         </div>
