@@ -55,7 +55,21 @@ const Education = () => {
         'Entrepreneurship mentoring',
         'Innovation projects'
       ]
-    }
+    },
+    {
+  icon: Briefcase,
+  title: '🎓 Campus Ambassador',
+  company: 'SmartED Innovations',
+  duration: '—',
+  description: 'Represented SmartED on campus, driving student engagement and outreach',
+  achievements: [
+    'Promoted SmartED programs and initiatives among students',
+    'Acted as a bridge between the organization and campus community',
+    'Managed outreach campaigns and peer onboarding',
+    'Enhanced brand visibility through events and digital promotion'
+  ]
+}
+
   ];
 
   return (
