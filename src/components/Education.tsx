@@ -195,6 +195,27 @@ const Education = () => {
             </a>
           </div>
         </div>
+        {/* Azure AI Certification */}
+<div className="text-center" data-aos="zoom-in">
+  <div className="inline-block p-8 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-blue-500/10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2">
+    <Award size={48} className="mx-auto mb-4 text-cyan-400" />
+    <h3 className="text-2xl font-bold mb-2">
+      🤖 Azure AI Certification
+    </h3>
+    <p className="text-xl text-cyan-400 font-semibold mb-4">
+      Microsoft Certified: AI-900 (Azure AI Fundamentals)
+    </p>
+    <a
+      href="https://www.credly.com/badges/b381c11e-5e65-4d73-ba7e-e086c2e2df4e/linked_in_profile"
+      className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full font-medium hover:shadow-lg hover:shadow-cyan-600/50 transition-all duration-300 hover:scale-110"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      🔗 Verify on Credly
+    </a>
+  </div>
+</div>
+
       </div>
     </section>
   );
