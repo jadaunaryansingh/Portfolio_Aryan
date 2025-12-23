@@ -68,7 +68,22 @@ const Education = () => {
     'Managed outreach campaigns and peer onboarding',
     'Enhanced brand visibility through events and digital promotion'
   ]
+},
+    {
+  icon: Briefcase,
+  title: '🧠 Secretary & Head of Corporate Relations',
+  company: 'IEEE Computer Society Council, GLA University',
+  duration: 'Present',
+  description: 'Currently leading council operations and corporate partnerships, bridging academia with industry',
+  achievements: [
+    'Managing official communications, documentation, and council operations',
+    'Building and maintaining corporate relations for events and collaborations',
+    'Coordinating with industry partners for sponsorships and technical engagements',
+    'Actively organizing technical events, workshops, and hackathons',
+    'Representing the council in professional and corporate interactions'
+  ]
 }
+
 
   ];
 
