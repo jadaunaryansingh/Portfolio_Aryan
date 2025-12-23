@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, Github, Bot, Wrench, Sparkles, Zap, Star, Rocket,Car } from 'lucide-react';
+import { ExternalLink, Github, Bot, Wrench, Sparkles, Zap, Star, Rocket,Car,Scale,Brain,MapPin} from 'lucide-react';
 
 const Projects = () => {
   const projects = [
@@ -58,7 +58,56 @@ const Projects = () => {
   liveDemo: 'https://drive.google.com/file/d/your-demo-link/view?usp=drive_link',
   github: 'https://github.com/jadaunaryansingh?tab=repositories',
   gradient: 'from-black to-yellow-500'
+},{
+  icon: Scale,
+  title: '⚖️ LEGALLY — AI-Powered Legal Intelligence',
+  description: 'Explain laws, sections & rights instantly | Accuracy over aesthetics',
+  features: [
+    'Agentic AI workflows built using LangGraph for legal reasoning',
+    'Law explanation with applicable IPC/CrPC/CPC sections',
+    'Context-aware responses with step-by-step legal clarity',
+    'FastAPI backend with real APIs and production-ready architecture',
+    'Firebase Authentication & database for secure user handling',
+    'Minimal, distraction-free UI focused on legal clarity'
+  ],
+  liveDemo: 'https://legally25.netlify.app/',
+  github: 'https://github.com/jadaunaryansingh/Legally',
+  gradient: 'from-slate-900 to-emerald-500'
 }
+,{
+  icon: Brain,
+  title: '🧠 QUIZMAKER — Smart Quiz Creation Platform',
+  description: 'Create, attempt & analyze quizzes | Fast, clean, and interactive',
+  features: [
+    'Dynamic quiz creation with custom questions & options',
+    'Real-time score calculation and instant feedback',
+    'User-friendly UI with smooth navigation and clean layouts',
+    'Optimized for performance with fast load times',
+    'Responsive design for desktop and mobile users',
+    'Deployed live with production-ready frontend architecture'
+  ],
+  liveDemo: 'https://quizmakerbyaryan.netlify.app/',
+  github: 'https://github.com/jadaunaryansingh/quizmakerbyaryan',
+  gradient: 'from-indigo-600 to-purple-600'
+}
+,{
+  icon: MapPin,
+  title: '🌍 TRAVEL ITINERARY — Smart Trip Planning Tool',
+  description: 'Plan trips effortlessly | Organized, simple, and travel-ready',
+  features: [
+    'Create structured travel itineraries with day-wise planning',
+    'Add destinations, activities, and notes for each trip',
+    'Clean and intuitive UI focused on usability',
+    'Responsive design optimized for all screen sizes',
+    'Fast and lightweight frontend with smooth user experience',
+    'Deployed live with production-ready architecture'
+  ],
+  liveDemo: 'https://travelitiniarybyaryan.netlify.app/',
+  github: 'https://github.com/jadaunaryansingh/travelitiniarybyaryan',
+  gradient: 'from-emerald-500 to-teal-600'
+}
+
+    
 
     
   ];
