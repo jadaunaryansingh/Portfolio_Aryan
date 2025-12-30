@@ -19,18 +19,20 @@ const Projects = () => {
     },
     {
       icon: Wrench,
-      title: '📲 OpsSuite — Menu-Based AI Toolkit',
-      description: 'Tools: Twilio, WhatsApp, Email, SSH, Docker, Google Search, Face Swap',
-      features: [
-        'Integrated Jenkins CI/CD pipeline',
-        'Multi-platform communication',
-        'Docker containerization',
-        'AI-powered face swap technology'
-      ],
-      liveDemo: 'https://github.com/jadaunaryansingh?tab=repositories',
-      github: 'https://github.com/jadaunaryansingh?tab=repositories',
-      gradient: 'from-purple-500 to-pink-500'
-    },
+    title: '🧪 Sertraline Activity Predictor — ML for Cancer Research',
+    description: 'Machine Learning + Molecular Descriptors | Predicting Sertraline’s Role in Cancer Chemosensitization',
+    features: [
+    'ML-based prediction of sertraline activity',
+    'Feature extraction using molecular descriptors',
+    'Trained & evaluated on curated biomedical datasets',
+    'Model comparison with performance metrics',
+    'Research-oriented approach for drug repurposing'
+  ],
+  liveDemo: 'https://ml-project-final-aryan-ayush-palak.onrender.com/',
+  github: 'https://github.com/jadaunaryansingh/Ml_Project_Final_Aryan-Ayush-Palak.git',
+  gradient: 'from-purple-600 to-pink-500'
+}
+,
     {
       icon: Rocket,
       title: '🔁 AutoDeploy Pro — CI/CD Pipeline on RHEL',
