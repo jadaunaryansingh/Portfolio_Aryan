@@ -57,7 +57,7 @@ const Projects = () => {
     'Seamless booking with integrated APIs',
     'Dark + yellow glowing UI with premium glassmorphism design'
   ],
-  liveDemo: 'https://drive.google.com/file/d/your-demo-link/view?usp=drive_link',
+  liveDemo: 'https://cab-i-nit-2025.netlify.app/',
   github: 'https://github.com/jadaunaryansingh?tab=repositories',
   gradient: 'from-black to-yellow-500'
 },{
