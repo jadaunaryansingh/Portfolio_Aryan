@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, Github, Bot, Wrench, Sparkles, Zap, Star, Rocket,Car,Scale,Brain,MapPin} from 'lucide-react';
+import { ExternalLink, Github, Bot, Wrench, Sparkles, Zap, Star, Rocket,Car,Scale,Brain,MapPin,Shirt} from 'lucide-react';
 
 const Projects = () => {
   const projects = [
@@ -107,7 +107,26 @@ const Projects = () => {
   liveDemo: 'https://travelitiniarybyaryan.netlify.app/',
   github: 'https://github.com/jadaunaryansingh/travelitiniarybyaryan',
   gradient: 'from-emerald-500 to-teal-600'
+},
+    {
+  icon: Shirt,
+  title: '👕 CLOTHING RECOMMENDATION — AI-Powered Fashion Assistant',
+  description: 'Personalized outfit suggestions | Smart, stylish, and body-fit aware',
+  features: [
+    'AI-powered clothing recommendations using Gemini models',
+    'Personalized suggestions based on body shape, height, gender, and size',
+    'Smart fashion advice for colors, fits, and styles',
+    'Clean and intuitive UI focused on user experience',
+    'Responsive design optimized for all screen sizes',
+    'Fast and lightweight frontend with smooth performance',
+    'Backend powered by Python + Gemini API',
+    'Production-ready deployment with scalable architecture'
+  ],
+  liveDemo: 'https://your-clothing-recommendation-app.netlify.app/',
+  github: 'https://github.com/jadaunaryansingh/clothing-recommendation-by-aryan-powered-by-gemini',
+  gradient: 'from-pink-500 to-rose-600'
 }
+
 
     
 
