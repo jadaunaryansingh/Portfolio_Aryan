@@ -119,8 +119,7 @@ const Projects = () => {
     'Clean and intuitive UI focused on user experience',
     'Responsive design optimized for all screen sizes',
     'Fast and lightweight frontend with smooth performance',
-    'Backend powered by Python + Gemini API',
-    'Production-ready deployment with scalable architecture'
+    'Backend powered by Python + Gemini API'
   ],
   liveDemo: 'https://clothing-recommendation-by-aryan-powered.onrender.com/',
   github: 'https://github.com/jadaunaryansingh/Clothing-Recommendation-by-Aryan-powered-by-Gemini.git',
