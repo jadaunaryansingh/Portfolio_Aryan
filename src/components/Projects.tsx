@@ -122,8 +122,8 @@ const Projects = () => {
     'Backend powered by Python + Gemini API',
     'Production-ready deployment with scalable architecture'
   ],
-  liveDemo: 'https://your-clothing-recommendation-app.netlify.app/',
-  github: 'https://github.com/jadaunaryansingh/clothing-recommendation-by-aryan-powered-by-gemini',
+  liveDemo: 'https://clothing-recommendation-by-aryan-powered.onrender.com/',
+  github: 'https://github.com/jadaunaryansingh/Clothing-Recommendation-by-Aryan-powered-by-Gemini.git',
   gradient: 'from-pink-500 to-rose-600'
 }
 
