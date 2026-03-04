@@ -72,7 +72,7 @@ const Projects = () => {
     'Firebase Authentication & database for secure user handling',
     'Minimal, distraction-free UI focused on legal clarity'
   ],
-  liveDemo: 'https://legally25.netlify.app/',
+  liveDemo: 'https://legally2026.netlify.app/',
   github: 'https://github.com/jadaunaryansingh/Legally',
   gradient: 'from-slate-900 to-emerald-500'
 }
