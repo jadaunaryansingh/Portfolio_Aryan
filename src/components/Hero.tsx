@@ -1,6 +1,6 @@
 import React from 'react';
 import { Sparkles } from 'lucide-react';
-import myPhoto from '/profile.jpg';
+import myPhoto from '/profilephoto.jpg';
 
 const Hero = () => {
   return (
