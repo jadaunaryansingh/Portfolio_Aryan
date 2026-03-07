@@ -64,12 +64,12 @@ const About = () => {
             </p>
 
             <p className="animate-fade-in-up transition-transform duration-300" style={{ animationDelay: '0.4s' }}>
-              I break, build, and better everything I touch — currently crafting autonomous systems during my internship at{' '}
-              <span className="font-bold text-indigo-400 animate-text-glow inline-block">
-                LinuxWorld Informatics
-              </span>{' '}
-              with focus on Agentic AI, ML/DL, and cloud tech.
-            </p>
+  I break, build, and better everything I touch — previously worked at{' '}
+  <span className="font-bold text-indigo-400 animate-text-glow inline-block">
+    LinuxWorld Informatics
+  </span>{' '}
+  building autonomous systems with focus on Agentic AI, ML/DL, and cloud technologies.
+</p>
 
             {/* Traits Cards */}
             <div className="grid md:grid-cols-3 gap-6 mt-8 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
