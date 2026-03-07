@@ -60,7 +60,7 @@ const contactItems: ContactItem[] = [
     icon: FileText,
     label: '📄 Resume',
     value: 'Download CV',
-    href: 'https://drive.google.com/file/d/1c2rcpzT1vCcleujwXQFneWGdgVOmfMTZ/view?usp=drivesdk',
+    href: 'https://drive.google.com/file/d/19ZoiBLyYThKkgC_hwxmSNl2dKR1TsGR5/view?usp=sharing',
     color: 'from-indigo-500 to-indigo-600',
   },
 ];
