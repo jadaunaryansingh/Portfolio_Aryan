@@ -5,18 +5,18 @@ const Skills = () => {
   const [animatedSkills, setAnimatedSkills] = useState<number[]>([]);
 
   const skills = [
-    { name: 'AI/ML', icon: Brain, percentage: 95, color: 'from-purple-500 to-pink-500', glowColor: 'shadow-purple-500/50', description: 'Deep Learning, NLP, Computer Vision' },
-    { name: 'Full-Stack Dev', icon: Code, percentage: 80, color: 'from-blue-500 to-cyan-500', glowColor: 'shadow-blue-500/50', description: 'React, Python, Flask, APIs' },
-    { name: 'DevOps', icon: Settings, percentage: 85, color: 'from-green-500 to-teal-500', glowColor: 'shadow-green-500/50', description: 'CI/CD, Automation, Monitoring' },
-    { name: 'Cloud (AWS)', icon: Cloud, percentage: 95, color: 'from-orange-500 to-red-500', glowColor: 'shadow-orange-500/50', description: 'EC2, S3, Lambda, Docker' },
-    { name: 'Automation/Scripting', icon: Bot, percentage: 80, color: 'from-indigo-500 to-purple-500', glowColor: 'shadow-indigo-500/50', description: 'Python Scripts, Workflow Automation' },
-    { name: 'Database Management', icon: Database, percentage: 85, color: 'from-yellow-500 to-orange-500', glowColor: 'shadow-yellow-500/50', description: 'SQL, NoSQL, Data Modeling' },
-    { name: 'Prompt Engineering', icon: FileText, percentage: 90, color: 'from-pink-500 to-rose-500', glowColor: 'shadow-pink-500/50', description: 'LLM Optimization, AI Prompting' },
-    { name: 'Linux', icon: Terminal, percentage: 95, color: 'from-gray-600 to-gray-800', glowColor: 'shadow-gray-500/50', description: 'System Admin, Shell Scripting' },
-    { name: 'Version Control (Git)', icon: GitBranch, percentage: 95, color: 'from-red-500 to-pink-500', glowColor: 'shadow-red-500/50', description: 'Git, GitHub, Collaboration' },
-    { name: 'API Integration', icon: Link, percentage: 80, color: 'from-teal-500 to-cyan-500', glowColor: 'shadow-teal-500/50', description: 'REST APIs, GraphQL, Webhooks' },
-    { name: 'UI/UX & Web Design', icon: Palette, percentage: 85, color: 'from-violet-500 to-purple-500', glowColor: 'shadow-violet-500/50', description: 'Design Systems, User Experience' }
-  ];
+  { name: 'ML', icon: Brain, color: 'from-purple-500 to-pink-500', glowColor: 'shadow-purple-500/50', description: 'Deep Learning, NLP, Computer Vision' },
+  { name: 'Full-Stack Dev', icon: Code, color: 'from-blue-500 to-cyan-500', glowColor: 'shadow-blue-500/50', description: 'React, Python, Flask, APIs' },
+  { name: 'DevOps', icon: Settings, color: 'from-green-500 to-teal-500', glowColor: 'shadow-green-500/50', description: 'CI/CD, Automation, Monitoring' },
+  { name: 'Cloud (AWS)', icon: Cloud, color: 'from-orange-500 to-red-500', glowColor: 'shadow-orange-500/50', description: 'EC2, S3, Lambda, Docker' },
+  { name: 'Automation/Scripting', icon: Bot, color: 'from-indigo-500 to-purple-500', glowColor: 'shadow-indigo-500/50', description: 'Python Scripts, Workflow Automation' },
+  { name: 'Database Management', icon: Database, color: 'from-yellow-500 to-orange-500', glowColor: 'shadow-yellow-500/50', description: 'SQL, NoSQL, Data Modeling' },
+  { name: 'Prompt Engineering', icon: FileText, color: 'from-pink-500 to-rose-500', glowColor: 'shadow-pink-500/50', description: 'LLM Optimization, AI Prompting' },
+  { name: 'Linux', icon: Terminal, color: 'from-gray-600 to-gray-800', glowColor: 'shadow-gray-500/50', description: 'System Admin, Shell Scripting' },
+  { name: 'Version Control (Git)', icon: GitBranch, color: 'from-red-500 to-pink-500', glowColor: 'shadow-red-500/50', description: 'Git, GitHub, Collaboration' },
+  { name: 'API Integration', icon: Link, color: 'from-teal-500 to-cyan-500', glowColor: 'shadow-teal-500/50', description: 'REST APIs, GraphQL, Webhooks' },
+  { name: 'UI/UX & Web Design', icon: Palette, color: 'from-violet-500 to-purple-500', glowColor: 'shadow-violet-500/50', description: 'Design Systems, User Experience' }
+];
 
   useEffect(() => {
     const timer = setTimeout(() => {
