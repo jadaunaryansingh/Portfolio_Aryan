@@ -17,7 +17,6 @@ const Skills = () => {
   { name: 'API Integration', icon: Link, color: 'from-teal-500 to-cyan-500', glowColor: 'shadow-teal-500/50', description: 'REST APIs, GraphQL, Webhooks' },
   { name: 'UI/UX & Web Design', icon: Palette, color: 'from-violet-500 to-purple-500', glowColor: 'shadow-violet-500/50', description: 'Design Systems, User Experience' }
 ];
-
   useEffect(() => {
     const timer = setTimeout(() => {
       skills.forEach((_, index) => {
