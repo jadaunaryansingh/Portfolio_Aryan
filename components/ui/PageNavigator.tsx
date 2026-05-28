@@ -12,7 +12,9 @@ interface PageNavigatorProps {
 const pageNames = [
   "Front Cover",
   "About Me",
+  "Experience",
   "Projects",
+  "Research Paper",
   "Certifications",
   "Skills",
   "Contact",
