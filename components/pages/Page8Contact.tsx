@@ -34,7 +34,7 @@ const contactItems = [
     value: "linkedin.com/in/jadaunaryansingh",
     description: "Professional profile, endorsements, LinuxWorld experience & GLA University.",
     icon: "◉",
-    href: "https://linkedin.com/in/jadaunaryansingh",
+    href: "https://www.linkedin.com/in/aryan-singh-jadaun",
     copyValue: "https://linkedin.com/in/jadaunaryansingh",
   },
   {
@@ -155,7 +155,7 @@ export default function Page8Contact({ onNavigate }: { onNavigate?: (page: numbe
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
-                  href="https://drive.google.com/file/d/19ZoiBLyYThKkgC_hwxmSNl2dKR1TsGR5/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1y1gZl6DjqPP-m7DXg_huoWjJG3rUbjf5/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   id="download-resume"
@@ -311,7 +311,7 @@ export default function Page8Contact({ onNavigate }: { onNavigate?: (page: numbe
             <div className="border-2 border-gold p-4 text-center">
               <p className="label-text text-xs font-bold text-gold mb-2">── RÉSUMÉ ──</p>
               <a
-                href="https://drive.google.com/file/d/19ZoiBLyYThKkgC_hwxmSNl2dKR1TsGR5/view?usp=sharing"
+                href="https://drive.google.com/file/d/1y1gZl6DjqPP-m7DXg_huoWjJG3rUbjf5/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 id="resume-sidebar-link"
