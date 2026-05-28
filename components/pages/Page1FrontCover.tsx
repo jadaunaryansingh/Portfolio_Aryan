@@ -127,7 +127,7 @@ export default function Page1FrontCover({ onNavigate }: { onNavigate?: (page: nu
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.5 }}
             >
-              ARYAN SINGH
+              ARYAN SINGH JADAUN
               <br />
               BUILDS AI SYSTEMS
               <br />
