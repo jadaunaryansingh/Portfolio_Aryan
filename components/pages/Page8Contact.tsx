@@ -34,7 +34,7 @@ const contactItems = [
     value: "linkedin.com/in/jadaunaryansingh",
     description: "Professional profile, endorsements, LinuxWorld experience & GLA University.",
     icon: "◉",
-    href: "https://linkedin.com/in/jadaunaryansingh",
+    href: "https://www.linkedin.com/in/aryan-singh-jadaun",
     copyValue: "https://linkedin.com/in/jadaunaryansingh",
   },
   {
