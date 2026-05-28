@@ -79,9 +79,9 @@ export default function Masthead({ onNavigate }: { onNavigate?: (page: number) =
       </div>
 
       {/* Navigation */}
-      <nav className="flex justify-center border-t border-b border-ink">
+      <nav className="flex overflow-x-auto md:justify-center border-t border-b border-ink whitespace-nowrap scrollbar-none">
         {sections.map((section, i) => (
-          <span key={section} className="flex items-center">
+          <span key={section} className="flex items-center shrink-0">
             <button
               onClick={() => onNavigate?.(sectionMapping[section.toLowerCase()] ?? 0)}
               className="label-text px-4 py-2 hover:bg-ink hover:text-paper transition-colors duration-200 cursor-pointer"
@@ -90,7 +90,7 @@ export default function Masthead({ onNavigate }: { onNavigate?: (page: number) =
               {section}
             </button>
             {i < sections.length - 1 && (
-              <span className="text-ink-faded text-xs">|</span>
+              <span className="text-ink-faded text-xs select-none">|</span>
             )}
           </span>
         ))}

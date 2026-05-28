@@ -107,6 +107,11 @@ export default function Home() {
     return () => window.removeEventListener("keydown", handler);
   }, [currentPage]);
 
+  // Reset window scroll position on page change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentPage]);
+
   const navigateTo = useCallback(
     (page: number) => {
       if (page === currentPage) return;
@@ -149,84 +154,61 @@ export default function Home() {
             </>
           )}
 
-          {/* Page flip container — Desktop */}
-          {!isMobile ? (
+          {/* Page flip container — Desktop & Mobile */}
+          <div
+            className="page-flip-container"
+            style={{ perspective: "2000px", minHeight: "100dvh" }}
+          >
+            {/* Newspaper drop shadow */}
             <div
-              className="page-flip-container"
-              style={{ perspective: "2000px", minHeight: "100dvh" }}
-            >
-              {/* Newspaper drop shadow */}
-              <div
-                className="fixed inset-0 pointer-events-none z-0"
-                style={{
-                  background:
-                    "radial-gradient(ellipse at center, transparent 60%, rgba(0,0,0,0.15) 100%)",
-                }}
-              />
-
-              <AnimatePresence mode="wait" custom={direction}>
-                <motion.div
-                  key={currentPage}
-                  custom={direction}
-                  variants={pageVariants}
-                  initial="enter"
-                  animate="center"
-                  exit="exit"
-                  className="w-full min-h-screen"
-                  style={{ transformOrigin: direction > 0 ? "left center" : "right center" }}
-                  drag="x"
-                  dragConstraints={{ left: 0, right: 0 }}
-                  dragElastic={0.1}
-                  onDragEnd={(_, info) => {
-                    if (info.offset.x < -80) {
-                      navigateTo(Math.min(pages.length - 1, currentPage + 1));
-                    } else if (info.offset.x > 80) {
-                      navigateTo(Math.max(0, currentPage - 1));
-                    }
-                  }}
-                >
-                  {/* Page fold shadow */}
-                  <div className="page-fold-shadow" />
-                  {/* Left page fold shadow */}
-                  <div
-                    className="absolute left-0 top-0 bottom-0 w-10 pointer-events-none z-10"
-                    style={{
-                      background: "linear-gradient(to right, rgba(0,0,0,0.08), transparent)",
-                    }}
-                  />
-                  <CurrentPage onNavigate={navigateTo} />
-                </motion.div>
-              </AnimatePresence>
-            </div>
-          ) : (
-            /* Mobile: vertical scroll stack */
-            <div className="flex flex-col">
-              {pages.map(({ component: PageComp, name }, i) => (
-                <div key={i} id={`mobile-page-${i}`} className="w-full">
-                  <PageComp onNavigate={(pageIdx) => {
-                    const el = document.getElementById(`mobile-page-${pageIdx}`);
-                    if (el) el.scrollIntoView({ behavior: "smooth" });
-                  }} />
-                  {i < pages.length - 1 && (
-                    <div className="h-4 bg-ink flex items-center justify-center">
-                      <p className="label-text text-xs text-paper tracking-widest opacity-60">
-                        ─────── {pages[i + 1].name.toUpperCase()} ───────
-                      </p>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          )}
-
-          {/* Page Navigator (desktop only) */}
-          {!isMobile && (
-            <PageNavigator
-              currentPage={currentPage}
-              totalPages={pages.length}
-              onNavigate={navigateTo}
+              className="fixed inset-0 pointer-events-none z-0"
+              style={{
+                background:
+                  "radial-gradient(ellipse at center, transparent 60%, rgba(0,0,0,0.15) 100%)",
+              }}
             />
-          )}
+
+            <AnimatePresence mode="wait" custom={direction}>
+              <motion.div
+                key={currentPage}
+                custom={direction}
+                variants={pageVariants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                className="w-full min-h-screen"
+                style={{ transformOrigin: direction > 0 ? "left center" : "right center" }}
+                drag="x"
+                dragConstraints={{ left: 0, right: 0 }}
+                dragElastic={0.1}
+                onDragEnd={(_, info) => {
+                  if (info.offset.x < -80) {
+                    navigateTo(Math.min(pages.length - 1, currentPage + 1));
+                  } else if (info.offset.x > 80) {
+                    navigateTo(Math.max(0, currentPage - 1));
+                  }
+                }}
+              >
+                {/* Page fold shadow */}
+                <div className="page-fold-shadow" />
+                {/* Left page fold shadow */}
+                <div
+                  className="absolute left-0 top-0 bottom-0 w-10 pointer-events-none z-10"
+                  style={{
+                    background: "linear-gradient(to right, rgba(0,0,0,0.08), transparent)",
+                  }}
+                />
+                <CurrentPage onNavigate={navigateTo} />
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* Page Navigator */}
+          <PageNavigator
+            currentPage={currentPage}
+            totalPages={pages.length}
+            onNavigate={navigateTo}
+          />
 
           {/* Page indicator dots (desktop) */}
           {!isMobile && (
