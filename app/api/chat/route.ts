@@ -5,13 +5,14 @@ export async function POST(request: Request) {
     const { messages, systemInstruction } = await request.json();
     
     // Read API key from server-side environment variables.
-    // Note: Netlify allows setting GEMINI_API_KEY. Using a server-side route
-    // prevents Next.js from inlining the key into the client-side JS bundles.
-    const API_KEY = process.env.GEMINI_API_KEY || process.env.NEXT_PUBLIC_GEMINI_API_KEY;
+    // Note: By strictly using GEMINI_API_KEY (non-NEXT_PUBLIC), Next.js will
+    // read it dynamically at runtime instead of inlining it during the build,
+    // which prevents the API key from leaking into compiled server chunks.
+    const API_KEY = process.env.GEMINI_API_KEY;
 
     if (!API_KEY) {
       return NextResponse.json(
-        { error: "Gemini API key is missing on the server. Please configure GEMINI_API_KEY in your Netlify settings." },
+        { error: "Gemini API key is missing on the server. Please configure GEMINI_API_KEY in your Netlify environment variables." },
         { status: 500 }
       );
     }
