@@ -155,7 +155,7 @@ export default function Page8Contact({ onNavigate }: { onNavigate?: (page: numbe
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
-                  href="https://drive.google.com/file/d/19ZoiBLyYThKkgC_hwxmSNl2dKR1TsGR5/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1y1gZl6DjqPP-m7DXg_huoWjJG3rUbjf5/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   id="download-resume"
