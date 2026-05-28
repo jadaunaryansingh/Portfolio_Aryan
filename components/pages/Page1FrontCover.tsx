@@ -152,7 +152,7 @@ export default function Page1FrontCover({ onNavigate }: { onNavigate?: (page: nu
               transition={{ duration: 0.6, delay: 0.9 }}
             >
               <span className="drop-cap">
-                Based in the historic city of Agra, I am an AIML undergraduate at
+                Born in the historic city of Agra, I am an AIML undergraduate at
                 GLA University and an alumnus of LinuxWorld Informatics. Over the course of my
                 academic journey, I have focused on designing and deploying AI-driven systems and
                 full-stack solutions. My portfolio includes eighteen projects spanning machine
