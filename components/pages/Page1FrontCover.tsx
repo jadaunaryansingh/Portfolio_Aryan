@@ -71,7 +71,7 @@ function HalftonePortrait() {
 export default function Page1FrontCover({ onNavigate }: { onNavigate?: (page: number) => void }) {
   return (
     <article className="newspaper-page min-h-screen paper-aged grain-overlay">
-      <Masthead />
+      <Masthead onNavigate={onNavigate} />
 
       <div className="max-w-7xl mx-auto px-4 py-4">
         <BreakingNewsTicker />

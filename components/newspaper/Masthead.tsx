@@ -3,9 +3,29 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
-const sections = ["Editorial", "A.I.", "Technology", "Innovation", "Classifieds"];
+const sections = [
+  "Cover",
+  "About",
+  "Experience",
+  "Projects",
+  "Research",
+  "Certifications",
+  "Skills",
+  "Contact"
+];
 
-export default function Masthead() {
+const sectionMapping: Record<string, number> = {
+  "cover": 0,
+  "about": 1,
+  "experience": 2,
+  "projects": 3,
+  "research": 4,
+  "certifications": 5,
+  "skills": 6,
+  "contact": 7,
+};
+
+export default function Masthead({ onNavigate }: { onNavigate?: (page: number) => void }) {
   const [dateStr, setDateStr] = useState("");
 
   useEffect(() => {
@@ -63,6 +83,7 @@ export default function Masthead() {
         {sections.map((section, i) => (
           <span key={section} className="flex items-center">
             <button
+              onClick={() => onNavigate?.(sectionMapping[section.toLowerCase()] ?? 0)}
               className="label-text px-4 py-2 hover:bg-ink hover:text-paper transition-colors duration-200 cursor-pointer"
               id={`nav-${section.toLowerCase()}`}
             >
