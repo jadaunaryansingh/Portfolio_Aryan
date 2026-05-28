@@ -12,7 +12,7 @@ Features 3D page-flip animations, vintage letterpress typography, high-contrast 
 - **Framework**: [Next.js 16+](https://nextjs.org/) (App Router, React 19)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/) & custom vintage filters (halftone, paper grain overlays)
 - **Animations**: [Framer Motion](https://www.framer.com/motion/) & CSS Transitions
-- **Integration**: Native client-side fetch calls to the Gemini API
+- **Integration**: Secure server-side route handler calling the Gemini API to prevent API key exposure
 
 ### Prerequisites
 - **Node.js**: `v18.17.0` or higher
@@ -22,7 +22,7 @@ Features 3D page-flip animations, vintage letterpress typography, high-contrast 
 
 ## 🔑 Environment Variables Setup
 
-The chatbot uses the Gemini API key client-side. To protect it from public Git commits, the key is read from local environment variables.
+The chatbot uses a secure server-side API route handler. To configure the Gemini API key locally:
 
 1. Create a `.env.local` file in the root directory:
    ```bash
@@ -31,7 +31,7 @@ The chatbot uses the Gemini API key client-side. To protect it from public Git c
 
 2. Add your Gemini API key inside `.env.local`:
    ```env
-   NEXT_PUBLIC_GEMINI_API_KEY=your_gemini_api_key_here
+   GEMINI_API_KEY=your_gemini_api_key_here
    ```
 
 *Note: The `.gitignore` file is pre-configured to ignore all `.env` files, keeping your keys completely private.*
