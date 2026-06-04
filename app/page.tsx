@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 import VintageLoader from "@/components/ui/VintageLoader";
 import PageNavigator from "@/components/ui/PageNavigator";
@@ -85,6 +85,12 @@ export default function Home() {
   const [currentPage, setCurrentPage] = useState(0);
   const [direction, setDirection] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+
+  // Mouse-based swipe detection for desktop
+  const mouseStartX = useRef<number | null>(null);
+  const mouseStartY = useRef<number | null>(null);
+  const mouseMoved = useRef(false);
 
   // Check for mobile
   useEffect(() => {
@@ -120,6 +126,55 @@ export default function Home() {
     },
     [currentPage]
   );
+
+  // Desktop mouse swipe handlers
+  const handleMouseDown = useCallback((e: React.MouseEvent) => {
+    // Only track left mouse button, and ignore clicks on interactive elements
+    if (e.button !== 0) return;
+    const target = e.target as HTMLElement;
+    if (target.closest('a, button, input, textarea, select, [role="button"], .no-swipe')) return;
+    mouseStartX.current = e.clientX;
+    mouseStartY.current = e.clientY;
+    mouseMoved.current = false;
+    setIsDragging(true);
+  }, []);
+
+  const handleMouseMove = useCallback((e: React.MouseEvent) => {
+    if (mouseStartX.current === null) return;
+    const dx = Math.abs(e.clientX - mouseStartX.current);
+    if (dx > 5) mouseMoved.current = true;
+  }, []);
+
+  const handleMouseUp = useCallback((e: React.MouseEvent) => {
+    if (mouseStartX.current === null || mouseStartY.current === null) {
+      setIsDragging(false);
+      return;
+    }
+    const dx = e.clientX - mouseStartX.current;
+    const dy = Math.abs(e.clientY - mouseStartY.current);
+    const absDx = Math.abs(dx);
+
+    // Only trigger swipe if horizontal movement is dominant and exceeds threshold
+    if (absDx > 60 && absDx > dy * 1.5) {
+      if (dx < 0) {
+        navigateTo(Math.min(pages.length - 1, currentPage + 1));
+      } else {
+        navigateTo(Math.max(0, currentPage - 1));
+      }
+    }
+
+    mouseStartX.current = null;
+    mouseStartY.current = null;
+    mouseMoved.current = false;
+    setIsDragging(false);
+  }, [currentPage, navigateTo]);
+
+  const handleMouseLeave = useCallback(() => {
+    mouseStartX.current = null;
+    mouseStartY.current = null;
+    mouseMoved.current = false;
+    setIsDragging(false);
+  }, []);
 
   const CurrentPage = pages[currentPage].component;
 
@@ -157,7 +212,17 @@ export default function Home() {
           {/* Page flip container — Desktop & Mobile */}
           <div
             className="page-flip-container"
-            style={{ perspective: "2000px", minHeight: "100dvh" }}
+            style={{
+              perspective: "2000px",
+              minHeight: "100dvh",
+              userSelect: "none",
+              WebkitUserSelect: "none",
+              cursor: isDragging ? "grabbing" : "grab",
+            }}
+            onMouseDown={!isMobile ? handleMouseDown : undefined}
+            onMouseMove={!isMobile ? handleMouseMove : undefined}
+            onMouseUp={!isMobile ? handleMouseUp : undefined}
+            onMouseLeave={!isMobile ? handleMouseLeave : undefined}
           >
             {/* Newspaper drop shadow */}
             <div
@@ -177,14 +242,18 @@ export default function Home() {
                 animate="center"
                 exit="exit"
                 className="w-full min-h-screen"
-                style={{ transformOrigin: direction > 0 ? "left center" : "right center" }}
-                drag="x"
+                style={{
+                  transformOrigin: direction > 0 ? "left center" : "right center",
+                  userSelect: "none",
+                  WebkitUserSelect: "none",
+                }}
+                drag={isMobile ? "x" : false}
                 dragConstraints={{ left: 0, right: 0 }}
-                dragElastic={0.1}
+                dragElastic={0.15}
                 onDragEnd={(_, info) => {
-                  if (info.offset.x < -80) {
+                  if (info.offset.x < -60) {
                     navigateTo(Math.min(pages.length - 1, currentPage + 1));
-                  } else if (info.offset.x > 80) {
+                  } else if (info.offset.x > 60) {
                     navigateTo(Math.max(0, currentPage - 1));
                   }
                 }}
