@@ -23,8 +23,8 @@ const knowledgeBase: Record<string, string> = {
   "zorvyn": "Zorvyn Backend is a secure, scalable backend core featuring REST APIs, JWT authentication, PostgreSQL, and Docker containerization deployed on AWS.",
   "jailbreak": "The Jailbreak Web App is a security platform built for an IEEE event demonstrating prompt injection simulation, LLM vulnerabilities, and defense strategies.",
   "skills": "Aryan has 11 skill domains: ML/DL/NLP/CV, Full-Stack Dev (React, Python, FastAPI), DevOps (CI/CD, Jenkins, Docker), AWS Cloud (EC2, S3, Lambda), Automation/Scripting, Database Management, Prompt Engineering, Linux, Version Control, API Integration, and UI/UX Design.",
-  "contact": "Reach Aryan at: Email — aryansinghjadaun@gmail.com | GitHub — github.com/jadaunaryansingh | LinkedIn — linkedin.com/in/jadaunaryansingh | WhatsApp — +91 98370 39028. Resume on Google Drive.",
-  "resume": "Aryan's resume is available at: https://drive.google.com/file/d/19ZoiBLyYThKkgC_hwxmSNl2dKR1TsGR5/view — Updated and current.",
+  "contact": "Reach Aryan at: Email — aryansinghjadaun@gmail.com | GitHub — github.com/jadaunaryansingh | LinkedIn — linkedin.com/in/jadaunaryansingh | WhatsApp — +91 98370 39028. Resume on Google Drive and Notion.",
+  "resume": "Aryan's PDF resume is at: https://drive.google.com/file/d/19ZoiBLyYThKkgC_hwxmSNl2dKR1TsGR5/view. His interactive Notion E-Resume is at: https://app.notion.com/p/Aryan-Singh-Jadaun-3776bf65d55880a19550e857237863a2?source=copy_link",
   "github": "Aryan's GitHub: github.com/jadaunaryansingh — Find Zorvyn Backend, CareSync, CAB-I-NET, Voice Auth, and 14 other projects.",
   "python": "Python is Aryan's primary language — used across all 18 projects. He specialises in FastAPI, Flask, Streamlit, Pandas, LangChain, PyTorch, and Scikit-Learn.",
   "ai": "Aryan's AI expertise spans: LLMs & Prompt Engineering, LangGraph Agentic Pipelines, Groq RAG systems, Speech Recognition, NLP, and medical healthcare AI modeling.",
@@ -68,7 +68,7 @@ Here is the official fact sheet about Aryan Singh Jadaun:
   - Living Newspaper Portfolio: the current interactive portfolio website (Live: https://github.com/jadaunaryansingh/Portfolio)
 - Technical Skills: Python (primary), FastAPI, Flask, Streamlit, LangGraph, LangChain, React, Docker, Jenkins, AWS (EC2, S3, Lambda), PostgreSQL, Git.
 - Certifications: Microsoft Azure AI Fundamentals (AI-900), Microsoft Azure Fundamentals (AZ-900), AWS Solutions Architecture Job Simulation, Deloitte Tech/Data simulations, JP Morgan Software Engineering simulation, LinuxWorld.
-- Contacts: Email (aryansinghjadaun@gmail.com), GitHub (github.com/jadaunaryansingh), LinkedIn (linkedin.com/in/jadaunaryansingh), WhatsApp (+91 98370 39028). Resume Link (https://drive.google.com/file/d/19ZoiBLyYThKkgC_hwxmSNl2dKR1TsGR5/view).
+- Contacts: Email (aryansinghjadaun@gmail.com), GitHub (github.com/jadaunaryansingh), LinkedIn (linkedin.com/in/jadaunaryansingh), WhatsApp (+91 98370 39028). Resume Links: PDF (https://drive.google.com/file/d/19ZoiBLyYThKkgC_hwxmSNl2dKR1TsGR5/view), Notion (https://app.notion.com/p/Aryan-Singh-Jadaun-3776bf65d55880a19550e857237863a2?source=copy_link).
 
 If asked about topics not related to Aryan, politely guide them back to his portfolio, projects, skills, or career. Do not make up any facts outside of this list.`;
 

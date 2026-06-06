@@ -164,6 +164,15 @@ export default function Page8Contact({ onNavigate }: { onNavigate?: (page: numbe
                   ⬇ DOWNLOAD RÉSUMÉ
                 </a>
                 <a
+                  href="https://app.notion.com/p/Aryan-Singh-Jadaun-3776bf65d55880a19550e857237863a2?source=copy_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  id="e-resume"
+                  className="inline-block border-2 border-gold text-gold px-4 py-2 label-text text-xs font-bold hover:bg-gold hover:text-ink transition-colors"
+                >
+                  ↗ VIEW E-RÉSUMÉ
+                </a>
+                <a
                   href="mailto:aryansinghjadaun@gmail.com"
                   id="email-cta"
                   className="inline-block border-2 border-paper text-paper px-4 py-2 label-text text-xs font-bold hover:bg-paper hover:text-ink transition-colors"
@@ -310,16 +319,27 @@ export default function Page8Contact({ onNavigate }: { onNavigate?: (page: numbe
             {/* Resume CTA sidebar */}
             <div className="border-2 border-gold p-4 text-center">
               <p className="label-text text-xs font-bold text-gold mb-2">── RÉSUMÉ ──</p>
-              <a
-                href="https://drive.google.com/file/d/1y1gZl6DjqPP-m7DXg_huoWjJG3rUbjf5/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                id="resume-sidebar-link"
-                className="block bg-ink text-paper px-3 py-3 label-text text-xs font-bold hover:bg-brown transition-colors"
-              >
-                ⬇ DOWNLOAD RÉSUMÉ
-              </a>
-              <p className="label-text text-xs text-ink-faded mt-2">Google Drive · Always Up To Date</p>
+              <div className="flex flex-col gap-2">
+                <a
+                  href="https://app.notion.com/p/Aryan-Singh-Jadaun-3776bf65d55880a19550e857237863a2?source=copy_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  id="e-resume-sidebar-link"
+                  className="block border-2 border-ink text-ink px-3 py-3 label-text text-xs font-bold hover:bg-ink hover:text-paper transition-colors"
+                >
+                  ↗ VIEW E-RÉSUMÉ
+                </a>
+                <a
+                  href="https://drive.google.com/file/d/1y1gZl6DjqPP-m7DXg_huoWjJG3rUbjf5/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  id="resume-sidebar-link"
+                  className="block bg-ink text-paper px-3 py-3 label-text text-xs font-bold hover:bg-brown transition-colors"
+                >
+                  ⬇ DOWNLOAD PDF
+                </a>
+              </div>
+              <p className="label-text text-xs text-ink-faded mt-3">Notion & Google Drive</p>
             </div>
           </aside>
         </div>
