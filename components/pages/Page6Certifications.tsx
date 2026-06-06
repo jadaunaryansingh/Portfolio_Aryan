@@ -38,7 +38,7 @@ const certifications = [
     type: "Internship Completion",
     rotate: "-1.5deg",
     color: "#5c4b2d", // Vintage Brown
-    url: "/certifications/Internship Completion.pdf"
+    url: "/certifications/Internship_Completion.pdf"
   },
   {
     id: "linuxworld-appreciation",
@@ -58,7 +58,7 @@ const certifications = [
     type: "Training Certificate",
     rotate: "-1deg",
     color: "#5c4b2d", // Vintage Brown
-    url: "/certifications/Training Certificate.pdf"
+    url: "/certifications/Training_Certificate.pdf"
   },
 
   // --- INDUSTRY JOB SIMULATIONS ---
