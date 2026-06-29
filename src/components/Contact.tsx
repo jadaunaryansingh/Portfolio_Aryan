@@ -32,7 +32,7 @@ const contactItems: ContactItem[] = [
     icon: Linkedin,
     label: '💼 LinkedIn',
     value: 'Connect with me',
-    href: 'https://www.linkedin.com/in/aryan-singh-jadaun-4576aa23a',
+    href: 'https://www.linkedin.com/in/aryan-singh-jadaun',
     color: 'from-blue-600 to-blue-700',
   },
   {
@@ -60,7 +60,7 @@ const contactItems: ContactItem[] = [
     icon: FileText,
     label: '📄 Resume',
     value: 'Download CV',
-    href: 'https://drive.google.com/file/d/19ZoiBLyYThKkgC_hwxmSNl2dKR1TsGR5/view?usp=sharing',
+    href: 'https://www.dropbox.com/scl/fi/19rtpo9km1pb5wqg4wga4/Aryan_Singh_Jadaun.pdf?rlkey=zcm0kc8ztt7bh09o0f0p6ngbx&st=ysuadumy&dl=0',
     color: 'from-indigo-500 to-indigo-600',
   },
 ];
