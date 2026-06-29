@@ -155,7 +155,7 @@ export default function Page8Contact({ onNavigate }: { onNavigate?: (page: numbe
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
-                  href="https://drive.google.com/file/d/1y1gZl6DjqPP-m7DXg_huoWjJG3rUbjf5/view?usp=sharing"
+                  href="https://www.dropbox.com/scl/fi/19rtpo9km1pb5wqg4wga4/Aryan_Singh_Jadaun.pdf?rlkey=zcm0kc8ztt7bh09o0f0p6ngbx&st=ysuadumy&dl=0"
                   target="_blank"
                   rel="noopener noreferrer"
                   id="download-resume"
