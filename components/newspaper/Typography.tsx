@@ -45,15 +45,15 @@ interface SectionDividerProps {
 
 export function SectionDivider({ label }: SectionDividerProps) {
   return (
-    <div className="flex items-center gap-3 my-4">
-      <div className="flex-1 h-px bg-ink" />
+    <div className="flex items-center justify-center gap-3 my-4">
+      <div className="w-12 h-px bg-ink" />
       {label && (
-        <span className="label-text text-xs tracking-widest text-ink-faded px-2">
+        <span className="label-text text-xs tracking-widest text-ink px-2 font-bold">
           {label}
         </span>
       )}
       {!label && <span className="text-gold">❖</span>}
-      <div className="flex-1 h-px bg-ink" />
+      <div className="w-12 h-px bg-ink" />
     </div>
   );
 }

@@ -108,7 +108,7 @@ const achievements = [
   { label: "Microsoft Credentials", count: "2" },
   { label: "LinuxWorld Achievements", count: "3" },
   { label: "Industry Job Simulations", count: "4" },
-  { label: "Live Projects Deployed", count: "18" },
+  { label: "Live Projects Deployed", count: "19" },
 ];
 
 function CertCard({ cert, index }: { cert: typeof certifications[0]; index: number }) {
@@ -265,7 +265,7 @@ export default function Page6Certifications({ onNavigate }: { onNavigate?: (page
               <TimelineDot year="2024" event="LinuxWorld Informatics — System Administration & ML Internships" />
               <TimelineDot year="2025" event="Microsoft Credentials — Azure AI & Cloud Fundamentals Badges" />
               <TimelineDot year="2025" event="Industry Simulations — AWS, Deloitte, J.P. Morgan Chase Simulations" />
-              <TimelineDot year="2025" event="18 Live AI Projects Deployed across GitHub, Render & Netlify" />
+              <TimelineDot year="2025" event="19 Live AI Projects Deployed across GitHub, Render & Netlify" />
               <TimelineDot year="2028" event="B.Tech AIML Graduation — GLA University, Mathura" />
             </div>
 

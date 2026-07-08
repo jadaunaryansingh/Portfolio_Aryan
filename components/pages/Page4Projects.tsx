@@ -218,9 +218,21 @@ const projects = [
     body: "A portfolio of full-stack templates focusing on RAG, AI automation, predictive analytics, and secure backends utilizing FastAPI, AWS, Azure, Supabase, Neon, and Docker.",
     stack: ["FastAPI", "AWS", "Azure", "Docker", "Firebase", "Neon", "Supabase", "React", "Next.js"],
     live: "https://github.com/jadaunaryansingh",
-    size: "large",
-    column: "col-span-12",
+    size: "medium",
+    column: "col-span-12 md:col-span-6",
     emoji: "💼",
+  },
+  {
+    id: "legally-apk",
+    label: "MOBILE TECH / ANDROID",
+    headline: "Legally Mobile App - Android APK Launch",
+    subhead: "Flutter-based legal assistant Android application",
+    body: "The production-ready Android package (APK) of Legally. An interactive mobile app simplifying legal jargon, document workflows, and local attorney matching, with real-time Firebase syncing.",
+    stack: ["Flutter", "Dart", "Android APK", "Firebase", "APIs", "Mobile Tech"],
+    live: "https://drive.google.com/file/d/1oxERirjIPNGK3QgAmXJS3M4vAouK6MBV/view?usp=sharing",
+    size: "medium",
+    column: "col-span-12 md:col-span-6",
+    emoji: "📱",
   },
 ];
 
@@ -242,6 +254,7 @@ function ProjectThumbnail({ id, size, emoji }: { id: string; size: string; emoji
     "quizmaker":           ["#2a1a2a", "#e8d5b0"],
     "zorvyn-backend":      ["#1a1a2a", "#c9a227"],
     "legally-app":         ["#2a2a1a", "#e8c04a"],
+    "legally-apk":         ["#1a2a3a", "#e8c04a"],
     "sentiment-ai":        ["#1a2a2a", "#f5e9d4"],
     "fullstack-ai":        ["#1a2a1a", "#e8c04a"],
   };
@@ -347,7 +360,7 @@ export default function Page4Projects({ onNavigate }: { onNavigate?: (page: numb
         {/* Header */}
         <div className="text-center mb-4">
           <span className="label-text text-xs text-gold font-bold tracking-widest">
-            TECHNOLOGY & INNOVATION DESK · EIGHTEEN SHIPPED PROJECTS
+            TECHNOLOGY & INNOVATION DESK · NINETEEN SHIPPED PROJECTS
           </span>
           <OrnateRule thick />
           <motion.h2
@@ -356,7 +369,7 @@ export default function Page4Projects({ onNavigate }: { onNavigate?: (page: numb
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            Eighteen Projects That
+            Nineteen Projects That
             <br />
             Rewrite The Rules
           </motion.h2>
@@ -423,6 +436,7 @@ export default function Page4Projects({ onNavigate }: { onNavigate?: (page: numb
           <ProjectCard project={projects[13]} />
           <ProjectCard project={projects[14]} />
           <ProjectCard project={projects[15]} />
+          <ProjectCard project={projects[18]} />
 
           {/* Section: NLP & Collections */}
           <div className="col-span-12">

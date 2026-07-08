@@ -246,7 +246,7 @@ export default function Page2About({ onNavigate }: { onNavigate?: (page: number)
 
             <AdBlock
               title="AI/ML Engineer Available"
-              body="Aryan Singh Jadaun — AIML undergrad, 18 live AI products. Agentic AI · LangGraph · Full-Stack. Immediate availability. Results guaranteed."
+              body="Aryan Singh Jadaun — AIML undergrad, 19 live AI products. Agentic AI · LangGraph · Full-Stack. Immediate availability. Results guaranteed."
               cta="CONTACT NOW →"
               onClick={() => onNavigate?.(7)}
             />

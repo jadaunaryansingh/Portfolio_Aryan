@@ -155,7 +155,7 @@ export default function Page1FrontCover({ onNavigate }: { onNavigate?: (page: nu
                 Born in the historic city of Agra, I am an AIML undergraduate at
                 GLA University and an alumnus of LinuxWorld Informatics. Over the course of my
                 academic journey, I have focused on designing and deploying AI-driven systems and
-                full-stack solutions. My portfolio includes eighteen projects spanning machine
+                full-stack solutions. My portfolio includes nineteen projects spanning machine
                 learning models, autonomous agentic workflows, and cloud applications.
               </span>
             </motion.p>
@@ -228,7 +228,7 @@ export default function Page1FrontCover({ onNavigate }: { onNavigate?: (page: nu
               transition={{ duration: 0.6, delay: 1.5 }}
             >
               {[
-                { num: "18", label: "AI Projects" },
+                { num: "19", label: "AI Projects" },
                 { num: "11", label: "Skill Domains" },
                 { num: "2028", label: "Graduating" },
                 { num: "∞", label: "Ambition" },
