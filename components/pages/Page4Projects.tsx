@@ -157,7 +157,7 @@ const projects = [
     subhead: "Cinematic realistic 1930s-1940s interactive newspaper site",
     body: "Features 3D page-flip physics, paper texture shaders, vintage letterpress typography, and responsive editorial column grids. Powered by GSAP, Framer Motion, and Next.js.",
     stack: ["Next.js", "Tailwind CSS", "Framer Motion", "GSAP", "React PageFlip"],
-    live: "https://github.com/jadaunaryansingh/Portfolio",
+    live: "https://github.com/jadaunaryansingh/Portfolio_Aryan",
     size: "medium",
     column: "col-span-12 md:col-span-4",
     emoji: "📰",
