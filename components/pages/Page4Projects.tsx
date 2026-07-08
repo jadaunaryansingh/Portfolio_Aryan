@@ -97,7 +97,7 @@ const projects = [
     subhead: "Market trend monitoring and predictive analytics dashboard",
     body: "Provides real-time financial data visualization, market trend analysis, and predictive trading insights powered by custom-trained machine learning models.",
     stack: ["Python", "AI Models", "Data Analytics", "React", "Chart.js"],
-    live: "https://primetradeai-5uas.onrender.com",
+    live: "https://primetradeaibyaryan.netlify.app/",
     size: "medium",
     column: "col-span-12 md:col-span-4",
     emoji: "💸",
