@@ -13,7 +13,8 @@ import Page4Projects from "@/components/pages/Page4Projects";
 import Page5Research from "@/components/pages/Page5Research";
 import Page6Certifications from "@/components/pages/Page6Certifications";
 import Page7Skills from "@/components/pages/Page7Skills";
-import Page8Contact from "@/components/pages/Page8Contact";
+import Page8Editorial from "@/components/pages/Page8Editorial";
+import Page9Contact from "@/components/pages/Page9Contact";
 
 const pages = [
   { component: Page1FrontCover, name: "Front Cover" },
@@ -23,7 +24,8 @@ const pages = [
   { component: Page5Research, name: "Research Paper" },
   { component: Page6Certifications, name: "Certifications" },
   { component: Page7Skills, name: "Skills" },
-  { component: Page8Contact, name: "Classifieds" },
+  { component: Page8Editorial, name: "Editorial" },
+  { component: Page9Contact, name: "Classifieds" },
 ];
 
 // Page flip animation variants

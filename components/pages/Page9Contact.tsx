@@ -95,7 +95,7 @@ function AnimatedSignature() {
   );
 }
 
-export default function Page8Contact({ onNavigate }: { onNavigate?: (page: number) => void }) {
+export default function Page9Contact({ onNavigate }: { onNavigate?: (page: number) => void }) {
   const [copied, setCopied] = useState("");
 
   const copyToClipboard = (value: string, id: string) => {
@@ -155,7 +155,7 @@ export default function Page8Contact({ onNavigate }: { onNavigate?: (page: numbe
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
-                  href="https://drive.google.com/file/d/1y1gZl6DjqPP-m7DXg_huoWjJG3rUbjf5/view?usp=sharing"
+                  href="https://www.dropbox.com/scl/fi/19rtpo9km1pb5wqg4wga4/Aryan_Singh_Jadaun.pdf?rlkey=zcm0kc8ztt7bh09o0f0p6ngbx&st=ysuadumy&dl=0"
                   target="_blank"
                   rel="noopener noreferrer"
                   id="download-resume"
@@ -164,7 +164,7 @@ export default function Page8Contact({ onNavigate }: { onNavigate?: (page: numbe
                   ⬇ DOWNLOAD RÉSUMÉ
                 </a>
                 <a
-                  href="https://app.notion.com/p/Aryan-Singh-Jadaun-3776bf65d55880a19550e857237863a2?source=copy_link"
+                  href="https://www.dropbox.com/scl/fi/19rtpo9km1pb5wqg4wga4/Aryan_Singh_Jadaun.pdf?rlkey=zcm0kc8ztt7bh09o0f0p6ngbx&st=ysuadumy&dl=0"
                   target="_blank"
                   rel="noopener noreferrer"
                   id="e-resume"
@@ -330,7 +330,7 @@ export default function Page8Contact({ onNavigate }: { onNavigate?: (page: numbe
                   ↗ VIEW E-RÉSUMÉ
                 </a>
                 <a
-                  href="https://drive.google.com/file/d/1y1gZl6DjqPP-m7DXg_huoWjJG3rUbjf5/view?usp=sharing"
+                  href="https://www.dropbox.com/scl/fi/19rtpo9km1pb5wqg4wga4/Aryan_Singh_Jadaun.pdf?rlkey=zcm0kc8ztt7bh09o0f0p6ngbx&st=ysuadumy&dl=0"
                   target="_blank"
                   rel="noopener noreferrer"
                   id="resume-sidebar-link"

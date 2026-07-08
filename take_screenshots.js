@@ -27,7 +27,8 @@ const pageNames = [
   "5_Research_Paper",
   "6_Certifications",
   "7_Skills",
-  "8_Classifieds"
+  "8_Editorial",
+  "9_Classifieds"
 ];
 
 async function capture() {

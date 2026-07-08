@@ -11,6 +11,7 @@ const sections = [
   "Research",
   "Certifications",
   "Skills",
+  "Editorial",
   "Contact"
 ];
 
@@ -22,7 +23,8 @@ const sectionMapping: Record<string, number> = {
   "research": 4,
   "certifications": 5,
   "skills": 6,
-  "contact": 7,
+  "editorial": 7,
+  "contact": 8,
 };
 
 export default function Masthead({ onNavigate }: { onNavigate?: (page: number) => void }) {

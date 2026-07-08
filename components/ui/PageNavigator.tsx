@@ -17,6 +17,7 @@ const pageNames = [
   "Research Paper",
   "Certifications",
   "Skills",
+  "Editorial Columns",
   "Contact",
 ];
 
