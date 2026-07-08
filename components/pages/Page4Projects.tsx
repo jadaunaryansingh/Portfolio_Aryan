@@ -193,7 +193,7 @@ const projects = [
     subhead: "Scalable API orchestrator, cloud security, and DB architecture",
     body: "The engine backing the Zorvyn platform. Designed with secure JWT authentication, PostgreSQL database modeling, Docker container orchestration, and high-performance FastAPI endpoints.",
     stack: ["FastAPI", "PostgreSQL", "Docker", "AWS", "Backend Architecture"],
-    live: "https://zorvyn-lkz5.onrender.com",
+    live: "https://fintechdashboard-zorvyn.netlify.app/",
     size: "medium",
     column: "col-span-12 md:col-span-6",
     emoji: "⚙️",
