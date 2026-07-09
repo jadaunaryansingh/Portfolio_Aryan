@@ -11,7 +11,7 @@ const timeline = [
   { year: "2021-2023", event: "Matriculation at RCS Memorial Sr. Secondary School (Completed 11th & 12th Grade in 2023)" },
   { year: "2024", event: "Enrolled at GLA University — B.Tech in AI & Machine Learning (graduating 2028)" },
   { year: "2024", event: "Interned at LinuxWorld Informatics — deep dive into Agentic AI, cloud & autonomous systems" },
-  { year: "2025", event: "Launched CAB-I-NET, CareSync HMS, Voice Auth & other AI systems — 18 projects" },
+  { year: "2025", event: "Launched CAB-I-NET, CareSync HMS, Voice Auth & other AI systems — 19 projects" },
   { year: "2025", event: "Led E-Cell entrepreneurship initiatives at GLA University" },
   { year: "2026", event: "Actively seeking full-time AI/ML Engineering & Full-Stack Development roles" },
 ];
@@ -22,7 +22,7 @@ const techStack = [
 ];
 
 const stats = [
-  { value: "18", label: "Live Projects" },
+  { value: "19", label: "Live Projects" },
   { value: "11", label: "Skill Domains" },
   { value: "2028", label: "Graduating" },
   { value: "∞", label: "Drive" },
