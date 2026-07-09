@@ -322,7 +322,7 @@ export default function Page7Skills({ onNavigate }: { onNavigate?: (page: number
             <div className="mt-4 p-3 bg-ink text-paper text-center">
               <p className="label-text text-xs text-gold font-bold mb-1">EDITOR'S NOTE</p>
               <p className="body-text text-xs" style={{ color: "#e8d5b0" }}>
-                All ratings reflect production usage across 19 deployed projects — not academic study.
+                All ratings reflect production usage across 20 deployed projects — not academic study.
                 LinuxWorld Informatics trained. GLA University AIML backbone.
               </p>
             </div>

@@ -149,7 +149,7 @@ export default function Page9Contact({ onNavigate }: { onNavigate?: (page: numbe
               </h3>
               <p className="body-text text-sm mb-4" style={{ color: "#d4bc8a" }}>
                 Aryan Singh Jadaun — GLA University AIML undergraduate, LinuxWorld Informatics
-                alumnus, and builder of 19 live AI products — is actively seeking internships and
+                alumnus, and builder of 20 live AI products — is actively seeking internships and
                 full-time roles in AI/ML Engineering, Full-Stack Development, and Agentic AI.
                 Immediately available. Based in Agra; open to remote and relocation.
               </p>
