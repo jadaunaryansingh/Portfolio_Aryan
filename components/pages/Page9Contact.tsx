@@ -164,7 +164,7 @@ export default function Page9Contact({ onNavigate }: { onNavigate?: (page: numbe
                   ⬇ DOWNLOAD RÉSUMÉ
                 </a>
                 <a
-                  href="https://www.dropbox.com/scl/fi/19rtpo9km1pb5wqg4wga4/Aryan_Singh_Jadaun.pdf?rlkey=zcm0kc8ztt7bh09o0f0p6ngbx&st=ysuadumy&dl=0"
+                  href="https://freezing-pepper-94f.notion.site/Aryan-Singh-Jadaun-3776bf65d55880a19550e857237863a2?pvs=74"
                   target="_blank"
                   rel="noopener noreferrer"
                   id="e-resume"
@@ -321,7 +321,7 @@ export default function Page9Contact({ onNavigate }: { onNavigate?: (page: numbe
               <p className="label-text text-xs font-bold text-gold mb-2">── RÉSUMÉ ──</p>
               <div className="flex flex-col gap-2">
                 <a
-                  href="https://app.notion.com/p/Aryan-Singh-Jadaun-3776bf65d55880a19550e857237863a2?source=copy_link"
+                  href="https://freezing-pepper-94f.notion.site/Aryan-Singh-Jadaun-3776bf65d55880a19550e857237863a2?pvs=74"
                   target="_blank"
                   rel="noopener noreferrer"
                   id="e-resume-sidebar-link"
