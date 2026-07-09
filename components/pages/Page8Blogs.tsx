@@ -21,7 +21,7 @@ const blogs = [
     subhead: "A deep, honest, no-fluff look at the company running a huge chunk of the web.",
     teaser: "If you're building anything for the internet — a startup, an app, a side project — Cloudflare is the difference between surviving and scaling. In this breakdown, we demystify the Cloudflare ecosystem: from speed and security to DNS, CDN, and edge computing, delivered in a style your infrastructure deserves.",
     quote: "Cloudflare is not just a shield; it is a global accelerator that decides whether your startup survives the slashdot effect or crashes under traffic surge.",
-    url: "https://app.notion.com/p/Cloudflare-The-Internet-s-Quiet-Superpower-3986bf65d5588057b18cf5b78ec0e2ef?source=copy_link",
+    url: "https://freezing-pepper-94f.notion.site/Cloudflare-The-Internet-s-Quiet-Superpower-3986bf65d5588057b18cf5b78ec0e2ef?pvs=73",
     date: "JULY 2026",
     emoji: "🌐",
     body: [
