@@ -11,7 +11,7 @@ const timeline = [
   { year: "2021-2023", event: "Matriculation at RCS Memorial Sr. Secondary School (Completed 11th & 12th Grade in 2023)" },
   { year: "2024", event: "Enrolled at GLA University — B.Tech in AI & Machine Learning (graduating 2028)" },
   { year: "2024", event: "Interned at LinuxWorld Informatics — deep dive into Agentic AI, cloud & autonomous systems" },
-  { year: "2025", event: "Launched CAB-I-NET, CareSync HMS, Voice Auth & other AI systems — 19 projects" },
+  { year: "2025", event: "Launched CAB-I-NET, CareSync HMS, Voice Auth & other AI systems — 20 projects" },
   { year: "2025", event: "Led E-Cell entrepreneurship initiatives at GLA University" },
   { year: "2026", event: "Actively seeking full-time AI/ML Engineering & Full-Stack Development roles" },
 ];
@@ -22,7 +22,7 @@ const techStack = [
 ];
 
 const stats = [
-  { value: "19", label: "Live Projects" },
+  { value: "20", label: "Live Projects" },
   { value: "11", label: "Skill Domains" },
   { value: "2028", label: "Graduating" },
   { value: "∞", label: "Drive" },
@@ -92,7 +92,7 @@ export default function Page2About({ onNavigate }: { onNavigate?: (page: number)
           {/* Left: Main article */}
           <div className="col-span-12 md:col-span-8">
             <DropCapParagraph
-              text="I don't plan — I ship. Raised in Agra and now studying Artificial Intelligence & Machine Learning at GLA University in Mathura, I have built a philosophy that cuts through the noise of academia: bridge research and real-world systems, always. My nineteen deployed AI products are proof that this philosophy works."
+              text="I don't plan — I ship. Raised in Agra and now studying Artificial Intelligence & Machine Learning at GLA University in Mathura, I have built a philosophy that cuts through the noise of academia: bridge research and real-world systems, always. My twenty deployed AI products are proof that this philosophy works."
             />
 
             <p className="body-text mb-4">

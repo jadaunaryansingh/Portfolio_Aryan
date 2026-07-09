@@ -22,7 +22,7 @@ const contactItems = [
     type: "CODE REPOSITORY",
     label: "GitHub",
     value: "github.com/jadaunaryansingh",
-    description: "Browse 19 deployed projects, live AI systems, and open-source work.",
+    description: "Browse 20 deployed projects, live AI systems, and open-source work.",
     icon: "◈",
     href: "https://github.com/jadaunaryansingh",
     copyValue: "https://github.com/jadaunaryansingh",
@@ -57,7 +57,7 @@ const fakeAds = [
   },
   {
     title: "Full-Stack Developer — PREMIUM ROLE",
-    body: "Fintech platform requires React + Python + Firebase expert. 19 live projects preferred. GLA University AIML candidates strongly encouraged to apply.",
+    body: "Fintech platform requires React + Python + Firebase expert. 20 live projects preferred. GLA University AIML candidates strongly encouraged to apply.",
     cta: "CONTACT US",
   },
   {

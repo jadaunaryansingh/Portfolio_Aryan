@@ -252,7 +252,7 @@ export default function Page7Skills({ onNavigate }: { onNavigate?: (page: number
 
         {/* Summary counters */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
-          <Counter value="19" label="Live AI Products" />
+          <Counter value="20" label="Live AI Products" />
           <Counter value="11" label="Skill Domains" />
           <Counter value="3+" label="Years Building" />
           <Counter value="∞" label="Curiosity" />

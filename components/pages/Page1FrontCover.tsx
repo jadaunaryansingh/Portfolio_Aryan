@@ -252,7 +252,7 @@ export default function Page1FrontCover({ onNavigate }: { onNavigate?: (page: nu
             <p className="label-text text-xs text-ink truncate">
               CAB-I-NET Reinvents Cab Fare Comparison · Travel Itinerary AI Generates Custom Tours ·
               AI Voice Authentication Secures Systems · CareSync HMS Digitizes Hospitals ·
-              RAG with Groq Achieves High Speed · GLA University AIML Student Ships 19 Projects
+              RAG with Groq Achieves High Speed · GLA University AIML Student Ships 20 Projects
             </p>
           </div>
           <OrnateRule thick />

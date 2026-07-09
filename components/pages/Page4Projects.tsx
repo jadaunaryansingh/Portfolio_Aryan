@@ -99,7 +99,7 @@ const projects = [
     stack: ["Python", "AI Models", "Data Analytics", "React", "Chart.js"],
     live: "https://primetradeaibyaryan.netlify.app/",
     size: "medium",
-    column: "col-span-12 md:col-span-4",
+    column: "col-span-12 md:col-span-6",
     emoji: "💸",
   },
   {
@@ -111,7 +111,7 @@ const projects = [
     stack: ["Gemini AI", "React", "Python", "Recommendation Systems", "APIs"],
     live: "https://clothing-recommendation-by-aryan-powered.onrender.com",
     size: "medium",
-    column: "col-span-12 md:col-span-4",
+    column: "col-span-12 md:col-span-6",
     emoji: "👕",
   },
   {
@@ -123,7 +123,7 @@ const projects = [
     stack: ["Research", "Data Analysis", "Scientific Computing", "Python"],
     live: "https://ml-project-final-aryan-ayush-palak.onrender.com",
     size: "medium",
-    column: "col-span-12 md:col-span-4",
+    column: "col-span-12 md:col-span-6",
     emoji: "🔬",
   },
   {
@@ -234,6 +234,18 @@ const projects = [
     column: "col-span-12 md:col-span-6",
     emoji: "📱",
   },
+  {
+    id: "jaipur-hospital-chatbot",
+    label: "WEB SCRAPING / AI CHATBOT",
+    headline: "Jaipur Hospital Booking Chatbot",
+    subhead: "BeautifulSoup-powered web scraper and hospital booking chatbot",
+    body: "A chatbot platform scraping live hospital and booking data from Jaipur clinical registries using BeautifulSoup. Deploys conversational agents that guide patients through scheduling and resource checks.",
+    stack: ["Python", "BeautifulSoup", "Web Scraping", "FastAPI", "Chatbots"],
+    live: "https://chatbot-hospitals.onrender.com/",
+    size: "medium",
+    column: "col-span-12 md:col-span-6",
+    emoji: "🩺",
+  },
 ];
 
 function ProjectThumbnail({ id, size, emoji }: { id: string; size: string; emoji: string }) {
@@ -257,6 +269,7 @@ function ProjectThumbnail({ id, size, emoji }: { id: string; size: string; emoji
     "legally-apk":         ["#1a2a3a", "#e8c04a"],
     "sentiment-ai":        ["#1a2a2a", "#f5e9d4"],
     "fullstack-ai":        ["#1a2a1a", "#e8c04a"],
+    "jaipur-hospital-chatbot": ["#1a2a2a", "#e8d5b0"],
   };
   const [bg, accent] = palettes[id] || ["#1a1a1a", "#c9a227"];
 
@@ -360,7 +373,7 @@ export default function Page4Projects({ onNavigate }: { onNavigate?: (page: numb
         {/* Header */}
         <div className="text-center mb-4">
           <span className="label-text text-xs text-gold font-bold tracking-widest">
-            TECHNOLOGY & INNOVATION DESK · NINETEEN SHIPPED PROJECTS
+            TECHNOLOGY & INNOVATION DESK · TWENTY SHIPPED PROJECTS
           </span>
           <OrnateRule thick />
           <motion.h2
@@ -369,7 +382,7 @@ export default function Page4Projects({ onNavigate }: { onNavigate?: (page: numb
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            Nineteen Projects That
+            Twenty Projects That
             <br />
             Rewrite The Rules
           </motion.h2>
@@ -420,6 +433,7 @@ export default function Page4Projects({ onNavigate }: { onNavigate?: (page: numb
           <ProjectCard project={projects[7]} />
           <ProjectCard project={projects[8]} />
           <ProjectCard project={projects[9]} />
+          <ProjectCard project={projects[19]} />
 
           {/* Section: Agentic AI & RAG */}
           <div className="col-span-12">
