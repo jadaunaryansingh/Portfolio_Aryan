@@ -92,7 +92,7 @@ export default function Page2About({ onNavigate }: { onNavigate?: (page: number)
           {/* Left: Main article */}
           <div className="col-span-12 md:col-span-8">
             <DropCapParagraph
-              text="I don't plan — I ship. Raised in Agra and now studying Artificial Intelligence & Machine Learning at GLA University in Mathura, I have built a philosophy that cuts through the noise of academia: bridge research and real-world systems, always. My eighteen deployed AI products are proof that this philosophy works."
+              text="I don't plan — I ship. Raised in Agra and now studying Artificial Intelligence & Machine Learning at GLA University in Mathura, I have built a philosophy that cuts through the noise of academia: bridge research and real-world systems, always. My nineteen deployed AI products are proof that this philosophy works."
             />
 
             <p className="body-text mb-4">
