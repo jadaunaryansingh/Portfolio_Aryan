@@ -11,7 +11,7 @@ const sections = [
   "Research",
   "Certifications",
   "Skills",
-  "Editorial",
+  "Blogs",
   "Contact"
 ];
 
@@ -23,7 +23,7 @@ const sectionMapping: Record<string, number> = {
   "research": 4,
   "certifications": 5,
   "skills": 6,
-  "editorial": 7,
+  "blogs": 7,
   "contact": 8,
 };
 

@@ -1,10 +1,13 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { OrnateRule, SectionDivider, PullQuote, DropCapParagraph } from "@/components/newspaper/Typography";
 import AdBlock from "@/components/newspaper/AdBlock";
 
-export default function Page8Editorial({ onNavigate }: { onNavigate?: (page: number) => void }) {
+export default function Page8Blogs({ onNavigate }: { onNavigate?: (page: number) => void }) {
+  const [activeBlogId, setActiveBlogId] = useState<string | null>(null);
+
   const blogs = [
     {
       id: "cloudflare-scaling",
@@ -68,7 +71,7 @@ export default function Page8Editorial({ onNavigate }: { onNavigate?: (page: num
       subhead: "How lightweight virtualization revolutionized build and deployment times.",
       teaser: "Docker turned development chaos into structured containers. Discover how PayPal dropped deployment times from 60 minutes to just 5, and how Spotify runs thousands of containerized microservices in symphony. Demystifying container isolation, layer caching, and lightweight runtimes.",
       quote: "Docker's genius is not isolation; it is portability — ensuring that what runs on a developer's laptop runs identically in production.",
-      url: "https://www.linkedin.com/posts/aryan-singh-jadaun_why-companies-use-dockerpdf-activity-7354594825700069376-SETs?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADuMGAMBc3REc3fZYVTVUOinFQsoC6oParg",
+      url: "https://www.linkedin.com/posts/aryan-singh-jadaun_why-companies-use-dockerpdf-activity-7354594281342316544-wnAr?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADuMGAMBc3REc3fZYVTVUOinFQsoC6oParg",
       date: "MAY 2026",
       desk: "CONTAINERIZATION",
       body: [
@@ -92,13 +95,15 @@ export default function Page8Editorial({ onNavigate }: { onNavigate?: (page: num
     }
   ];
 
+  const activeBlog = blogs.find((blog) => blog.id === activeBlogId);
+
   return (
     <article className="newspaper-page min-h-screen paper-aged grain-overlay">
       <div className="max-w-7xl mx-auto px-4 py-6">
         {/* Page Header */}
         <div className="text-center mb-4">
           <span className="label-text text-xs text-gold font-bold tracking-widest">
-            THE EDITORIAL DESK · TECH COLUMNS & INDUSTRY INSIGHTS
+            THE BLOG DESK · TECH COLUMNS & INDUSTRY INSIGHTS
           </span>
           <OrnateRule thick />
           <motion.h2
@@ -110,7 +115,7 @@ export default function Page8Editorial({ onNavigate }: { onNavigate?: (page: num
           >
             Weekly Columns
             <br />
-            & Editorial Opinions
+            & Tech Blogs
           </motion.h2>
           <OrnateRule thick />
           <p className="label-text text-xs text-ink-faded mt-2">
@@ -119,53 +124,125 @@ export default function Page8Editorial({ onNavigate }: { onNavigate?: (page: num
         </div>
 
         <div className="grid grid-cols-12 gap-6 mt-6">
-          {/* Left Column: Featured Editorials */}
-          <div className="col-span-12 md:col-span-8 space-y-8">
-            {blogs.map((blog, index) => (
-              <div key={blog.id} className="space-y-4">
-                {index > 0 && <SectionDivider />}
-                <div>
-                  <p className="label-text text-xs text-gold font-bold mb-1">
-                    {index === 0 ? "FEATURED WEEKLY COLUMN" : "TECH COMMENTARY & ANALYSIS"}
-                  </p>
-                  <h3 className="headline-lg ink-bleed text-ink leading-tight mb-2">
-                    {blog.title}
-                  </h3>
-                  <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs label-text text-ink-faded font-bold border-b border-ink border-opacity-20 pb-2 mb-3">
-                    <span>WRITTEN BY: ARYAN SINGH JADAUN</span>
-                    <span>DESK: {blog.desk}</span>
-                    <span>DATE: {blog.date}</span>
-                  </div>
-                </div>
-
-                <DropCapParagraph text={blog.teaser} />
-
-                <PullQuote
-                  quote={blog.quote}
-                  attribution="Aryan Singh Jadaun, The Developer Daily"
-                />
-
-                <div className="body-text text-xs text-ink-faded leading-relaxed space-y-3 text-justify">
-                  {blog.body.map((para, pIdx) => (
-                    <p key={pIdx}>{para}</p>
+          {/* Left Column: List or Detail view */}
+          <div className="col-span-12 md:col-span-8 space-y-8 min-h-[500px]">
+            <AnimatePresence mode="wait">
+              {!activeBlog ? (
+                // --- LIST VIEW ---
+                <motion.div
+                  key="list"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.3 }}
+                  className="space-y-6"
+                >
+                  {blogs.map((blog, index) => (
+                    <div
+                      key={blog.id}
+                      className="group p-4 border border-ink border-opacity-10 hover:border-opacity-30 bg-cream bg-opacity-30 hover:bg-opacity-50 transition-all duration-300 rounded-sm cursor-pointer"
+                      onClick={() => setActiveBlogId(blog.id)}
+                    >
+                      {index > 0 && <SectionDivider />}
+                      <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
+                        <span className="label-text text-[0.65rem] text-gold font-bold">
+                          {blog.desk}
+                        </span>
+                        <span className="label-text text-[0.65rem] text-ink-faded font-bold">
+                          {blog.date}
+                        </span>
+                      </div>
+                      <h3 className="headline-md ink-bleed text-ink leading-tight group-hover:text-gold transition-colors mb-2">
+                        {blog.title}
+                      </h3>
+                      <p className="font-playfair italic text-ink-faded text-sm mb-3">
+                        {blog.subhead}
+                      </p>
+                      <p className="body-text text-xs text-ink-faded leading-relaxed line-clamp-2 mb-3">
+                        {blog.teaser}
+                      </p>
+                      <div className="flex items-center justify-between border-t border-ink border-opacity-10 pt-3 mt-2">
+                        <span className="label-text text-[0.6rem] text-ink-faded">
+                          BY: ARYAN SINGH JADAUN
+                        </span>
+                        <button
+                          className="label-text text-xs font-bold text-gold border-b border-gold hover:text-ink hover:border-ink transition-colors cursor-pointer"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setActiveBlogId(blog.id);
+                          }}
+                        >
+                          READ COLUMN ➔
+                        </button>
+                      </div>
+                    </div>
                   ))}
-                </div>
-
-                <div className="pt-2">
-                  <a
-                    href={blog.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block bg-ink text-paper px-4 py-2 label-text text-xs font-bold hover:bg-brown transition-colors cursor-pointer"
+                </motion.div>
+              ) : (
+                // --- DETAIL VIEW ---
+                <motion.div
+                  key="detail"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.3 }}
+                  className="space-y-6 bg-cream bg-opacity-20 p-4 md:p-6 border-2 border-ink border-opacity-20"
+                >
+                  <button
+                    onClick={() => setActiveBlogId(null)}
+                    className="inline-flex items-center gap-2 border border-ink px-3 py-1.5 label-text text-xs font-bold hover:bg-ink hover:text-paper transition-all duration-300 cursor-pointer"
                   >
-                    READ FULL ARTICLE ON LINKEDIN ➔
-                  </a>
-                </div>
-              </div>
-            ))}
+                    ← BACK TO ALL COLUMNS
+                  </button>
+
+                  <div className="pt-2">
+                    <p className="label-text text-xs text-gold font-bold mb-1">
+                      {activeBlog.desk}
+                    </p>
+                    <h3 className="headline-lg ink-bleed text-ink leading-tight mb-2">
+                      {activeBlog.title}
+                    </h3>
+                    <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs label-text text-ink-faded font-bold border-b border-ink border-opacity-20 pb-2 mb-3">
+                      <span>WRITTEN BY: ARYAN SINGH JADAUN</span>
+                      <span>DATE: {activeBlog.date}</span>
+                    </div>
+                  </div>
+
+                  <DropCapParagraph text={activeBlog.teaser} />
+
+                  <PullQuote
+                    quote={activeBlog.quote}
+                    attribution="Aryan Singh Jadaun, The Developer Daily"
+                  />
+
+                  <div className="body-text text-xs text-ink-faded leading-relaxed space-y-4 text-justify">
+                    {activeBlog.body.map((para, pIdx) => (
+                      <p key={pIdx}>{para}</p>
+                    ))}
+                  </div>
+
+                  <div className="pt-4 border-t border-ink border-opacity-20 flex flex-wrap gap-4 items-center justify-between">
+                    <button
+                      onClick={() => setActiveBlogId(null)}
+                      className="label-text text-xs font-bold text-ink-faded hover:text-ink transition-colors cursor-pointer"
+                    >
+                      ← RETURN TO LIST
+                    </button>
+                    <a
+                      href={activeBlog.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block bg-ink text-paper px-4 py-2 label-text text-xs font-bold hover:bg-brown transition-colors cursor-pointer"
+                    >
+                      READ FULL ARTICLE ON LINKEDIN ➔
+                    </a>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
 
-          {/* Right Column: Weekly Archives & Ads */}
+          {/* Right Column: Weekly Archives & Ads (Remains constant) */}
           <aside className="col-span-12 md:col-span-4 space-y-6">
             <div className="border-newspaper p-4">
               <p className="label-text text-xs font-bold tracking-widest border-b border-ink pb-2 mb-3">
@@ -178,7 +255,7 @@ export default function Page8Editorial({ onNavigate }: { onNavigate?: (page: num
                     desc: "Decoding cyclic agentic workflows, memory persistence, and dynamic planning loops in state-of-the-art agent architectures.",
                     tag: "AGENTIC AI / LLMs",
                   },
-                ].map((item, idx) => (
+                ].map((item) => (
                   <div key={item.title} className="border-b border-ink border-opacity-20 pb-3 last:border-0 last:pb-0">
                     <span className="label-text text-[0.6rem] font-bold text-gold">{item.tag}</span>
                     <h4 className="headline-sm text-xs font-bold text-ink ink-bleed mt-0.5 mb-1 leading-snug">

@@ -27,7 +27,7 @@ const projects = [
     stack: ["Groq", "Appwrite", "AI Agents", "LLMs", "RAG", "LangChain"],
     live: "https://web-silk-six-36.vercel.app/",
     size: "medium",
-    column: "col-span-12 md:col-span-4",
+    column: "col-span-12 md:col-span-6",
     emoji: "🤖",
   },
   {
@@ -51,7 +51,7 @@ const projects = [
     stack: ["Next.js", "React", "AI APIs", "Travel APIs", "Tailwind"],
     live: "https://travelitiniarybyaryan.netlify.app/",
     size: "medium",
-    column: "col-span-12 md:col-span-5",
+    column: "col-span-12 md:col-span-6",
     emoji: "🗺️",
   },
   {
@@ -63,7 +63,7 @@ const projects = [
     stack: ["FlutterFlow", "React", "Firebase", "Google Maps", "Razorpay", "AI"],
     live: "https://cab-i-net.netlify.app/",
     size: "large",
-    column: "col-span-12 md:col-span-7",
+    column: "col-span-12",
     emoji: "🚖",
   },
   {
@@ -75,7 +75,7 @@ const projects = [
     stack: ["Python", "Pandas", "Machine Learning", "Data Analytics", "FastAPI"],
     live: "https://ai-demand-inventory.onrender.com",
     size: "medium",
-    column: "col-span-12 md:col-span-4",
+    column: "col-span-12 md:col-span-6",
     emoji: "📈",
   },
   {
@@ -123,7 +123,7 @@ const projects = [
     stack: ["Research", "Data Analysis", "Scientific Computing", "Python"],
     live: "https://ml-project-final-aryan-ayush-palak.onrender.com",
     size: "medium",
-    column: "col-span-12 md:col-span-6",
+    column: "col-span-12 md:col-span-4",
     emoji: "🔬",
   },
   {
@@ -159,7 +159,7 @@ const projects = [
     stack: ["Next.js", "Tailwind CSS", "Framer Motion", "GSAP", "React PageFlip"],
     live: "https://github.com/jadaunaryansingh/Portfolio_Aryan",
     size: "medium",
-    column: "col-span-12 md:col-span-4",
+    column: "col-span-12 md:col-span-6",
     emoji: "📰",
   },
   {
@@ -171,7 +171,7 @@ const projects = [
     stack: ["Groq", "LangChain", "Vector Databases", "LLMs", "Python"],
     live: "https://ragmodelpoweredbygrok-1.onrender.com",
     size: "medium",
-    column: "col-span-12 md:col-span-4",
+    column: "col-span-12 md:col-span-6",
     emoji: "⚡",
   },
   {
@@ -425,8 +425,8 @@ export default function Page4Projects({ onNavigate }: { onNavigate?: (page: numb
           <div className="col-span-12">
             <SectionDivider label="AGENTIC AI & RAG ARCHITECTURES" />
           </div>
-          <ProjectCard project={projects[10]} />
           <ProjectCard project={projects[11]} />
+          <ProjectCard project={projects[10]} />
           <ProjectCard project={projects[12]} />
 
           {/* Section: Education, Backend & Mobile */}
