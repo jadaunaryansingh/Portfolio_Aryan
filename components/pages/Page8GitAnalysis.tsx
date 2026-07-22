@@ -58,14 +58,14 @@ const fallbackUser: GitHubUser = {
 const fallbackRepos: GitHubRepo[] = [
   {
     id: 1,
-    name: "Portfolio",
-    full_name: "jadaunaryansingh/Portfolio",
-    html_url: "https://github.com/jadaunaryansingh/Portfolio",
-    description: "Cinematic 1930s-1940s Vintage Newspaper Portfolio built with Next.js & Tailwind",
-    stargazers_count: 14,
-    forks_count: 5,
-    language: "TypeScript",
-    updated_at: "Just now",
+    name: "CAB-I-NET",
+    full_name: "jadaunaryansingh/CAB-I-NET",
+    html_url: "https://github.com/jadaunaryansingh/CAB-I-NET",
+    description: "Real-time cab fare aggregator comparing Uber, Ola & Rapido using ML surge forecasting",
+    stargazers_count: 18,
+    forks_count: 6,
+    language: "Python",
+    updated_at: "Today",
     fork: false,
   },
   {
@@ -74,58 +74,154 @@ const fallbackRepos: GitHubRepo[] = [
     full_name: "jadaunaryansingh/Zorvyn-Backend",
     html_url: "https://github.com/jadaunaryansingh/Zorvyn-Backend",
     description: "Scalable enterprise REST API backend core with JWT auth, Docker & PostgreSQL",
-    stargazers_count: 12,
-    forks_count: 4,
+    stargazers_count: 14,
+    forks_count: 5,
     language: "Python",
     updated_at: "Today",
     fork: false,
   },
   {
     id: 3,
-    name: "CareSync-HMS",
-    full_name: "jadaunaryansingh/CareSync-HMS",
-    html_url: "https://github.com/jadaunaryansingh/CareSync-HMS",
-    description: "Hospital Management System with automated appointment scheduling & doctor dashboards",
-    stargazers_count: 10,
+    name: "Voice-Authentication-System",
+    full_name: "jadaunaryansingh/Voice-Authentication-System",
+    html_url: "https://github.com/jadaunaryansingh/Voice-Authentication-System",
+    description: "Biometric voice authentication & speaker verification engine using deep learning",
+    stargazers_count: 12,
     forks_count: 3,
-    language: "JavaScript",
-    updated_at: "2 days ago",
+    language: "Python",
+    updated_at: "Yesterday",
     fork: false,
   },
   {
     id: 4,
-    name: "CAB-I-NET",
-    full_name: "jadaunaryansingh/CAB-I-NET",
-    html_url: "https://github.com/jadaunaryansingh/CAB-I-NET",
-    description: "Real-time cab fare aggregator comparing Uber, Ola & Rapido using ML surge forecasting",
-    stargazers_count: 18,
-    forks_count: 6,
+    name: "Enterprise-Growth-Predictor",
+    full_name: "jadaunaryansingh/Enterprise-Growth-Predictor",
+    html_url: "https://github.com/jadaunaryansingh/Enterprise-Growth-Predictor",
+    description: "ML financial forecasting & risk analyzer using Pandas & Scikit-Learn",
+    stargazers_count: 10,
+    forks_count: 2,
+    language: "Python",
+    updated_at: "2 days ago",
+    fork: false,
+  },
+  {
+    id: 5,
+    name: "Travel-Itinerary-AI",
+    full_name: "jadaunaryansingh/Travel-Itinerary-AI",
+    html_url: "https://github.com/jadaunaryansingh/Travel-Itinerary-AI",
+    description: "Customized AI itinerary planner and route optimizer for India tourism",
+    stargazers_count: 15,
+    forks_count: 4,
     language: "Python",
     updated_at: "3 days ago",
     fork: false,
   },
   {
-    id: 5,
-    name: "Voice-Authentication-System",
-    full_name: "jadaunaryansingh/Voice-Authentication-System",
-    html_url: "https://github.com/jadaunaryansingh/Voice-Authentication-System",
-    description: "Biometric voice authentication & speaker verification engine using deep learning",
-    stargazers_count: 9,
-    forks_count: 2,
+    id: 6,
+    name: "AI-Agent-Architecture",
+    full_name: "jadaunaryansingh/AI-Agent-Architecture",
+    html_url: "https://github.com/jadaunaryansingh/AI-Agent-Architecture",
+    description: "LangGraph autonomous multi-agent pipelines & stateful reasoning workflows",
+    stargazers_count: 13,
+    forks_count: 3,
     language: "Python",
     updated_at: "4 days ago",
     fork: false,
   },
   {
-    id: 6,
+    id: 7,
+    name: "Groq-RAG-System",
+    full_name: "jadaunaryansingh/Groq-RAG-System",
+    html_url: "https://github.com/jadaunaryansingh/Groq-RAG-System",
+    description: "High-speed semantic document retrieval pipeline using Vector DBs",
+    stargazers_count: 12,
+    forks_count: 3,
+    language: "Python",
+    updated_at: "5 days ago",
+    fork: false,
+  },
+  {
+    id: 8,
+    name: "Jaipur-Hospital-Booking-Chatbot",
+    full_name: "jadaunaryansingh/Jaipur-Hospital-Booking-Chatbot",
+    html_url: "https://github.com/jadaunaryansingh/Jaipur-Hospital-Booking-Chatbot",
+    description: "Web scraping hospital booking chatbot for real-time appointments",
+    stargazers_count: 9,
+    forks_count: 2,
+    language: "Python",
+    updated_at: "1 week ago",
+    fork: false,
+  },
+  {
+    id: 9,
+    name: "Portfolio",
+    full_name: "jadaunaryansingh/Portfolio",
+    html_url: "https://github.com/jadaunaryansingh/Portfolio",
+    description: "Cinematic 1930s-1940s Vintage Newspaper Portfolio built with Next.js & Tailwind",
+    stargazers_count: 16,
+    forks_count: 4,
+    language: "TypeScript",
+    updated_at: "Just now",
+    fork: false,
+  },
+  {
+    id: 10,
+    name: "CareSync-HMS",
+    full_name: "jadaunaryansingh/CareSync-HMS",
+    html_url: "https://github.com/jadaunaryansingh/CareSync-HMS",
+    description: "Hospital Management System with automated scheduling & doctor dashboards",
+    stargazers_count: 11,
+    forks_count: 3,
+    language: "TypeScript",
+    updated_at: "1 week ago",
+    fork: false,
+  },
+  {
+    id: 11,
     name: "Legally-Agentic-AI",
     full_name: "jadaunaryansingh/Legally-Agentic-AI",
     html_url: "https://github.com/jadaunaryansingh/Legally-Agentic-AI",
-    description: "LangGraph-powered multi-agent legal intelligence platform with Flutter & FastAPI",
+    description: "LangGraph-powered legal intelligence app with Flutter & FastAPI",
     stargazers_count: 15,
     forks_count: 4,
     language: "Dart",
-    updated_at: "5 days ago",
+    updated_at: "6 days ago",
+    fork: false,
+  },
+  {
+    id: 12,
+    name: "Legally-Mobile-App",
+    full_name: "jadaunaryansingh/Legally-Mobile-App",
+    html_url: "https://github.com/jadaunaryansingh/Legally-Mobile-App",
+    description: "Flutter cross-platform mobile application for Android & iOS",
+    stargazers_count: 10,
+    forks_count: 2,
+    language: "Dart",
+    updated_at: "2 weeks ago",
+    fork: false,
+  },
+  {
+    id: 13,
+    name: "Jailbreak-Web-App",
+    full_name: "jadaunaryansingh/Jailbreak-Web-App",
+    html_url: "https://github.com/jadaunaryansingh/Jailbreak-Web-App",
+    description: "Prompt injection security demonstrator for IEEE",
+    stargazers_count: 14,
+    forks_count: 4,
+    language: "JavaScript",
+    updated_at: "2 weeks ago",
+    fork: false,
+  },
+  {
+    id: 14,
+    name: "DevOps-CI-CD-Automation",
+    full_name: "jadaunaryansingh/DevOps-CI-CD-Automation",
+    html_url: "https://github.com/jadaunaryansingh/DevOps-CI-CD-Automation",
+    description: "Jenkins & Docker deployment pipelines on RHEL Linux",
+    stargazers_count: 8,
+    forks_count: 2,
+    language: "Shell",
+    updated_at: "3 weeks ago",
     fork: false,
   },
 ];
@@ -323,7 +419,7 @@ export default function Page8GitAnalysis({ onNavigate }: { onNavigate?: (page: n
         if (resRepos.ok) {
           const repoData: GitHubRepo[] = await resRepos.json();
           if (repoData.length > 0) {
-            setRepos(repoData.filter((r) => !r.fork).slice(0, 8));
+            setRepos(repoData.filter((r) => !r.fork));
           }
         }
 
@@ -348,7 +444,7 @@ export default function Page8GitAnalysis({ onNavigate }: { onNavigate?: (page: n
     fetchGitHubData();
   }, []);
 
-  // Compute language distribution statistics
+  // Compute language distribution statistics across all repositories
   const langCounts: Record<string, number> = {};
   repos.forEach((r) => {
     if (r.language) {
@@ -416,29 +512,29 @@ export default function Page8GitAnalysis({ onNavigate }: { onNavigate?: (page: n
         {/* Live Profile & KPI Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
           <div className="border border-ink p-3 text-center bg-cream">
-            <span className="label-text text-xs text-ink-faded block">PUBLIC REPOSITORIES</span>
-            <span className="font-abril text-2xl text-ink block mt-1">{user.public_repos || 20}</span>
-            <span className="label-text text-[10px] text-gold font-bold">ALL PUBLIC & OPEN SOURCE</span>
+            <span className="label-text text-xs text-ink-faded block uppercase">PUBLIC REPOSITORIES</span>
+            <span className="font-abril text-2xl text-ink block mt-1">{user.public_repos || 20}+</span>
+            <span className="label-text text-[10px] text-gold font-bold uppercase">DEPLOYED AI & DIGITAL SYSTEMS</span>
           </div>
 
           <div className="border border-ink p-3 text-center bg-cream">
-            <span className="label-text text-xs text-ink-faded block">PRIMARY LANGUAGE</span>
-            <span className="font-abril text-2xl text-ink block mt-1">Python / TS</span>
-            <span className="label-text text-[10px] text-gold font-bold">98.5% PRODUCTION GRADE</span>
+            <span className="label-text text-xs text-ink-faded block uppercase">PRIMARY LANGUAGE</span>
+            <span className="font-abril text-2xl text-ink block mt-1">Python</span>
+            <span className="label-text text-[10px] text-gold font-bold uppercase">57% MAIN AI & BACKEND STACK</span>
           </div>
 
           <div className="border border-ink p-3 text-center bg-cream">
-            <span className="label-text text-xs text-ink-faded block">TOTAL STARGAVERS</span>
+            <span className="label-text text-xs text-ink-faded block uppercase">STARGAZERS & APPRECIATION</span>
             <span className="font-abril text-2xl text-ink block mt-1">
-              {repos.reduce((acc, r) => acc + (r.stargazers_count || 0), 0) + 78}★
+              {repos.reduce((acc, r) => acc + (r.stargazers_count || 0), 0) + 78}+ ★
             </span>
-            <span className="label-text text-[10px] text-gold font-bold">ACROSS ALL AI PRODUCTS</span>
+            <span className="label-text text-[10px] text-gold font-bold uppercase">ACROSS ALL LIVE PRODUCTS</span>
           </div>
 
           <div className="border border-ink p-3 text-center bg-cream">
-            <span className="label-text text-xs text-ink-faded block">COMMITS & ACTIVITY</span>
-            <span className="font-abril text-2xl text-ink block mt-1">565</span>
-            <span className="label-text text-[10px] text-gold font-bold">IN THE LAST YEAR</span>
+            <span className="label-text text-xs text-ink-faded block uppercase">TOTAL COMMITS & ACTIVITY</span>
+            <span className="font-abril text-2xl text-ink block mt-1">1,250+</span>
+            <span className="label-text text-[10px] text-gold font-bold uppercase">565 ANNUAL CONTRIBUTIONS</span>
           </div>
         </div>
 
@@ -522,7 +618,7 @@ export default function Page8GitAnalysis({ onNavigate }: { onNavigate?: (page: n
                       <span className="font-bold label-text text-ink">{lang}</span>
                     </div>
                     <div className="label-text text-ink-faded">
-                      <span>{count} repos</span> · <span className="text-ink font-bold">{pct}%</span>
+                      <span>{count} {count === 1 ? "REPO" : "REPOS"}</span> · <span className="text-ink font-bold">{pct}%</span>
                     </div>
                   </div>
                 ))}
@@ -586,7 +682,7 @@ export default function Page8GitAnalysis({ onNavigate }: { onNavigate?: (page: n
             ── FEATURED GITHUB REPOSITORIES ──
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {repos.map((repo) => (
+            {repos.slice(0, 6).map((repo) => (
               <motion.a
                 key={repo.id}
                 href={repo.html_url}
