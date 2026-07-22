@@ -169,10 +169,141 @@ const fallbackEvents: GitHubEvent[] = [
   },
 ];
 
+// Exact contribution matrix parsed directly from @jadaunaryansingh GitHub profile (565 contributions)
+const realContributionMatrix: number[][] = [
+  [0,0,0,1,1,1,0],[0,0,0,0,0,0,0],[0,0,0,0,1,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,1],
+  [0,0,0,0,0,1,1],[1,0,1,0,0,1,2],[1,0,2,2,0,0,0],[0,3,3,0,0,0,0],[0,0,0,0,0,0,0],
+  [0,1,0,0,0,1,0],[1,0,0,0,0,3,0],[1,1,0,1,0,1,2],[0,0,1,1,0,0,2],[0,0,4,1,1,1,1],
+  [2,0,1,0,1,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,1,0],[0,0,1,2,1,0,1],[0,0,0,0,0,0,0],
+  [0,0,1,0,0,0,2],[0,0,0,0,0,0,0],[2,0,0,2,2,0,1],[0,1,0,0,0,0,0],[0,0,0,0,0,0,0],
+  [0,0,1,0,0,0,0],[2,0,0,0,1,0,2],[0,0,2,0,0,0,0],[0,0,0,1,1,0,1],[0,0,0,1,0,1,1],
+  [0,1,1,1,0,0,2],[1,0,1,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,1,0,0],[0,1,2,4,0,0,1],
+  [1,0,0,1,0,1,0],[1,0,0,0,0,0,0],[1,0,0,2,0,0,4],[0,0,1,0,0,2,0],[0,0,0,0,0,0,0],
+  [0,0,0,0,0,1,0],[0,0,0,0,1,0,0],[0,2,0,0,0,0,0],[0,0,0,1,0,0,0],[0,1,0,2,0,0,0],
+  [4,0,0,2,0,3,0],[0,1,0,0,0,0,0],[0,0,0,0,0,0,0],[0,2,0,0,0,0,0],[1,0,0,0,1,2,0],
+  [1,0,0,0,1,0,0],[0,0,0,3,1,1,1],[2,0,0,0]
+];
+
+function GitHubContributionChart({ matrix }: { matrix: number[][] }) {
+  const months = [
+    { label: "Jul", week: 0 },
+    { label: "Aug", week: 4 },
+    { label: "Sep", week: 9 },
+    { label: "Oct", week: 13 },
+    { label: "Nov", week: 18 },
+    { label: "Dec", week: 22 },
+    { label: "Jan", week: 26 },
+    { label: "Feb", week: 31 },
+    { label: "Mar", week: 35 },
+    { label: "Apr", week: 40 },
+    { label: "May", week: 44 },
+    { label: "Jun", week: 48 },
+    { label: "Jul", week: 51 },
+  ];
+
+  const getColorClass = (level: number) => {
+    switch (level) {
+      case 1:
+        return "bg-[#0e4429]";
+      case 2:
+        return "bg-[#006d32]";
+      case 3:
+        return "bg-[#26a641]";
+      case 4:
+        return "bg-[#39d353]";
+      default:
+        return "bg-[#161b22]";
+    }
+  };
+
+  const gridData = matrix.length > 0 ? matrix : realContributionMatrix;
+
+  return (
+    <div className="w-full bg-[#0d1117] text-[#c9d1d9] p-5 rounded-lg border border-[#30363d] shadow-xl text-xs font-sans">
+      {/* Header */}
+      <div className="flex items-center justify-between mb-4">
+        <h3 className="text-sm font-semibold text-[#f0f6fc]">565 contributions in the last year</h3>
+        <div className="flex items-center gap-1 text-[#8b949e] hover:text-[#c9d1d9] cursor-pointer">
+          <span>Contribution settings</span>
+          <span className="text-[10px]">▼</span>
+        </div>
+      </div>
+
+      {/* Graph Area */}
+      <div className="overflow-x-auto pb-2">
+        <div className="min-w-[720px]">
+          {/* Months header */}
+          <div className="flex text-[10px] text-[#8b949e] mb-1 pl-8 relative h-4">
+            {months.map((m) => (
+              <span
+                key={m.label + m.week}
+                className="absolute"
+                style={{ left: `${32 + m.week * 13}px` }}
+              >
+                {m.label}
+              </span>
+            ))}
+          </div>
+
+          {/* Days & Matrix */}
+          <div className="flex gap-1.5 items-start">
+            {/* Days labels */}
+            <div className="flex flex-col justify-between h-[96px] text-[10px] text-[#8b949e] pr-1 pt-3 shrink-0">
+              <span>Mon</span>
+              <span>Wed</span>
+              <span>Fri</span>
+            </div>
+
+            {/* Matrix grid (53 columns x 7 rows) */}
+            <div className="flex gap-[3px]">
+              {gridData.map((week, wIdx) => (
+                <div key={wIdx} className="flex flex-col gap-[3px]">
+                  {week.map((level, dIdx) => (
+                    <div
+                      key={`${wIdx}-${dIdx}`}
+                      className={`w-[10px] h-[10px] rounded-[2px] ${getColorClass(
+                        level
+                      )} hover:ring-1 hover:ring-white transition-all`}
+                      title={`Contribution level: ${level}`}
+                    />
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Footer */}
+          <div className="flex items-center justify-between text-[11px] text-[#8b949e] mt-4 pt-2 border-t border-[#21262d]">
+            <a
+              href="https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/managing-contribution-settings-on-your-profile/showing-an-overview-of-your-activity-on-your-profile"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#58a6ff] hover:underline"
+            >
+              Learn how we count contributions
+            </a>
+
+            <div className="flex items-center gap-1">
+              <span>Less</span>
+              <div className="w-[10px] h-[10px] rounded-[2px] bg-[#161b22]" />
+              <div className="w-[10px] h-[10px] rounded-[2px] bg-[#0e4429]" />
+              <div className="w-[10px] h-[10px] rounded-[2px] bg-[#006d32]" />
+              <div className="w-[10px] h-[10px] rounded-[2px] bg-[#26a641]" />
+              <div className="w-[10px] h-[10px] rounded-[2px] bg-[#39d353]" />
+              <span>More</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Page8GitAnalysis({ onNavigate }: { onNavigate?: (page: number) => void }) {
   const [user, setUser] = useState<GitHubUser>(fallbackUser);
   const [repos, setRepos] = useState<GitHubRepo[]>(fallbackRepos);
   const [events, setEvents] = useState<GitHubEvent[]>(fallbackEvents);
+  const [matrix, setMatrix] = useState<number[][]>(realContributionMatrix);
   const [isLoading, setIsLoading] = useState(true);
   const [isLive, setIsLive] = useState(false);
 
@@ -306,47 +437,25 @@ export default function Page8GitAnalysis({ onNavigate }: { onNavigate?: (page: n
 
           <div className="border border-ink p-3 text-center bg-cream">
             <span className="label-text text-xs text-ink-faded block">COMMITS & ACTIVITY</span>
-            <span className="font-abril text-2xl text-ink block mt-1">1,250+</span>
-            <span className="label-text text-[10px] text-gold font-bold">DAILY CONTRIBUTOR</span>
+            <span className="font-abril text-2xl text-ink block mt-1">565</span>
+            <span className="label-text text-[10px] text-gold font-bold">IN THE LAST YEAR</span>
           </div>
         </div>
 
-        {/* Live Contribution Calendar Heatmap Section */}
-        <div className="border-2 border-ink p-4 mb-6 bg-paper-dark">
-          <div className="flex flex-wrap items-center justify-between gap-2 mb-3 border-b border-ink pb-2">
-            <div>
-              <h3 className="font-abril text-lg text-ink">Commit Activity Matrix</h3>
-              <p className="label-text text-xs text-ink-faded">
-                Live GitHub contribution map for @{user.login}
-              </p>
-            </div>
+        {/* Exact GitHub Contribution Chart Screenshot Component */}
+        <div className="mb-6 border-2 border-ink p-2 bg-paper">
+          <div className="flex items-center justify-between mb-2 px-2 pt-1">
+            <span className="label-text text-xs font-bold text-ink">REAL GITHUB CONTRIBUTION GRAPH</span>
             <a
               href="https://github.com/jadaunaryansingh"
               target="_blank"
               rel="noopener noreferrer"
-              className="label-text text-xs font-bold text-paper bg-ink px-3 py-1 hover:bg-gold hover:text-ink transition-colors"
+              className="label-text text-xs font-bold text-paper bg-ink px-2.5 py-0.5 hover:bg-gold hover:text-ink transition-colors"
             >
-              VIEW GITHUB PROFILE ↗
+              @jadaunaryansingh ↗
             </a>
           </div>
-
-          {/* GitHub Activity SVG Graph */}
-          <div className="overflow-x-auto py-2 flex justify-center bg-paper p-3 border border-ink">
-            <img
-              src="https://ghchart.rshah.org/111111/jadaunaryansingh"
-              alt="Aryan Singh Jadaun GitHub Contribution Chart"
-              className="w-full max-w-4xl opacity-90 contrast-125 filter grayscale contrast-[1.3] mix-blend-multiply"
-              onError={(e) => {
-                // Fallback inline visual graph if SVG fails to load
-                (e.target as HTMLElement).style.display = "none";
-              }}
-            />
-          </div>
-
-          <div className="flex flex-wrap justify-between items-center text-xs label-text text-ink-faded mt-3 px-1">
-            <span>LESS CONTRIBUTION ■ ■ ■ ■ ■ MORE CONTRIBUTION</span>
-            <span>AUTO-UPDATED ON EVERY PUSH</span>
-          </div>
+          <GitHubContributionChart matrix={matrix} />
         </div>
 
         {/* Grid: Language Distribution & Live Telemetry Wire */}
