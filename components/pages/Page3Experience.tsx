@@ -50,7 +50,9 @@ const internships = [
       "Collaborated on unit testing, validation pipelines, and secure cloud staging deployments."
     ],
     color: "#86bc25", // Deloitte/Foundation Green accent
-    hasOfferLetter: false
+    hasOfferLetter: true,
+    docLabel: "OFFICIAL INTERNSHIP OFFER LETTER",
+    offerLetterUrl: "/InAmigos_Offer_Letter.pdf"
   }
 ];
 
