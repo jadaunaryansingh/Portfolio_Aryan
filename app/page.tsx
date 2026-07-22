@@ -13,6 +13,7 @@ import Page4Projects from "@/components/pages/Page4Projects";
 import Page5Research from "@/components/pages/Page5Research";
 import Page6Certifications from "@/components/pages/Page6Certifications";
 import Page7Skills from "@/components/pages/Page7Skills";
+import Page8GitAnalysis from "@/components/pages/Page8GitAnalysis";
 import Page8Blogs from "@/components/pages/Page8Blogs";
 import Page9Contact from "@/components/pages/Page9Contact";
 
@@ -24,6 +25,7 @@ const pages = [
   { component: Page5Research, name: "Research Paper" },
   { component: Page6Certifications, name: "Certifications" },
   { component: Page7Skills, name: "Skills" },
+  { component: Page8GitAnalysis, name: "Git Dispatch" },
   { component: Page8Blogs, name: "Blogs" },
   { component: Page9Contact, name: "Classifieds" },
 ];
