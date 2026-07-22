@@ -169,7 +169,7 @@ export default function Page3Experience({ onNavigate }: { onNavigate?: (page: nu
                           <span className="text-xl">📜</span>
                           <div>
                             <p className="label-text text-xs font-bold text-ink tracking-wider">OFFICIAL OFFER LETTER DOCUMENT</p>
-                            <p className="label-text text-[10px] text-ink-faded">LinuxWorld Informatics Pvt. Ltd. · Verified Employment Record</p>
+                            <p className="label-text text-[10px] text-ink-faded">{job.company} · Verified Employment Record</p>
                           </div>
                         </div>
                         <div className="flex items-center gap-2">
