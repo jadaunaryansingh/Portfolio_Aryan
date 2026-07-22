@@ -8,6 +8,21 @@ import AdBlock from "@/components/newspaper/AdBlock";
 
 const internships = [
   {
+    role: "Backend Developer Intern",
+    company: "Zorvyn FinTech Pvt. Ltd.",
+    duration: "April 2026 - Present (₹40,000 / Mo)",
+    summary: "Architected scalable backend infrastructure, JWT authentication, PostgreSQL database schemas, and microservices for financial engineering platform.",
+    bullets: [
+      "Engineered high-performance REST APIs in Python & FastAPI, handling secure transactions and JWT token authentication.",
+      "Designed and deployed containerized Docker microservices integrated with PostgreSQL databases on AWS EC2.",
+      "Built production-ready API documentation, automated test suites, and rate-limiting middleware.",
+      "Offered INR 40,000/month stipend with official Pre-Placement Offer (PPO) evaluation track under CEO leadership."
+    ],
+    color: "#3178C6", // Tech Blue accent
+    hasOfferLetter: true,
+    offerLetterUrl: "/Offer_Letter_Aryan_Singh_Jadaun.pdf"
+  },
+  {
     role: "Agentic AI & Cloud Intern",
     company: "LinuxWorld Informatics Pvt. Ltd.",
     duration: "May 2025 - August 2025 (3 Months)",
@@ -19,8 +34,7 @@ const internships = [
       "Configured robust Docker containerization pipelines, optimizing resource footprint and dependency isolation."
     ],
     color: "#ff9900", // AWS Orange accent
-    hasOfferLetter: true,
-    offerLetterUrl: "/Offer_Letter_Aryan_Singh_Jadaun.pdf"
+    hasOfferLetter: false
   },
   {
     role: "AI Web Development Intern",
@@ -260,8 +274,8 @@ export default function Page3Experience({ onNavigate }: { onNavigate?: (page: nu
             >
               <div className="flex items-center justify-between border-b-2 border-ink pb-3 mb-3">
                 <div>
-                  <h3 className="font-abril text-lg text-ink">LinuxWorld Informatics — Official Offer Letter</h3>
-                  <p className="label-text text-xs text-ink-faded">Verified Employment & Internship Document for Aryan Singh Jadaun</p>
+                  <h3 className="font-abril text-lg text-ink">Zorvyn FinTech Pvt. Ltd. — Official Offer Letter</h3>
+                  <p className="label-text text-xs text-ink-faded">Verified Internship Offer Document (Backend Developer Intern · ₹40,000/mo) for Aryan Singh Jadaun</p>
                 </div>
                 <div className="flex items-center gap-2">
                   <a

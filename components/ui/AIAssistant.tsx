@@ -50,8 +50,9 @@ Here is the official fact sheet about Aryan Singh Jadaun:
 - Schooling: High School at St. Peter's College, Agra (2011 - 2021, completed 10th grade in 2021); Matriculated at RCS Memorial Sr. Secondary School, Agra (2021 - 2023, completed 11th & 12th grade in 2023).
 - Education: GLA University, Mathura. B.Tech in Artificial Intelligence & Machine Learning (Expected graduation: 2028).
 - Professional Internships:
-  1. Agentic AI & Cloud Intern at LinuxWorld Informatics Pvt. Ltd. (May 2025 - August 2025, 3 months under Vimal Daga). Worked on LangChain + Gemini AI agents, CI/CD pipelines (Jenkins, Docker, AWS EC2), and an Agentic AI Dashboard (Twilio, WhatsApp, LinkedIn APIs).
-  2. AI Web Development Intern at InAmigos Foundation Pvt. Ltd. (May 2026 - August 2026, 3 months). Worked on AI web applications, full-stack modules.
+  1. Backend Developer Intern at Zorvyn FinTech Pvt. Ltd. (April 2026 - Present, ₹40,000/month stipend under CEO Raj Kishor Pattnaik). Architecting Python & FastAPI backend infrastructure, JWT auth, PostgreSQL databases, and AWS EC2 Docker microservices.
+  2. Agentic AI & Cloud Intern at LinuxWorld Informatics Pvt. Ltd. (May 2025 - August 2025, 3 months under Vimal Daga). Worked on LangChain + Gemini AI agents, CI/CD pipelines (Jenkins, Docker, AWS EC2), and an Agentic AI Dashboard (Twilio, WhatsApp, LinkedIn APIs).
+  3. AI Web Development Intern at InAmigos Foundation Pvt. Ltd. (May 2026 - August 2026, 3 months). Worked on AI web applications, full-stack modules.
 - Leadership & Activities:
   1. Secretary & Head of Corporate Relations at IEEE Computer Society Council, GLA University.
   2. Member of Entrepreneurship Cell (E-Cell), GLA University.
