@@ -11,7 +11,7 @@ const timeline = [
   { year: "2021-2023", event: "Matriculation at RCS Memorial Sr. Secondary School (Completed 11th & 12th Grade in 2023)" },
   { year: "2024", event: "Enrolled at GLA University — B.Tech in AI & Machine Learning (graduating 2028)" },
   { year: "2024", event: "Interned at LinuxWorld Informatics — deep dive into Agentic AI, cloud & autonomous systems" },
-  { year: "2025", event: "Launched CAB-I-NET, CareSync HMS, Voice Auth & other AI systems — 20 projects" },
+  { year: "2025", event: "Launched CAB-I-NET, CareSync HMS, Voice Auth & other AI systems — 22 projects" },
   { year: "2025", event: "Led E-Cell entrepreneurship initiatives at GLA University" },
   { year: "2026", event: "Actively seeking full-time AI/ML Engineering & Full-Stack Development roles" },
 ];
@@ -22,8 +22,8 @@ const techStack = [
 ];
 
 const stats = [
-  { value: "20", label: "Live Projects" },
-  { value: "11", label: "Skill Domains" },
+  { value: "22", label: "Live Projects" },
+  { value: "13", label: "Skill Domains" },
   { value: "2028", label: "Graduating" },
   { value: "∞", label: "Drive" },
 ];
@@ -92,7 +92,7 @@ export default function Page2About({ onNavigate }: { onNavigate?: (page: number)
           {/* Left: Main article */}
           <div className="col-span-12 md:col-span-8">
             <DropCapParagraph
-              text="I don't plan — I ship. Raised in Agra and now studying Artificial Intelligence & Machine Learning at GLA University in Mathura, I have built a philosophy that cuts through the noise of academia: bridge research and real-world systems, always. My twenty deployed AI products are proof that this philosophy works."
+              text="I don't plan — I ship. Raised in Agra and now studying Artificial Intelligence & Machine Learning at GLA University in Mathura, I have built a philosophy that cuts through the noise of academia: bridge research and real-world systems, always. My twenty-two deployed AI & digital products are proof that this philosophy works."
             />
 
             <p className="body-text mb-4">
@@ -246,9 +246,9 @@ export default function Page2About({ onNavigate }: { onNavigate?: (page: number)
 
             <AdBlock
               title="AI/ML Engineer Available"
-              body="Aryan Singh Jadaun — AIML undergrad, 20 live AI products. Agentic AI · LangGraph · Full-Stack. Immediate availability. Results guaranteed."
+              body="Aryan Singh Jadaun — AIML undergrad, 22 live AI & digital products. Agentic AI · LangGraph · Full-Stack. Immediate availability. Results guaranteed."
               cta="CONTACT NOW →"
-              onClick={() => onNavigate?.(7)}
+              onClick={() => onNavigate?.(9)}
             />
           </aside>
         </div>

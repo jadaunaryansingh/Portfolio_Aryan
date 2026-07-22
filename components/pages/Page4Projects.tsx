@@ -7,6 +7,32 @@ import AdBlock from "@/components/newspaper/AdBlock";
 
 const projects = [
   {
+    id: "krugerx-browser",
+    label: "FEATURED BROWSER ECOSYSTEM / AI ENGINE · [WIP]",
+    headline: "KrugerX: AI-Powered Multi-Platform Browser & Engine [WIP]",
+    subhead: "Cross-platform Flutter browser client with multi-provider AI backend engine · Work In Progress",
+    body: "KrugerX is a modern AI-powered browser ecosystem currently under active development [WIP]. Features a multi-platform Flutter client (Android, iOS, Windows, macOS, Linux, Web), an async FastAPI backend (Supabase PostgreSQL, Redis, Celery), and a multi-provider AI engine unifying OpenAI, Gemini, Claude, Groq, and local Ollama LLMs.",
+    stack: ["WIP", "Flutter", "Dart", "FastAPI", "Python 3.13", "Supabase", "Redis", "Celery", "OpenAI", "Gemini", "Claude", "Groq", "Ollama"],
+    live: "https://github.com/jadaunaryansingh",
+    size: "large",
+    column: "col-span-12",
+    emoji: "🌐",
+    isWip: true,
+  },
+  {
+    id: "project-management-system",
+    label: "ENTERPRISE BACKEND ARCHITECTURE · [WIP]",
+    headline: "Enterprise Project Management System — Backend Lead [WIP]",
+    subhead: "Scalable team task management, role-based RBAC & async notification engine · Backend Lead",
+    body: "Architected and led backend development for an enterprise project management platform. Features role-based access control (RBAC), multi-tenant workspace architecture, high-performance FastAPI REST endpoints, real-time WebSocket notifications, PostgreSQL database optimization, Redis caching, and Celery async workers.",
+    stack: ["WIP", "Backend Lead", "FastAPI", "Python 3.13", "PostgreSQL", "Redis", "Celery", "Docker", "WebSockets", "JWT Auth"],
+    live: "https://github.com/jadaunaryansingh",
+    size: "large",
+    column: "col-span-12",
+    emoji: "📋",
+    isWip: true,
+  },
+  {
     id: "legally-app",
     label: "MOBILE TECH / LEGAL",
     headline: "Modern Legal Assistance Through Mobile Technology",
@@ -250,26 +276,28 @@ const projects = [
 
 function ProjectThumbnail({ id, size, emoji }: { id: string; size: string; emoji: string }) {
   const palettes: Record<string, [string, string]> = {
-    "cab-i-net":           ["#1a1a2a", "#c9a227"],
-    "travel-itinerary":    ["#2a1a1a", "#e8d5b0"],
-    "voice-auth":          ["#1a2a2a", "#e8c04a"],
-    "jailbreak":           ["#3a1a1a", "#e8d5b0"],
-    "enterprise-predictor": ["#2a2a3a", "#f5e9d4"],
-    "primetrade":          ["#1a3a2a", "#c9a227"],
-    "clothing-ai":         ["#2a1a2a", "#e8d5b0"],
-    "cancer-research":     ["#1a2a3a", "#e8d5b0"],
-    "brain-stroke":        ["#2a2a1a", "#e8c04a"],
-    "caresync-hms":        ["#1a3a2a", "#c9a227"],
-    "newspaper-portfolio": ["#1a1a1a", "#f5e9d4"],
-    "ai-agent-arch":       ["#2a1a3a", "#e8c04a"],
-    "rag-groq":            ["#1a2a1a", "#c9a227"],
-    "quizmaker":           ["#2a1a2a", "#e8d5b0"],
-    "zorvyn-backend":      ["#1a1a2a", "#c9a227"],
-    "legally-app":         ["#2a2a1a", "#e8c04a"],
-    "legally-apk":         ["#1a2a3a", "#e8c04a"],
-    "sentiment-ai":        ["#1a2a2a", "#f5e9d4"],
-    "fullstack-ai":        ["#1a2a1a", "#e8c04a"],
-    "jaipur-hospital-chatbot": ["#1a2a2a", "#e8d5b0"],
+    "krugerx-browser":           ["#0f172a", "#00B4AB"],
+    "project-management-system": ["#1e1b4b", "#818cf8"],
+    "cab-i-net":                 ["#1a1a2a", "#c9a227"],
+    "travel-itinerary":          ["#2a1a1a", "#e8d5b0"],
+    "voice-auth":                ["#1a2a2a", "#e8c04a"],
+    "jailbreak":                 ["#3a1a1a", "#e8d5b0"],
+    "enterprise-predictor":       ["#2a2a3a", "#f5e9d4"],
+    "primetrade":                ["#1a3a2a", "#c9a227"],
+    "clothing-ai":               ["#2a1a2a", "#e8d5b0"],
+    "cancer-research":           ["#1a2a3a", "#e8d5b0"],
+    "brain-stroke":              ["#2a2a1a", "#e8c04a"],
+    "caresync-hms":              ["#1a3a2a", "#c9a227"],
+    "newspaper-portfolio":       ["#1a1a1a", "#f5e9d4"],
+    "ai-agent-arch":             ["#2a1a3a", "#e8c04a"],
+    "rag-groq":                  ["#1a2a1a", "#c9a227"],
+    "quizmaker":                 ["#2a1a2a", "#e8d5b0"],
+    "zorvyn-backend":            ["#1a1a2a", "#c9a227"],
+    "legally-app":               ["#2a2a1a", "#e8c04a"],
+    "legally-apk":               ["#1a2a3a", "#e8c04a"],
+    "sentiment-ai":              ["#1a2a2a", "#f5e9d4"],
+    "fullstack-ai":              ["#1a2a1a", "#e8c04a"],
+    "jaipur-hospital-chatbot":    ["#1a2a2a", "#e8d5b0"],
   };
   const [bg, accent] = palettes[id] || ["#1a1a1a", "#c9a227"];
 
@@ -324,7 +352,7 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
             <motion.div
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
+              exit={{ height: "auto", opacity: 1 }}
               className="mt-2"
             >
               <p className="body-text text-xs text-ink-faded italic">
@@ -358,7 +386,7 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
           <span
             className="label-text text-xs font-bold border border-ink px-2 py-0.5 hover:bg-ink hover:text-paper transition-colors"
           >
-            {project.live.includes("github.com") ? "VIEW ON GITHUB ➔" : "LIVE ↗"}
+            {project.isWip ? "WORK IN PROGRESS [WIP] 🛠️" : project.live.includes("github.com") ? "VIEW ON GITHUB ➔" : "LIVE ↗"}
           </span>
         </div>
       </div>
@@ -373,7 +401,7 @@ export default function Page4Projects({ onNavigate }: { onNavigate?: (page: numb
         {/* Header */}
         <div className="text-center mb-4">
           <span className="label-text text-xs text-gold font-bold tracking-widest">
-            TECHNOLOGY & INNOVATION DESK · TWENTY SHIPPED PROJECTS
+            TECHNOLOGY & INNOVATION DESK · 22 SHIPPED & IN-PROGRESS PROJECTS
           </span>
           <OrnateRule thick />
           <motion.h2
@@ -382,7 +410,7 @@ export default function Page4Projects({ onNavigate }: { onNavigate?: (page: numb
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            Twenty Projects That
+            22 Projects That
             <br />
             Rewrite The Rules
           </motion.h2>
@@ -394,26 +422,38 @@ export default function Page4Projects({ onNavigate }: { onNavigate?: (page: numb
 
         {/* Grid */}
         <div className="grid grid-cols-12 gap-4 mt-6">
+          {/* Section: Featured Browser Ecosystem */}
+          <div className="col-span-12">
+            <SectionDivider label="FEATURED BROWSER ECOSYSTEM & MULTI-AI ENGINE" />
+          </div>
+          <ProjectCard project={projects[0]} />
+
+          {/* Section: Enterprise Backend & Management */}
+          <div className="col-span-12">
+            <SectionDivider label="ENTERPRISE BACKEND ARCHITECTURE & MANAGEMENT" />
+          </div>
+          <ProjectCard project={projects[1]} />
+
           {/* Section: Consumer & Travel */}
           <div className="col-span-12">
             <SectionDivider label="CONSUMER TECHNOLOGY & TRAVEL" />
           </div>
-          <ProjectCard project={projects[0]} />
-          <ProjectCard project={projects[1]} />
+          <ProjectCard project={projects[2]} />
+          <ProjectCard project={projects[3]} />
 
           {/* Section: AI Security & Biometrics */}
           <div className="col-span-12">
             <SectionDivider label="AI SECURITY & BIOMETRICS" />
           </div>
-          <ProjectCard project={projects[2]} />
-          <ProjectCard project={projects[3]} />
+          <ProjectCard project={projects[4]} />
+          <ProjectCard project={projects[5]} />
 
           <div className="col-span-12">
             <AdBlock
               title="Zorvyn Backend Infrastructure Goes Live"
               body="Aryan Singh Jadaun engineers high-speed backend systems with FastAPI, PostgreSQL, Docker and AWS. Verified performance under load."
               cta="CONTACT NOW →"
-              onClick={() => onNavigate?.(7)}
+              onClick={() => onNavigate?.(9)}
               className="max-w-sm mx-auto my-2"
             />
           </div>
@@ -422,42 +462,42 @@ export default function Page4Projects({ onNavigate }: { onNavigate?: (page: numb
           <div className="col-span-12">
             <SectionDivider label="ENTERPRISE ANALYTICS & FINANCE" />
           </div>
-          <ProjectCard project={projects[4]} />
-          <ProjectCard project={projects[5]} />
           <ProjectCard project={projects[6]} />
+          <ProjectCard project={projects[7]} />
+          <ProjectCard project={projects[8]} />
 
           {/* Section: Medical & Healthcare */}
           <div className="col-span-12">
             <SectionDivider label="MEDICAL RESEARCH & HEALTHCARE AI" />
           </div>
-          <ProjectCard project={projects[7]} />
-          <ProjectCard project={projects[8]} />
           <ProjectCard project={projects[9]} />
-          <ProjectCard project={projects[19]} />
+          <ProjectCard project={projects[10]} />
+          <ProjectCard project={projects[11]} />
+          <ProjectCard project={projects[21]} />
 
           {/* Section: Agentic AI & RAG */}
           <div className="col-span-12">
             <SectionDivider label="AGENTIC AI & RAG ARCHITECTURES" />
           </div>
-          <ProjectCard project={projects[11]} />
-          <ProjectCard project={projects[10]} />
+          <ProjectCard project={projects[13]} />
           <ProjectCard project={projects[12]} />
+          <ProjectCard project={projects[14]} />
 
           {/* Section: Education, Backend & Mobile */}
           <div className="col-span-12">
             <SectionDivider label="EDTECH, SYSTEM INFRASTRUCTURE & MOBILE" />
           </div>
-          <ProjectCard project={projects[13]} />
-          <ProjectCard project={projects[14]} />
           <ProjectCard project={projects[15]} />
-          <ProjectCard project={projects[18]} />
+          <ProjectCard project={projects[16]} />
+          <ProjectCard project={projects[17]} />
+          <ProjectCard project={projects[20]} />
 
           {/* Section: NLP & Collections */}
           <div className="col-span-12">
             <SectionDivider label="NATURAL LANGUAGE PROCESSING & PORTFOLIOS" />
           </div>
-          <ProjectCard project={projects[16]} />
-          <ProjectCard project={projects[17]} />
+          <ProjectCard project={projects[18]} />
+          <ProjectCard project={projects[19]} />
         </div>
 
         {/* GitHub link note */}

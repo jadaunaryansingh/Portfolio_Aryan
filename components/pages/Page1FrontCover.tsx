@@ -155,7 +155,7 @@ export default function Page1FrontCover({ onNavigate }: { onNavigate?: (page: nu
                 Born in the historic city of Agra, I am an AIML undergraduate at
                 GLA University and an alumnus of LinuxWorld Informatics. Over the course of my
                 academic journey, I have focused on designing and deploying AI-driven systems and
-                full-stack solutions. My portfolio includes twenty projects spanning machine
+                full-stack solutions. My portfolio includes twenty-two projects spanning machine
                 learning models, autonomous agentic workflows, and cloud applications.
               </span>
             </motion.p>
@@ -228,8 +228,8 @@ export default function Page1FrontCover({ onNavigate }: { onNavigate?: (page: nu
               transition={{ duration: 0.6, delay: 1.5 }}
             >
               {[
-                { num: "20", label: "AI Projects" },
-                { num: "11", label: "Skill Domains" },
+                { num: "22", label: "AI Projects" },
+                { num: "13", label: "Skill Domains" },
                 { num: "2028", label: "Graduating" },
                 { num: "∞", label: "Ambition" },
               ].map(({ num, label }) => (
@@ -252,7 +252,7 @@ export default function Page1FrontCover({ onNavigate }: { onNavigate?: (page: nu
             <p className="label-text text-xs text-ink truncate">
               CAB-I-NET Reinvents Cab Fare Comparison · Travel Itinerary AI Generates Custom Tours ·
               AI Voice Authentication Secures Systems · CareSync HMS Digitizes Hospitals ·
-              RAG with Groq Achieves High Speed · GLA University AIML Student Ships 20 Projects
+              RAG with Groq Achieves High Speed · GLA University AIML Student Ships 22 Projects
             </p>
           </div>
           <OrnateRule thick />

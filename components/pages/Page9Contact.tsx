@@ -22,7 +22,7 @@ const contactItems = [
     type: "CODE REPOSITORY",
     label: "GitHub",
     value: "github.com/jadaunaryansingh",
-    description: "Browse 20 deployed projects, live AI systems, and open-source work.",
+    description: "Browse 22 deployed projects, live AI systems, and open-source work.",
     icon: "◈",
     href: "https://github.com/jadaunaryansingh",
     copyValue: "https://github.com/jadaunaryansingh",
@@ -57,7 +57,7 @@ const fakeAds = [
   },
   {
     title: "Full-Stack Developer — PREMIUM ROLE",
-    body: "Fintech platform requires React + Python + Firebase expert. 20 live projects preferred. GLA University AIML candidates strongly encouraged to apply.",
+    body: "Fintech platform requires React + Python + Firebase expert. 22 live projects preferred. GLA University AIML candidates strongly encouraged to apply.",
     cta: "CONTACT US",
   },
   {
@@ -149,7 +149,7 @@ export default function Page9Contact({ onNavigate }: { onNavigate?: (page: numbe
               </h3>
               <p className="body-text text-sm mb-4" style={{ color: "#d4bc8a" }}>
                 Aryan Singh Jadaun — GLA University AIML undergraduate, LinuxWorld Informatics
-                alumnus, and builder of 20 live AI products — is actively seeking internships and
+                alumnus, and builder of 22 live AI & system products — is actively seeking internships and
                 full-time roles in AI/ML Engineering, Full-Stack Development, and Agentic AI.
                 Immediately available. Based in Agra; open to remote and relocation.
               </p>
