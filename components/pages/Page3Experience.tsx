@@ -20,6 +20,7 @@ const internships = [
     ],
     color: "#3178C6", // Tech Blue accent
     hasOfferLetter: true,
+    docLabel: "OFFICIAL OFFER LETTER DOCUMENT",
     offerLetterUrl: "/Offer_Letter_Aryan_Singh_Jadaun.pdf"
   },
   {
@@ -34,7 +35,9 @@ const internships = [
       "Configured robust Docker containerization pipelines, optimizing resource footprint and dependency isolation."
     ],
     color: "#ff9900", // AWS Orange accent
-    hasOfferLetter: false
+    hasOfferLetter: true,
+    docLabel: "INTERNSHIP TRAINING & SELECTION CERTIFICATE",
+    offerLetterUrl: "/Aryan_Singh.pdf"
   },
   {
     role: "AI Web Development Intern",
@@ -86,7 +89,7 @@ const leadership = [
 ];
 
 export default function Page3Experience({ onNavigate }: { onNavigate?: (page: number) => void }) {
-  const [showPdfModal, setShowPdfModal] = useState(false);
+  const [activePdf, setActivePdf] = useState<{ url: string; title: string; subtitle: string } | null>(null);
 
   return (
     <article className="newspaper-page min-h-screen paper-aged grain-overlay">
@@ -162,19 +165,27 @@ export default function Page3Experience({ onNavigate }: { onNavigate?: (page: nu
                       ))}
                     </ul>
 
-                    {/* Official Offer Letter Banner */}
-                    {job.hasOfferLetter && (
+                    {/* Official Offer / Certificate Letter Banner */}
+                    {job.hasOfferLetter && job.offerLetterUrl && (
                       <div className="mt-4 pt-3 border-t border-ink border-opacity-20 flex flex-wrap items-center justify-between gap-3 bg-paper p-3 border border-ink">
                         <div className="flex items-center gap-3">
                           <span className="text-xl">📜</span>
                           <div>
-                            <p className="label-text text-xs font-bold text-ink tracking-wider">OFFICIAL OFFER LETTER DOCUMENT</p>
-                            <p className="label-text text-[10px] text-ink-faded">{job.company} · Verified Employment Record</p>
+                            <p className="label-text text-xs font-bold text-ink tracking-wider">
+                              {job.docLabel || "OFFICIAL VERIFIED DOCUMENT"}
+                            </p>
+                            <p className="label-text text-[10px] text-ink-faded">{job.company} · Verified Record</p>
                           </div>
                         </div>
                         <div className="flex items-center gap-2">
                           <button
-                            onClick={() => setShowPdfModal(true)}
+                            onClick={() =>
+                              setActivePdf({
+                                url: job.offerLetterUrl!,
+                                title: `${job.company} — Official Document`,
+                                subtitle: `${job.docLabel || "Verified Document"} for Aryan Singh Jadaun`,
+                              })
+                            }
                             className="label-text text-xs font-bold text-paper bg-ink px-3 py-1.5 hover:bg-gold hover:text-ink transition-colors cursor-pointer"
                           >
                             PREVIEW DOCUMENT 👁
@@ -255,15 +266,15 @@ export default function Page3Experience({ onNavigate }: { onNavigate?: (page: nu
         </div>
       </div>
 
-      {/* Interactive PDF Offer Letter Viewer Modal */}
+      {/* Interactive PDF Document Viewer Modal */}
       <AnimatePresence>
-        {showPdfModal && (
+        {activePdf && (
           <motion.div
             className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={() => setShowPdfModal(false)}
+            onClick={() => setActivePdf(null)}
           >
             <motion.div
               className="bg-paper border-4 border-ink max-w-5xl w-full h-[88vh] flex flex-col p-4 relative shadow-2xl"
@@ -274,19 +285,19 @@ export default function Page3Experience({ onNavigate }: { onNavigate?: (page: nu
             >
               <div className="flex items-center justify-between border-b-2 border-ink pb-3 mb-3">
                 <div>
-                  <h3 className="font-abril text-lg text-ink">Zorvyn FinTech Pvt. Ltd. — Official Offer Letter</h3>
-                  <p className="label-text text-xs text-ink-faded">Verified Internship Offer Document (Backend Developer Intern · ₹40,000/mo) for Aryan Singh Jadaun</p>
+                  <h3 className="font-abril text-lg text-ink">{activePdf.title}</h3>
+                  <p className="label-text text-xs text-ink-faded">{activePdf.subtitle}</p>
                 </div>
                 <div className="flex items-center gap-2">
                   <a
-                    href="/Offer_Letter_Aryan_Singh_Jadaun.pdf"
-                    download="Offer_Letter_Aryan_Singh_Jadaun.pdf"
+                    href={activePdf.url}
+                    download
                     className="label-text text-xs font-bold text-paper bg-ink px-3 py-1.5 hover:bg-gold hover:text-ink transition-colors"
                   >
                     DOWNLOAD PDF ⬇
                   </a>
                   <button
-                    onClick={() => setShowPdfModal(false)}
+                    onClick={() => setActivePdf(null)}
                     className="label-text text-xs font-bold text-ink border border-ink px-3 py-1.5 hover:bg-ink hover:text-paper transition-colors cursor-pointer"
                   >
                     CLOSE ✕
@@ -296,9 +307,9 @@ export default function Page3Experience({ onNavigate }: { onNavigate?: (page: nu
 
               <div className="flex-1 w-full bg-paper-dark border border-ink overflow-hidden">
                 <iframe
-                  src="/Offer_Letter_Aryan_Singh_Jadaun.pdf"
+                  src={activePdf.url}
                   className="w-full h-full border-0"
-                  title="Aryan Singh Jadaun Offer Letter PDF"
+                  title={activePdf.title}
                 />
               </div>
             </motion.div>
