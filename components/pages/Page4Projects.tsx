@@ -422,18 +422,6 @@ export default function Page4Projects({ onNavigate }: { onNavigate?: (page: numb
 
         {/* Grid */}
         <div className="grid grid-cols-12 gap-4 mt-6">
-          {/* Section: Featured Browser Ecosystem */}
-          <div className="col-span-12">
-            <SectionDivider label="FEATURED BROWSER ECOSYSTEM & MULTI-AI ENGINE" />
-          </div>
-          <ProjectCard project={projects[0]} />
-
-          {/* Section: Enterprise Backend & Management */}
-          <div className="col-span-12">
-            <SectionDivider label="ENTERPRISE BACKEND ARCHITECTURE & MANAGEMENT" />
-          </div>
-          <ProjectCard project={projects[1]} />
-
           {/* Section: Consumer & Travel */}
           <div className="col-span-12">
             <SectionDivider label="CONSUMER TECHNOLOGY & TRAVEL" />
@@ -498,6 +486,13 @@ export default function Page4Projects({ onNavigate }: { onNavigate?: (page: numb
           </div>
           <ProjectCard project={projects[18]} />
           <ProjectCard project={projects[19]} />
+
+          {/* Section: Active Initiatives & Work In Progress [WIP] */}
+          <div className="col-span-12">
+            <SectionDivider label="ACTIVE INITIATIVES & WORK IN PROGRESS [WIP]" />
+          </div>
+          <ProjectCard project={projects[0]} />
+          <ProjectCard project={projects[1]} />
         </div>
 
         {/* GitHub link note */}
