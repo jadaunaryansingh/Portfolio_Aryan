@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { OrnateRule, SectionDivider } from "@/components/newspaper/Typography";
 import VintageStamp from "@/components/newspaper/VintageStamp";
 import AdBlock from "@/components/newspaper/AdBlock";
@@ -17,7 +18,9 @@ const internships = [
       "Engineered an Agentic AI Dashboard: a multi-tool menu-driven application integrating Twilio, WhatsApp, and LinkedIn API endpoints.",
       "Configured robust Docker containerization pipelines, optimizing resource footprint and dependency isolation."
     ],
-    color: "#ff9900" // AWS Orange accent
+    color: "#ff9900", // AWS Orange accent
+    hasOfferLetter: true,
+    offerLetterUrl: "/Offer_Letter_Aryan_Singh_Jadaun.pdf"
   },
   {
     role: "AI Web Development Intern",
@@ -29,7 +32,8 @@ const internships = [
       "Optimized frontend module delivery for responsive client viewing and maximum performance.",
       "Collaborated on unit testing, validation pipelines, and secure cloud staging deployments."
     ],
-    color: "#86bc25" // Deloitte/Foundation Green accent
+    color: "#86bc25", // Deloitte/Foundation Green accent
+    hasOfferLetter: false
   }
 ];
 
@@ -68,6 +72,8 @@ const leadership = [
 ];
 
 export default function Page3Experience({ onNavigate }: { onNavigate?: (page: number) => void }) {
+  const [showPdfModal, setShowPdfModal] = useState(false);
+
   return (
     <article className="newspaper-page min-h-screen paper-aged grain-overlay">
       <div className="max-w-7xl mx-auto px-4 py-6">
@@ -133,7 +139,7 @@ export default function Page3Experience({ onNavigate }: { onNavigate?: (page: nu
 
                     <p className="body-text text-xs italic text-ink-faded mb-3">{job.summary}</p>
 
-                    <ul className="space-y-2">
+                    <ul className="space-y-2 mb-4">
                       {job.bullets.map((bullet, bIdx) => (
                         <li key={bIdx} className="flex gap-2 items-start body-text text-xs text-ink-light">
                           <span className="text-gold shrink-0">◆</span>
@@ -141,6 +147,35 @@ export default function Page3Experience({ onNavigate }: { onNavigate?: (page: nu
                         </li>
                       ))}
                     </ul>
+
+                    {/* Official Offer Letter Banner */}
+                    {job.hasOfferLetter && (
+                      <div className="mt-4 pt-3 border-t border-ink border-opacity-20 flex flex-wrap items-center justify-between gap-3 bg-paper p-3 border border-ink">
+                        <div className="flex items-center gap-3">
+                          <span className="text-xl">📜</span>
+                          <div>
+                            <p className="label-text text-xs font-bold text-ink tracking-wider">OFFICIAL OFFER LETTER DOCUMENT</p>
+                            <p className="label-text text-[10px] text-ink-faded">LinuxWorld Informatics Pvt. Ltd. · Verified Employment Record</p>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <button
+                            onClick={() => setShowPdfModal(true)}
+                            className="label-text text-xs font-bold text-paper bg-ink px-3 py-1.5 hover:bg-gold hover:text-ink transition-colors cursor-pointer"
+                          >
+                            PREVIEW DOCUMENT 👁
+                          </button>
+                          <a
+                            href={job.offerLetterUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="label-text text-xs font-bold text-ink border border-ink px-3 py-1.5 hover:bg-ink hover:text-paper transition-colors"
+                          >
+                            OPEN PDF ↗
+                          </a>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </motion.div>
               ))}
@@ -149,7 +184,7 @@ export default function Page3Experience({ onNavigate }: { onNavigate?: (page: nu
             {/* Bottom mini classified layout */}
             <div className="border border-ink p-3 bg-[#faf3e0] text-center">
               <p className="label-text text-[0.6rem] text-ink-faded">
-                VERIFIED ARCHIVES · PUBLIC REGISTERED RECORD OF EMPLOYMENT
+                VERIFIED ARCHIVES · PUBLIC REGISTERED RECORD OF EMPLOYMENT & OFFICIAL DOCUMENTS
               </p>
             </div>
           </div>
@@ -192,7 +227,7 @@ export default function Page3Experience({ onNavigate }: { onNavigate?: (page: nu
               title="Talent Available for AI Engineering"
               body="Aryan Singh Jadaun is available for autonomous Agentic AI, LangGraph orchestration, cloud deployments, and full-stack engineering."
               cta="HIRE ME NOW →"
-              onClick={() => onNavigate?.(7)}
+              onClick={() => onNavigate?.(9)}
             />
 
             {/* Stamps */}
@@ -205,6 +240,58 @@ export default function Page3Experience({ onNavigate }: { onNavigate?: (page: nu
 
         </div>
       </div>
+
+      {/* Interactive PDF Offer Letter Viewer Modal */}
+      <AnimatePresence>
+        {showPdfModal && (
+          <motion.div
+            className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setShowPdfModal(false)}
+          >
+            <motion.div
+              className="bg-paper border-4 border-ink max-w-5xl w-full h-[88vh] flex flex-col p-4 relative shadow-2xl"
+              initial={{ scale: 0.9, y: 20 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.9, y: 20 }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex items-center justify-between border-b-2 border-ink pb-3 mb-3">
+                <div>
+                  <h3 className="font-abril text-lg text-ink">LinuxWorld Informatics — Official Offer Letter</h3>
+                  <p className="label-text text-xs text-ink-faded">Verified Employment & Internship Document for Aryan Singh Jadaun</p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <a
+                    href="/Offer_Letter_Aryan_Singh_Jadaun.pdf"
+                    download="Offer_Letter_Aryan_Singh_Jadaun.pdf"
+                    className="label-text text-xs font-bold text-paper bg-ink px-3 py-1.5 hover:bg-gold hover:text-ink transition-colors"
+                  >
+                    DOWNLOAD PDF ⬇
+                  </a>
+                  <button
+                    onClick={() => setShowPdfModal(false)}
+                    className="label-text text-xs font-bold text-ink border border-ink px-3 py-1.5 hover:bg-ink hover:text-paper transition-colors cursor-pointer"
+                  >
+                    CLOSE ✕
+                  </button>
+                </div>
+              </div>
+
+              <div className="flex-1 w-full bg-paper-dark border border-ink overflow-hidden">
+                <iframe
+                  src="/Offer_Letter_Aryan_Singh_Jadaun.pdf"
+                  className="w-full h-full border-0"
+                  title="Aryan Singh Jadaun Offer Letter PDF"
+                />
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </article>
   );
 }
+
