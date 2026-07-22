@@ -1,20 +1,51 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { OrnateRule, SectionDivider } from "@/components/newspaper/Typography";
+import { OrnateRule } from "@/components/newspaper/Typography";
 import VintageStamp from "@/components/newspaper/VintageStamp";
+import { useRef, useEffect, useState } from "react";
+import { useInView } from "framer-motion";
+
+interface SkillItemProps {
+  name: string;
+  note: string;
+}
 
 const skillCategories = [
+  {
+    category: "AGENTIC AI & MULTI-AGENT SYSTEMS",
+    icon: "⬡",
+    desc: "LangGraph, AutoGen, CrewAI, MCP, Autonomous Agents",
+    skills: [
+      { name: "LangGraph & LangChain", note: "Multi-agent DAGs & stateful workflows" },
+      { name: "Autonomous AI Agents", note: "Tool-calling & self-healing loops" },
+      { name: "Multi-Agent Orchestration", note: "CrewAI, AutoGen, Swarm architectures" },
+      { name: "Model Context Protocol (MCP)", note: "Custom tools & external integrations" },
+      { name: "Advanced RAG & Vector DBs", note: "Pinecone, ChromaDB, hybrid search" },
+    ],
+  },
+  {
+    category: "FLUTTER & CROSS-PLATFORM APPS",
+    icon: "⬡",
+    desc: "Flutter, Dart, Mobile & PC Desktop Applications",
+    skills: [
+      { name: "Flutter Cross-Platform", note: "iOS, Android, Windows & macOS apps" },
+      { name: "Dart Language Mastery", note: "Async, OOP, reactive programming" },
+      { name: "Desktop & Mobile UI/UX", note: "Responsive layouts & adaptive views" },
+      { name: "State Management", note: "Provider, Riverpod, Bloc pattern" },
+      { name: "Native Feature & API Integration", note: "Plugins, SQLite, Push Notifications" },
+    ],
+  },
   {
     category: "ML / DEEP LEARNING / NLP / CV",
     icon: "⬡",
     desc: "Deep Learning, NLP, Computer Vision",
     skills: [
-      { name: "Deep Learning (CNN, RNN, Transformers)", level: 8, note: "Production models" },
-      { name: "Natural Language Processing", level: 9, note: "LLMs, BERT, SpaCy" },
-      { name: "Computer Vision", level: 7, note: "OpenCV, YOLO, CNNs" },
-      { name: "Scikit-Learn / PyTorch", level: 8, note: "Classical ML & DL" },
-      { name: "LangChain / LangGraph", level: 9, note: "Agentic pipelines" },
+      { name: "Deep Learning (CNN, RNN, Transformers)", note: "Production models" },
+      { name: "Natural Language Processing", note: "LLMs, BERT, SpaCy" },
+      { name: "Computer Vision", note: "OpenCV, YOLO, CNNs" },
+      { name: "Scikit-Learn / PyTorch", note: "Classical ML & DL" },
+      { name: "LangChain / LangGraph", note: "Agentic pipelines" },
     ],
   },
   {
@@ -22,11 +53,11 @@ const skillCategories = [
     icon: "⬡",
     desc: "React, Python, Flask, APIs",
     skills: [
-      { name: "Python", level: 10, note: "Primary language" },
-      { name: "Flask / FastAPI / Streamlit", level: 9, note: "Backend & AI UI" },
-      { name: "React / JavaScript", level: 8, note: "Frontend" },
-      { name: "REST API Design", level: 9, note: "OpenAPI, JSON" },
-      { name: "Firebase / Supabase", level: 8, note: "BaaS & Auth" },
+      { name: "Python", note: "Primary language" },
+      { name: "Flask / FastAPI / Streamlit", note: "Backend & AI UI" },
+      { name: "React / JavaScript", note: "Frontend" },
+      { name: "REST API Design", note: "OpenAPI, JSON" },
+      { name: "Firebase / Supabase", note: "BaaS & Auth" },
     ],
   },
   {
@@ -34,11 +65,11 @@ const skillCategories = [
     icon: "⬡",
     desc: "CI/CD, Automation, Monitoring",
     skills: [
-      { name: "Jenkins CI/CD Pipelines", level: 8, note: "Full RHEL setup" },
-      { name: "Docker & Containerization", level: 9, note: "Docker Hub, Compose" },
-      { name: "GitHub Actions / Webhooks", level: 8, note: "Automated deploys" },
-      { name: "Monitoring & Logging", level: 7, note: "Production observability" },
-      { name: "Shell Scripting", level: 8, note: "RHEL / Linux" },
+      { name: "Jenkins CI/CD Pipelines", note: "Full RHEL setup" },
+      { name: "Docker & Containerization", note: "Docker Hub, Compose" },
+      { name: "GitHub Actions / Webhooks", note: "Automated deploys" },
+      { name: "Monitoring & Logging", note: "Production observability" },
+      { name: "Shell Scripting", note: "RHEL / Linux" },
     ],
   },
   {
@@ -46,11 +77,11 @@ const skillCategories = [
     icon: "⬡",
     desc: "EC2, S3, Lambda, Docker on Cloud",
     skills: [
-      { name: "AWS EC2 & Compute", level: 8, note: "Instance management" },
-      { name: "AWS S3 & Storage", level: 8, note: "Object storage" },
-      { name: "AWS Lambda", level: 7, note: "Serverless functions" },
-      { name: "Docker on Cloud", level: 8, note: "ECS-ready containers" },
-      { name: "Cloud Architecture", level: 7, note: "Scalable design" },
+      { name: "AWS EC2 & Compute", note: "Instance management" },
+      { name: "AWS S3 & Storage", note: "Object storage" },
+      { name: "AWS Lambda", note: "Serverless functions" },
+      { name: "Docker on Cloud", note: "ECS-ready containers" },
+      { name: "Cloud Architecture", note: "Scalable design" },
     ],
   },
   {
@@ -58,11 +89,11 @@ const skillCategories = [
     icon: "⬡",
     desc: "Python Scripts, Workflow Automation",
     skills: [
-      { name: "Python Automation Scripts", level: 9, note: "Complex workflows" },
-      { name: "Web Scraping", level: 9, note: "BeautifulSoup, Selenium" },
-      { name: "Task Scheduling", level: 8, note: "Cron, Celery" },
-      { name: "Workflow Automation", level: 8, note: "End-to-end pipelines" },
-      { name: "Process Orchestration", level: 7, note: "Multi-step agents" },
+      { name: "Python Automation Scripts", note: "Complex workflows" },
+      { name: "Web Scraping", note: "BeautifulSoup, Selenium" },
+      { name: "Task Scheduling", note: "Cron, Celery" },
+      { name: "Workflow Automation", note: "End-to-end pipelines" },
+      { name: "Process Orchestration", note: "Multi-step agents" },
     ],
   },
   {
@@ -70,11 +101,11 @@ const skillCategories = [
     icon: "⬡",
     desc: "SQL, NoSQL, Data Modeling",
     skills: [
-      { name: "PostgreSQL / MySQL", level: 8, note: "Relational DBs" },
-      { name: "MongoDB / NoSQL", level: 8, note: "Document stores" },
-      { name: "Firebase Firestore", level: 8, note: "Real-time DB" },
-      { name: "Data Modeling", level: 8, note: "Schema design" },
-      { name: "Query Optimization", level: 7, note: "Performance tuning" },
+      { name: "PostgreSQL / MySQL", note: "Relational DBs" },
+      { name: "MongoDB / NoSQL", note: "Document stores" },
+      { name: "Firebase Firestore", note: "Real-time DB" },
+      { name: "Data Modeling", note: "Schema design" },
+      { name: "Query Optimization", note: "Performance tuning" },
     ],
   },
   {
@@ -82,11 +113,11 @@ const skillCategories = [
     icon: "⬡",
     desc: "LLM Optimization, AI Prompting",
     skills: [
-      { name: "LLM Prompt Design", level: 9, note: "GPT, Gemini, Claude" },
-      { name: "Chain-of-Thought Prompting", level: 9, note: "Reasoning chains" },
-      { name: "RAG (Retrieval-Augmented)", level: 8, note: "Vector search" },
-      { name: "Gemini API Integration", level: 9, note: "Production use" },
-      { name: "Agentic AI Patterns", level: 8, note: "Tool-calling agents" },
+      { name: "LLM Prompt Design", note: "GPT, Gemini, Claude" },
+      { name: "Chain-of-Thought Prompting", note: "Reasoning chains" },
+      { name: "RAG (Retrieval-Augmented)", note: "Vector search" },
+      { name: "Gemini API Integration", note: "Production use" },
+      { name: "Agentic AI Patterns", note: "Tool-calling agents" },
     ],
   },
   {
@@ -94,11 +125,11 @@ const skillCategories = [
     icon: "⬡",
     desc: "System Admin, Shell Scripting",
     skills: [
-      { name: "RHEL / Ubuntu Administration", level: 8, note: "LinuxWorld trained" },
-      { name: "Bash / Shell Scripting", level: 9, note: "Automation scripts" },
-      { name: "System Configuration", level: 8, note: "Services & daemons" },
-      { name: "Networking & Security", level: 7, note: "Firewall, SSH, ports" },
-      { name: "Package Management", level: 8, note: "dnf, apt, pip" },
+      { name: "RHEL / Ubuntu Administration", note: "LinuxWorld trained" },
+      { name: "Bash / Shell Scripting", note: "Automation scripts" },
+      { name: "System Configuration", note: "Services & daemons" },
+      { name: "Networking & Security", note: "Firewall, SSH, ports" },
+      { name: "Package Management", note: "dnf, apt, pip" },
     ],
   },
   {
@@ -106,11 +137,11 @@ const skillCategories = [
     icon: "⬡",
     desc: "Git, GitHub, Collaboration",
     skills: [
-      { name: "Git", level: 10, note: "Daily driver" },
-      { name: "GitHub Flow & PR Reviews", level: 9, note: "Team collaboration" },
-      { name: "Branching Strategies", level: 8, note: "Git Flow, trunk" },
-      { name: "GitHub Actions", level: 8, note: "CI/CD automation" },
-      { name: "Open Source Contribution", level: 7, note: "PRs & issues" },
+      { name: "Git", note: "Daily driver" },
+      { name: "GitHub Flow & PR Reviews", note: "Team collaboration" },
+      { name: "Branching Strategies", note: "Git Flow, trunk" },
+      { name: "GitHub Actions", note: "CI/CD automation" },
+      { name: "Open Source Contribution", note: "PRs & issues" },
     ],
   },
   {
@@ -118,11 +149,11 @@ const skillCategories = [
     icon: "⬡",
     desc: "REST APIs, GraphQL, Webhooks",
     skills: [
-      { name: "REST API Consumption", level: 9, note: "External services" },
-      { name: "API Design & Documentation", level: 9, note: "OpenAPI, Swagger" },
-      { name: "Webhooks & Event Streams", level: 8, note: "Real-time events" },
-      { name: "GraphQL", level: 7, note: "Query language" },
-      { name: "Rate Limiting & Auth", level: 8, note: "JWT, OAuth" },
+      { name: "REST API Consumption", note: "External services" },
+      { name: "API Design & Documentation", note: "OpenAPI, Swagger" },
+      { name: "Webhooks & Event Streams", note: "Real-time events" },
+      { name: "GraphQL", note: "Query language" },
+      { name: "Rate Limiting & Auth", note: "JWT, OAuth" },
     ],
   },
   {
@@ -130,58 +161,26 @@ const skillCategories = [
     icon: "⬡",
     desc: "Design Systems, User Experience",
     skills: [
-      { name: "UI Component Design", level: 8, note: "React, Tailwind" },
-      { name: "UX Principles", level: 8, note: "User-centred design" },
-      { name: "Responsive Layouts", level: 9, note: "Mobile-first" },
-      { name: "Streamlit / Gradio UIs", level: 9, note: "AI-first interfaces" },
-      { name: "Accessibility", level: 7, note: "WCAG basics" },
+      { name: "UI Component Design", note: "React, Tailwind" },
+      { name: "UX Principles", note: "User-centred design" },
+      { name: "Responsive Layouts", note: "Mobile-first & Desktop" },
+      { name: "Streamlit / Gradio UIs", note: "AI-first interfaces" },
+      { name: "Accessibility", note: "WCAG basics" },
     ],
   },
 ];
 
-import { useRef, useEffect, useState } from "react";
-import { useInView } from "framer-motion";
-
-function SkillMeter({ name, level, note }: { name: string; level: number; note: string }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true });
-  const [displayLevel, setDisplayLevel] = useState(0);
-
-  useEffect(() => {
-    if (isInView) {
-      let start = 0;
-      const timer = setInterval(() => {
-        start += 1;
-        setDisplayLevel(start);
-        if (start >= level) clearInterval(timer);
-      }, 70);
-      return () => clearInterval(timer);
-    }
-  }, [isInView, level]);
-
-  const bars = Array.from({ length: 10 }, (_, i) => i < displayLevel);
-
+function SkillItem({ name, note }: SkillItemProps) {
   return (
-    <div ref={ref} className="flex items-center gap-2 py-1.5 border-b border-ink border-opacity-10">
-      <div className="flex-1 min-w-0">
+    <div className="flex items-center justify-between py-1.5 border-b border-ink border-opacity-10">
+      <div className="flex-1 min-w-0 pr-2">
         <div className="flex items-baseline gap-2 flex-wrap">
           <span className="body-text text-xs font-bold text-ink">{name}</span>
           <span className="label-text text-xs text-ink-faded hidden md:inline">{note}</span>
         </div>
       </div>
-      <div className="flex gap-0.5 shrink-0">
-        {bars.map((filled, i) => (
-          <motion.div
-            key={i}
-            className={`w-2 h-2 border border-ink ${filled ? "bg-ink" : "bg-transparent"}`}
-            initial={{ scale: 0 }}
-            animate={isInView ? { scale: 1 } : { scale: 0 }}
-            transition={{ delay: i * 0.04, duration: 0.15 }}
-          />
-        ))}
-      </div>
-      <span className="label-text text-xs font-bold text-gold w-4 shrink-0 text-right">
-        {displayLevel}
+      <span className="label-text text-[10px] font-bold tracking-wider text-gold px-1.5 py-0.5 border border-gold border-opacity-40 uppercase shrink-0">
+        EXPERT
       </span>
     </div>
   );
@@ -231,7 +230,7 @@ export default function Page7Skills({ onNavigate }: { onNavigate?: (page: number
         {/* Header */}
         <div className="text-center mb-4">
           <span className="label-text text-xs text-gold font-bold tracking-widest">
-            TECHNOLOGY INDEX · ELEVEN COMPETENCY DOMAINS
+            TECHNOLOGY INDEX · THIRTEEN COMPETENCY DOMAINS
           </span>
           <OrnateRule thick />
           <motion.h2
@@ -246,14 +245,14 @@ export default function Page7Skills({ onNavigate }: { onNavigate?: (page: number
           </motion.h2>
           <OrnateRule thick />
           <p className="label-text text-xs text-ink-faded mt-2">
-            11 SKILL DOMAINS · 55+ SUB-SKILLS · ALL PRODUCTION-TESTED
+            13 SKILL DOMAINS · 65+ SUB-SKILLS · ALL PRODUCTION-TESTED & EXPERT LEVEL
           </p>
         </div>
 
         {/* Summary counters */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
           <Counter value="20" label="Live AI Products" />
-          <Counter value="11" label="Skill Domains" />
+          <Counter value="13" label="Skill Domains" />
           <Counter value="3+" label="Years Building" />
           <Counter value="∞" label="Curiosity" />
         </div>
@@ -262,10 +261,20 @@ export default function Page7Skills({ onNavigate }: { onNavigate?: (page: number
         <div className="border-2 border-ink p-4 mb-6 bg-cream">
           <div className="flex items-center gap-2 mb-2">
             <span className="label-text text-xs font-bold">TECHNOLOGY MARKET INDEX:</span>
-            <span className="label-text text-xs text-gold">▲ BULLISH ON AGENTIC AI</span>
+            <span className="label-text text-xs text-gold">▲ BULLISH ON AGENTIC AI & FLUTTER</span>
           </div>
           <div className="flex flex-wrap gap-4">
-            {["Python ▲98", "LangGraph ▲92", "Flask ▲90", "Docker ▲88", "AWS ▲83", "React ▲80", "NLP ▲90", "Gemini ▲95"].map((item) => (
+            {[
+              "Agentic AI ▲ EXPERT",
+              "Flutter ▲ EXPERT",
+              "Python ▲ EXPERT",
+              "LangGraph ▲ EXPERT",
+              "FastAPI ▲ EXPERT",
+              "Docker ▲ EXPERT",
+              "AWS ▲ EXPERT",
+              "React ▲ EXPERT",
+              "Gemini ▲ EXPERT",
+            ].map((item) => (
               <span key={item} className="label-text text-xs font-bold text-ink">
                 {item}
               </span>
@@ -293,7 +302,7 @@ export default function Page7Skills({ onNavigate }: { onNavigate?: (page: number
               </div>
               <div className="space-y-0.5">
                 {cat.skills.map((skill) => (
-                  <SkillMeter key={skill.name} {...skill} />
+                  <SkillItem key={skill.name} {...skill} />
                 ))}
               </div>
             </motion.div>
@@ -302,17 +311,17 @@ export default function Page7Skills({ onNavigate }: { onNavigate?: (page: number
           {/* Legend */}
           <div className="border border-ink p-4 flex flex-col justify-center md:col-span-2">
             <p className="label-text text-xs font-bold mb-3 border-b border-ink pb-2 text-center">
-              ── PROFICIENCY RATING SCALE ──
+              ── DOMAIN MASTERY & PROFICIENCY ──
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {[
-                { range: "9–10", label: "Expert", desc: "Production mastery" },
-                { range: "7–8", label: "Advanced", desc: "Professional depth" },
-                { range: "5–6", label: "Proficient", desc: "Working knowledge" },
-                { range: "1–4", label: "Learning", desc: "Active development" },
-              ].map(({ range, label, desc }) => (
-                <div key={range} className="border border-ink p-2 text-center">
-                  <span className="label-text text-xs font-bold text-gold block">{range}</span>
+                { level: "EXPERT", label: "Agentic AI & LLMs", desc: "Production Systems" },
+                { level: "EXPERT", label: "Flutter & Mobile/PC", desc: "Cross-Platform Apps" },
+                { level: "EXPERT", label: "Full-Stack & Cloud", desc: "AWS, DevOps & CI/CD" },
+                { level: "EXPERT", label: "System Architecture", desc: "Battle-Tested Systems" },
+              ].map(({ level, label, desc }) => (
+                <div key={label} className="border border-ink p-2 text-center">
+                  <span className="label-text text-xs font-bold text-gold block">{level}</span>
                   <span className="label-text text-xs font-bold text-ink block mt-0.5">{label}</span>
                   <span className="body-text text-xs text-ink-faded">{desc}</span>
                 </div>
@@ -322,7 +331,7 @@ export default function Page7Skills({ onNavigate }: { onNavigate?: (page: number
             <div className="mt-4 p-3 bg-ink text-paper text-center">
               <p className="label-text text-xs text-gold font-bold mb-1">EDITOR'S NOTE</p>
               <p className="body-text text-xs" style={{ color: "#e8d5b0" }}>
-                All ratings reflect production usage across 20 deployed projects — not academic study.
+                All domains reflect Expert-Level production usage across 20+ deployed projects — not academic study.
                 LinuxWorld Informatics trained. GLA University AIML backbone.
               </p>
             </div>
@@ -334,13 +343,14 @@ export default function Page7Skills({ onNavigate }: { onNavigate?: (page: number
           <p className="label-text text-xs font-bold mb-3 text-center tracking-widest">── COMPLETE TECHNOLOGY INDEX ──</p>
           <div className="flex flex-wrap justify-center gap-2">
             {[
-              "Python","Flask","FastAPI","Streamlit","React","JavaScript",
-              "LangGraph","LangChain","LLMs","Gemini API","Prompt Engineering","RAG",
-              "NLP","Computer Vision","Deep Learning","Scikit-Learn","PyTorch",
-              "Docker","Jenkins","CI/CD","GitHub Actions","RHEL","Linux","Bash",
-              "AWS EC2","AWS S3","AWS Lambda","Firebase","MongoDB","PostgreSQL","MySQL",
-              "REST APIs","GraphQL","Webhooks","Web Scraping","Selenium","BeautifulSoup",
-              "Git","GitHub","HuggingFace","Netlify","Render","Tailwind CSS","UI/UX",
+              "Python", "Flutter", "Dart", "Agentic AI", "LangGraph", "LangChain", "AutoGen", "CrewAI", "MCP",
+              "Flask", "FastAPI", "Streamlit", "React", "JavaScript", "Mobile Apps", "PC Apps",
+              "LLMs", "Gemini API", "Prompt Engineering", "RAG", "Vector DBs",
+              "NLP", "Computer Vision", "Deep Learning", "Scikit-Learn", "PyTorch",
+              "Docker", "Jenkins", "CI/CD", "GitHub Actions", "RHEL", "Linux", "Bash",
+              "AWS EC2", "AWS S3", "AWS Lambda", "Firebase", "MongoDB", "PostgreSQL", "MySQL",
+              "REST APIs", "GraphQL", "Webhooks", "Web Scraping", "Selenium", "BeautifulSoup",
+              "Git", "GitHub", "HuggingFace", "Netlify", "Render", "Tailwind CSS", "UI/UX",
             ].map((tech, i) => (
               <motion.span
                 key={tech}
@@ -368,3 +378,4 @@ export default function Page7Skills({ onNavigate }: { onNavigate?: (page: number
     </article>
   );
 }
+

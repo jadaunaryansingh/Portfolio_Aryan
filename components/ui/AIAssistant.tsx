@@ -22,12 +22,12 @@ const knowledgeBase: Record<string, string> = {
   "rag": "The Groq RAG system implements high-speed semantic document retrieval pipelines and context-aware responses using LangChain and Vector Databases.",
   "zorvyn": "Zorvyn Backend is a secure, scalable backend core featuring REST APIs, JWT authentication, PostgreSQL, and Docker containerization deployed on AWS.",
   "jailbreak": "The Jailbreak Web App is a security platform built for an IEEE event demonstrating prompt injection simulation, LLM vulnerabilities, and defense strategies.",
-  "skills": "Aryan has 11 skill domains: ML/DL/NLP/CV, Full-Stack Dev (React, Python, FastAPI), DevOps (CI/CD, Jenkins, Docker), AWS Cloud (EC2, S3, Lambda), Automation/Scripting, Database Management, Prompt Engineering, Linux, Version Control, API Integration, and UI/UX Design.",
+  "skills": "Aryan has 13 skill domains: Agentic AI & Multi-Agent Systems, Flutter & Cross-Platform Apps (Mobile & PC), ML/DL/NLP/CV, Full-Stack Dev (React, Python, FastAPI), DevOps (CI/CD, Jenkins, Docker), AWS Cloud (EC2, S3, Lambda), Automation/Scripting, Database Management, Prompt Engineering, Linux, Version Control, API Integration, and UI/UX Design.",
   "contact": "Reach Aryan at: Email — aryansinghjadaun@gmail.com | GitHub — github.com/jadaunaryansingh | LinkedIn — linkedin.com/in/jadaunaryansingh | WhatsApp — +91 98370 39028. Resume on Google Drive and Notion.",
   "resume": "Aryan's PDF resume is at: https://drive.google.com/file/d/19ZoiBLyYThKkgC_hwxmSNl2dKR1TsGR5/view. His interactive Notion E-Resume is at: https://app.notion.com/p/Aryan-Singh-Jadaun-3776bf65d55880a19550e857237863a2?source=copy_link",
   "github": "Aryan's GitHub: github.com/jadaunaryansingh — Find Zorvyn Backend, CareSync, CAB-I-NET, Voice Auth, and 16 other projects.",
   "python": "Python is Aryan's primary language — used across all 20 projects. He specialises in FastAPI, Flask, Streamlit, Pandas, LangChain, PyTorch, and Scikit-Learn.",
-  "ai": "Aryan's AI expertise spans: LLMs & Prompt Engineering, LangGraph Agentic Pipelines, Groq RAG systems, Speech Recognition, NLP, and medical healthcare AI modeling.",
+  "ai": "Aryan's AI expertise spans: Agentic AI Systems (LangGraph, AutoGen, CrewAI, MCP), LLMs & Prompt Engineering, Groq RAG systems, Speech Recognition, NLP, and medical healthcare AI modeling.",
   "linuxworld": "LinuxWorld Informatics was Aryan's internship — focused on Autonomous Systems, Agentic AI, ML/DL, cloud technologies, and Linux system administration. He earned 3 certifications there.",
   "agra": "Aryan is from Agra, Uttar Pradesh — the city of the Taj Mahal. He attended St. Peter's College there before moving to GLA University in Mathura for his AIML degree.",
   "default": "A most intriguing question! I can tell you about Aryan's 20 projects (like CAB-I-NET, Voice Auth, CareSync HMS, Zorvyn, Groq RAG, Jaipur Hospital Chatbot), skills, education, or contact details.",
@@ -67,7 +67,7 @@ Here is the official fact sheet about Aryan Singh Jadaun:
   - AI Agent Architecture: autonomous workflows (Live: https://web-silk-six-36.vercel.app/)
   - Living Newspaper Portfolio: the current interactive portfolio website (Live: https://github.com/jadaunaryansingh/Portfolio)
   - Jaipur Hospital Chatbot: web scraping hospital booking chatbot (Live: https://chatbot-hospitals.onrender.com/)
-- Technical Skills: Python (primary), FastAPI, Flask, Streamlit, LangGraph, LangChain, React, Docker, Jenkins, AWS (EC2, S3, Lambda), PostgreSQL, Git.
+- Technical Skills: Python (primary), Flutter & Dart (Mobile & PC apps), Agentic AI (LangGraph, AutoGen, CrewAI, MCP), FastAPI, Flask, Streamlit, React, Docker, Jenkins, AWS (EC2, S3, Lambda), PostgreSQL, Git.
 - Certifications: Microsoft Azure AI Fundamentals (AI-900), Microsoft Azure Fundamentals (AZ-900), AWS Solutions Architecture Job Simulation, Deloitte Tech/Data simulations, JP Morgan Software Engineering simulation, LinuxWorld.
 - Contacts: Email (aryansinghjadaun@gmail.com), GitHub (github.com/jadaunaryansingh), LinkedIn (linkedin.com/in/jadaunaryansingh), WhatsApp (+91 98370 39028). Resume Links: PDF (https://drive.google.com/file/d/19ZoiBLyYThKkgC_hwxmSNl2dKR1TsGR5/view), Notion (https://app.notion.com/p/Aryan-Singh-Jadaun-3776bf65d55880a19550e857237863a2?source=copy_link).
 
