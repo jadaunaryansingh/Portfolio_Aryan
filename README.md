@@ -4,6 +4,8 @@ A cinematic, highly interactive 1930s-1940s newspaper-style Next.js developer po
 
 Features 3D page-flip animations, vintage letterpress typography, high-contrast halftone styling, and a real-time Gemini AI Correspondent chatbot.
 
+Showcasing **40+ live projects** and **40+ mini projects & experiments** built with cutting-edge technologies.
+
 ---
 
 ## 🛠️ Tech Stack & Requirements
@@ -66,3 +68,29 @@ The chatbot uses a secure server-side API route handler. To configure the Gemini
 - `components/newspaper/`: Reusable typographic and newspaper elements (Masthead, AdBlocks, BreakingNewsTicker, VintageStamp).
 - `components/ui/`: UI features, including `AIAssistant.tsx` (the chatbot widget) and `SoundToggle.tsx`.
 - `public/`: Hosting static textures, Azure badge assets, and the GitHub redirect QR code.
+
+## 📊 Portfolio Highlights
+
+- **40+ Live Projects**: Full-stack applications deployed and ready to explore
+- **40+ Mini Projects & Experiments**: Quick solutions showcasing diverse tech stacks
+- **AI-Powered Features**: Gemini AI chatbot, ML models, and intelligent automation
+- **Production-Ready Code**: Best practices in React, TypeScript, and modern web development
+
+---
+
+## 🚀 Features
+
+- 🎬 Cinematic 3D page-flip animations
+- 📰 Vintage newspaper-style design with halftone effects
+- 🤖 Real-time AI chatbot powered by Gemini
+- 📱 Fully responsive design
+- ✨ Smooth animations and transitions
+- 🎨 Dark mode support
+- ⚡ Optimized performance
+- 🔗 40+ live project showcases
+
+---
+
+## 📄 License
+
+This portfolio is a personal project by Aryan Singh Jadaun.
