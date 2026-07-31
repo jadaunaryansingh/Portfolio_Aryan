@@ -48,7 +48,7 @@ const fallbackUser: GitHubUser = {
   html_url: "https://github.com/jadaunaryansingh",
   name: "Aryan Singh Jadaun",
   bio: "AIML Engineer | Full Stack Developer | LinuxWorld Alumnus | GLA University 2028",
-  public_repos: 20,
+  public_repos: 40,
   followers: 48,
   following: 32,
   created_at: "2023-01-15T00:00:00Z",
@@ -513,7 +513,7 @@ export default function Page8GitAnalysis({ onNavigate }: { onNavigate?: (page: n
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
           <div className="border border-ink p-3 text-center bg-cream">
             <span className="label-text text-xs text-ink-faded block uppercase">PUBLIC REPOSITORIES</span>
-            <span className="font-abril text-2xl text-ink block mt-1">{user.public_repos || 20}+</span>
+            <span className="font-abril text-2xl text-ink block mt-1">{user.public_repos || 40}+</span>
             <span className="label-text text-[10px] text-gold font-bold uppercase">DEPLOYED AI & DIGITAL SYSTEMS</span>
           </div>
 

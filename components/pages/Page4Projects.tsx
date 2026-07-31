@@ -401,7 +401,7 @@ export default function Page4Projects({ onNavigate }: { onNavigate?: (page: numb
         {/* Header */}
         <div className="text-center mb-4">
           <span className="label-text text-xs text-gold font-bold tracking-widest">
-            TECHNOLOGY & INNOVATION DESK · 22 SHIPPED & IN-PROGRESS PROJECTS
+            TECHNOLOGY & INNOVATION DESK · 40+ SHIPPED & IN-PROGRESS PROJECTS
           </span>
           <OrnateRule thick />
           <motion.h2
@@ -410,7 +410,7 @@ export default function Page4Projects({ onNavigate }: { onNavigate?: (page: numb
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            22 Projects That
+            40+ Projects That
             <br />
             Rewrite The Rules
           </motion.h2>

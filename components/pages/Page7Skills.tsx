@@ -251,7 +251,7 @@ export default function Page7Skills({ onNavigate }: { onNavigate?: (page: number
 
         {/* Summary counters */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
-          <Counter value="20" label="Live AI Products" />
+          <Counter value="40+" label="Live AI Products" />
           <Counter value="13" label="Skill Domains" />
           <Counter value="3+" label="Years Building" />
           <Counter value="∞" label="Curiosity" />
@@ -331,7 +331,7 @@ export default function Page7Skills({ onNavigate }: { onNavigate?: (page: number
             <div className="mt-4 p-3 bg-ink text-paper text-center">
               <p className="label-text text-xs text-gold font-bold mb-1">EDITOR'S NOTE</p>
               <p className="body-text text-xs" style={{ color: "#e8d5b0" }}>
-                All domains reflect Expert-Level production usage across 20+ deployed projects — not academic study.
+                All domains reflect Expert-Level production usage across 40+ deployed projects — not academic study.
                 LinuxWorld Informatics trained. GLA University AIML backbone.
               </p>
             </div>

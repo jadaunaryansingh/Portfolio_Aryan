@@ -228,7 +228,7 @@ export default function Page1FrontCover({ onNavigate }: { onNavigate?: (page: nu
               transition={{ duration: 0.6, delay: 1.5 }}
             >
               {[
-                { num: "22", label: "AI Projects" },
+                { num: "40+", label: "AI Projects" },
                 { num: "13", label: "Skill Domains" },
                 { num: "2028", label: "Graduating" },
                 { num: "∞", label: "Ambition" },
@@ -252,7 +252,7 @@ export default function Page1FrontCover({ onNavigate }: { onNavigate?: (page: nu
             <p className="label-text text-xs text-ink truncate">
               CAB-I-NET Reinvents Cab Fare Comparison · Travel Itinerary AI Generates Custom Tours ·
               AI Voice Authentication Secures Systems · CareSync HMS Digitizes Hospitals ·
-              RAG with Groq Achieves High Speed · GLA University AIML Student Ships 22 Projects
+              RAG with Groq Achieves High Speed · GLA University AIML Student Ships 40+ Projects
             </p>
           </div>
           <OrnateRule thick />
