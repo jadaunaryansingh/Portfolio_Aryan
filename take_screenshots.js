@@ -24,11 +24,13 @@ const pageNames = [
   "2_About_Me",
   "3_Experience",
   "4_Projects",
-  "5_Research_Paper",
-  "6_Certifications",
-  "7_Skills",
-  "8_Editorial",
-  "9_Classifieds"
+  "5_SIH_Hackathon_2026",
+  "6_Research_Paper",
+  "7_Certifications",
+  "8_Skills",
+  "9_Git_Dispatch",
+  "10_Blogs",
+  "11_Classifieds"
 ];
 
 async function capture() {

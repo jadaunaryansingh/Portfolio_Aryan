@@ -441,7 +441,7 @@ export default function Page4Projects({ onNavigate }: { onNavigate?: (page: numb
               title="Zorvyn Backend Infrastructure Goes Live"
               body="Aryan Singh Jadaun engineers high-speed backend systems with FastAPI, PostgreSQL, Docker and AWS. Verified performance under load."
               cta="CONTACT NOW →"
-              onClick={() => onNavigate?.(9)}
+              onClick={() => onNavigate?.(10)}
               className="max-w-sm mx-auto my-2"
             />
           </div>

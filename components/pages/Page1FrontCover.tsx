@@ -102,7 +102,7 @@ export default function Page1FrontCover({ onNavigate }: { onNavigate?: (page: nu
 
             <div className="flex gap-3 mt-4 flex-wrap">
               <button
-                onClick={() => onNavigate?.(7)}
+                onClick={() => onNavigate?.(10)}
                 className="cursor-pointer transition-transform hover:scale-105"
               >
                 <VintageStamp text="OPEN TO WORK" color="#c9a227" delay={1.2} />
@@ -181,7 +181,7 @@ export default function Page1FrontCover({ onNavigate }: { onNavigate?: (page: nu
                 return isInternal ? (
                   <button
                     key={i}
-                    onClick={() => onNavigate?.(7)}
+                    onClick={() => onNavigate?.(10)}
                     className="text-left cursor-pointer w-full bg-transparent border-0 p-0"
                   >
                     <motion.div
@@ -250,7 +250,7 @@ export default function Page1FrontCover({ onNavigate }: { onNavigate?: (page: nu
           <div className="flex items-center gap-2 py-2">
             <span className="label-text text-xs text-gold font-bold shrink-0">TODAY IN AI:</span>
             <p className="label-text text-xs text-ink truncate">
-              CAB-I-NET Reinvents Cab Fare Comparison · Travel Itinerary AI Generates Custom Tours ·
+              🏆 1st Prize Winners at Smart India Hackathon (SIH) Internal 2026 · CAB-I-NET Reinvents Cab Fare Comparison · Travel Itinerary AI Generates Custom Tours ·
               AI Voice Authentication Secures Systems · CareSync HMS Digitizes Hospitals ·
               RAG with Groq Achieves High Speed · GLA University AIML Student Ships 40+ Projects
             </p>

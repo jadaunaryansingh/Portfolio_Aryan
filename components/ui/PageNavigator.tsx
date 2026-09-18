@@ -7,13 +7,15 @@ interface PageNavigatorProps {
   currentPage: number;
   totalPages: number;
   onNavigate: (page: number) => void;
+  pageNames?: string[];
 }
 
-const pageNames = [
+const defaultPageNames = [
   "Front Cover",
   "About Me",
   "Experience",
   "Projects",
+  "SIH Hackathon 2026",
   "Research Paper",
   "Certifications",
   "Skills",
@@ -26,6 +28,7 @@ export default function PageNavigator({
   currentPage,
   totalPages,
   onNavigate,
+  pageNames = defaultPageNames,
 }: PageNavigatorProps) {
   const [showMenu, setShowMenu] = useState(false);
 

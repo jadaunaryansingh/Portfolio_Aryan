@@ -254,7 +254,7 @@ export default function Page3Experience({ onNavigate }: { onNavigate?: (page: nu
               title="Talent Available for AI Engineering"
               body="Aryan Singh Jadaun is available for autonomous Agentic AI, LangGraph orchestration, cloud deployments, and full-stack engineering."
               cta="HIRE ME NOW →"
-              onClick={() => onNavigate?.(9)}
+              onClick={() => onNavigate?.(10)}
             />
 
             {/* Stamps */}

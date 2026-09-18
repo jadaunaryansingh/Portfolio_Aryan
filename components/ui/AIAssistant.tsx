@@ -31,8 +31,12 @@ const knowledgeBase: Record<string, string> = {
   "python": "Python is Aryan's primary language — used across all 40+ projects. He specialises in FastAPI, Flask, Streamlit, Pandas, LangChain, PyTorch, and Scikit-Learn.",
   "ai": "Aryan's AI expertise spans: Agentic AI Systems (LangGraph, AutoGen, CrewAI, MCP), LLMs & Prompt Engineering, Groq RAG systems, Speech Recognition, NLP, and medical healthcare AI modeling.",
   "linuxworld": "LinuxWorld Informatics was Aryan's internship — focused on Autonomous Systems, Agentic AI, ML/DL, cloud technologies, and Linux system administration. He earned 3 certifications there.",
+  "sih": "🏆 Aryan Singh Jadaun won 1st Prize in the Software Category at the Internal Smart India Hackathon (SIH) 2026, receiving a ₹10,000 cash prize and championship trophy at GLA University! In his own words: 'My first-ever hackathon. My first SIH. And We won. 🏆'",
+  "hackathon": "🏆 Aryan Singh Jadaun won 1st Prize in the Software Category at the Internal Smart India Hackathon (SIH) 2026, receiving a ₹10,000 cash award and championship trophy at GLA University! In his own words: 'My first-ever hackathon. My first SIH. And We won. 🏆'",
+  "award": "Aryan's premier accolade is winning 1st Prize in the Software Category at the Internal Smart India Hackathon (SIH) 2026 (₹10,000 cash prize) in his very first hackathon appearance! He has also published peer-reviewed research in IJRRR and earned multiple Microsoft certifications.",
+  "achievement": "Aryan's crowning achievement is winning 1st Prize in the Software Category at the Internal Smart India Hackathon (SIH) 2026 (₹10,000 cash prize) in his very first hackathon appearance! He has also published peer-reviewed research in IJRRR and earned multiple Microsoft certifications.",
   "agra": "Aryan is from Agra, Uttar Pradesh — the city of the Taj Mahal. He attended St. Peter's College there before moving to GLA University in Mathura for his AIML degree.",
-  "default": "A most intriguing question! I can tell you about Aryan's 40+ projects (like KrugerX Browser [WIP], Enterprise PMS [WIP], CAB-I-NET, Voice Auth, CareSync HMS, Zorvyn, Groq RAG), skills, education, or contact details.",
+  "default": "A most intriguing question! I can tell you about Aryan's SIH 2026 1st Prize win, 40+ projects (like KrugerX Browser [WIP], Enterprise PMS [WIP], CAB-I-NET, Voice Auth, CareSync HMS, Zorvyn, Groq RAG), skills, education, or contact details.",
 };
 
 function getResponse(query: string): string {
@@ -51,6 +55,8 @@ Here is the official fact sheet about Aryan Singh Jadaun:
 - Location: Agra, Uttar Pradesh, India.
 - Schooling: High School at St. Peter's College, Agra (2011 - 2021, completed 10th grade in 2021); Matriculated at RCS Memorial Sr. Secondary School, Agra (2021 - 2023, completed 11th & 12th grade in 2023).
 - Education: GLA University, Mathura. B.Tech in Artificial Intelligence & Machine Learning (Expected graduation: 2028).
+- Major Achievements & Hackathons:
+  - 🏆 1st Prize Winner (Software Category) — Internal Smart India Hackathon (SIH) 2026 held on Sept 11–13, 2026 at GLA University. Endorsed by MoE's Innovation Cell (Govt. of India), AICTE, and Ministry of Education. Awarded ₹10,000 cash prize, memento, and citation. Aryan's milestone quote: "My first-ever hackathon. My first SIH. And We won. 🏆"
 - Professional Internships:
   1. Backend Developer Intern at Zorvyn FinTech Pvt. Ltd. (April 2026 - Present, ₹40,000/month stipend under CEO Raj Kishor Pattnaik). Architecting Python & FastAPI backend infrastructure, JWT auth, PostgreSQL databases, and AWS EC2 Docker microservices.
   2. Agentic AI & Cloud Intern at LinuxWorld Informatics Pvt. Ltd. (May 2025 - August 2025, 3 months under Vimal Daga). Worked on LangChain + Gemini AI agents, CI/CD pipelines (Jenkins, Docker, AWS EC2), and an Agentic AI Dashboard (Twilio, WhatsApp, LinkedIn APIs).
@@ -79,6 +85,7 @@ Here is the official fact sheet about Aryan Singh Jadaun:
 If asked about topics not related to Aryan, politely guide them back to his portfolio, projects, skills, or career. Do not make up any facts outside of this list.`;
 
 const suggestedQuestions = [
+  "Tell me about his SIH Hackathon win",
   "Tell me about his projects",
   "What are his skills?",
   "How to contact Aryan?",

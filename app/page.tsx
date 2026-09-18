@@ -10,6 +10,7 @@ import Page1FrontCover from "@/components/pages/Page1FrontCover";
 import Page2About from "@/components/pages/Page2About";
 import Page3Experience from "@/components/pages/Page3Experience";
 import Page4Projects from "@/components/pages/Page4Projects";
+import Page5Hackathon from "@/components/pages/Page5Hackathon";
 import Page5Research from "@/components/pages/Page5Research";
 import Page6Certifications from "@/components/pages/Page6Certifications";
 import Page7Skills from "@/components/pages/Page7Skills";
@@ -22,6 +23,7 @@ const pages = [
   { component: Page2About, name: "About Me" },
   { component: Page3Experience, name: "Experience" },
   { component: Page4Projects, name: "Projects" },
+  { component: Page5Hackathon, name: "SIH Hackathon 2026" },
   { component: Page5Research, name: "Research Paper" },
   { component: Page6Certifications, name: "Certifications" },
   { component: Page7Skills, name: "Skills" },
@@ -281,6 +283,7 @@ export default function Home() {
             currentPage={currentPage}
             totalPages={pages.length}
             onNavigate={navigateTo}
+            pageNames={pages.map((p) => p.name)}
           />
 
           {/* Page indicator dots (desktop) */}
