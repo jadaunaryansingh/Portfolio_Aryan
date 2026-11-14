@@ -272,6 +272,42 @@ const projects = [
     column: "col-span-12 md:col-span-6",
     emoji: "🩺",
   },
+  {
+    id: "neuralflow-ai",
+    label: "GENERATIVE AI / GROQ LPU",
+    headline: "NeuralFlow AI — Hyper-Speed Groq LPU Studio",
+    subhead: "AI workbench with streaming chat, live code studio, and prompt architect",
+    body: "A high-performance AI workbench built on Groq's LPU for ultra-fast completions. Features sub-millisecond SSE streaming with live t/s and TTFT diagnostics, a sandboxed live code generation studio, an agentic prompt architect, reasoning-chain views for DeepSeek-R1, and a dual-mode pipeline that falls back to direct Groq streaming when the FastAPI backend is offline.",
+    stack: ["React 19", "Vite", "Groq LPU", "FastAPI", "SSE Streaming", "DeepSeek-R1", "Highlight.js", "Python"],
+    live: "https://github.com/jadaunaryansingh/NeuralFlow-AI",
+    size: "medium",
+    column: "col-span-12 md:col-span-6",
+    emoji: "🧬",
+  },
+  {
+    id: "carelink",
+    label: "FEATURED HEALTHCARE PLATFORM / FULL-STACK · LIVE",
+    headline: "CareLink: One Connected Healthcare Platform For India",
+    subhead: "Government, hospital, doctor, patient and health-creator portals on one backend, one database and one sign-in",
+    body: "CareLink connects India's disconnected health system across 5 portals on web and mobile. Patients raise emergencies and nearby approved hospitals must accept within a deadline, or the case escalates to a government coordinator. Hospitals manage wards, beds and admissions with live district-level ICU and ventilator capacity. Patients book real free slots and receive prescriptions. Backed by a FastAPI and Supabase Postgres backend with 72 automated tests, a React 19 web app and a Flutter mobile client, deployed on AWS (CloudFront, S3, EC2) with Docker.",
+    stack: ["FastAPI", "Python 3.12", "React 19", "TypeScript", "Vite", "Flutter", "Supabase", "PostgreSQL", "AWS", "Docker"],
+    live: "https://d120cq0rom48wn.cloudfront.net/#portals",
+    size: "large",
+    column: "col-span-12",
+    emoji: "💠",
+  },
+  {
+    id: "fashion-mnist",
+    label: "COMPUTER VISION / DEEP LEARNING",
+    headline: "Classifying Fashion Products With Deep Learning",
+    subhead: "Full-stack Fashion MNIST classifier with a live inference API and web interface",
+    body: "A full-stack image classification app that identifies 10 clothing categories (T-shirt, Trouser, Pullover, Dress, Coat, Sandal, Shirt, Sneaker, Bag, Ankle Boot) from 28x28 grayscale images. Includes a model training notebook, a PyTorch model exported to ONNX for lightweight serverless inference, a Python REST API with /predict and /health endpoints, a React and Vite frontend, and Docker and Vercel deployment.",
+    stack: ["PyTorch", "ONNX Runtime", "scikit-learn", "Flask", "FastAPI", "React", "Vite", "Docker", "Vercel"],
+    live: "https://fashion-mnist-product-classificatio.vercel.app",
+    size: "medium",
+    column: "col-span-12 md:col-span-6",
+    emoji: "👗",
+  },
 ];
 
 function ProjectThumbnail({ id, size, emoji }: { id: string; size: string; emoji: string }) {
@@ -298,6 +334,9 @@ function ProjectThumbnail({ id, size, emoji }: { id: string; size: string; emoji
     "sentiment-ai":              ["#1a2a2a", "#f5e9d4"],
     "fullstack-ai":              ["#1a2a1a", "#e8c04a"],
     "jaipur-hospital-chatbot":    ["#1a2a2a", "#e8d5b0"],
+    "neuralflow-ai":             ["#0f1a2e", "#7dd3fc"],
+    "carelink":                  ["#0b2a2e", "#2dd4bf"],
+    "fashion-mnist":             ["#2a1a2a", "#f0abfc"],
   };
   const [bg, accent] = palettes[id] || ["#1a1a1a", "#c9a227"];
 
@@ -453,11 +492,13 @@ export default function Page4Projects({ onNavigate }: { onNavigate?: (page: numb
           <ProjectCard project={projects[6]} />
           <ProjectCard project={projects[7]} />
           <ProjectCard project={projects[8]} />
+          <ProjectCard project={projects[24]} />
 
           {/* Section: Medical & Healthcare */}
           <div className="col-span-12">
             <SectionDivider label="MEDICAL RESEARCH & HEALTHCARE AI" />
           </div>
+          <ProjectCard project={projects[23]} />
           <ProjectCard project={projects[9]} />
           <ProjectCard project={projects[10]} />
           <ProjectCard project={projects[11]} />
@@ -470,6 +511,7 @@ export default function Page4Projects({ onNavigate }: { onNavigate?: (page: numb
           <ProjectCard project={projects[13]} />
           <ProjectCard project={projects[12]} />
           <ProjectCard project={projects[14]} />
+          <ProjectCard project={projects[22]} />
 
           {/* Section: Education, Backend & Mobile */}
           <div className="col-span-12">
