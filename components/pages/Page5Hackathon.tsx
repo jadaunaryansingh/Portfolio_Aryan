@@ -225,7 +225,7 @@ export default function Page5Hackathon({ onNavigate }: { onNavigate?: (page: num
                   Explore 40+ Live AI Projects
                 </p>
                 <p className="body-text text-xs text-ink-faded group-hover:text-paper/80">
-                  Inspect CAB-I-NET, KrugerX Browser, CareSync HMS & more.
+                  Inspect CAB-I-NET, KrugerX Browser, CareLink & more.
                 </p>
               </button>
 

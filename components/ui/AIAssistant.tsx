@@ -13,21 +13,21 @@ const knowledgeBase: Record<string, string> = {
   "aryan": "Aryan Singh Jadaun is an AIML undergraduate at GLA University (graduating 2028), a LinuxWorld Informatics alumnus, and the builder of 40+ live AI products and digital systems. He is from Agra, UP — tech-obsessed since childhood. Engineer. Builder. Dreamer. Rider.",
   "education": "Aryan studies B.Tech in Artificial Intelligence & Machine Learning at GLA University, Mathura (expected graduation: 2028). He completed high school at St. Peter's College, Agra (2021) and matriculated at RCS Memorial Sr. Secondary School, Agra (2023).",
   "experience": "Aryan interned at LinuxWorld Informatics, where he worked on Autonomous Systems, Agentic AI, ML/DL, and cloud technologies. He also serves as Backend Lead & Developer for enterprise systems and leads E-Cell (entrepreneurship club) at GLA University.",
-  "projects": "Aryan has built 40+ unique projects: 🌐 KrugerX Browser (AI-powered browser ecosystem [WIP]), 📋 Enterprise Project Management System (Backend Lead [WIP]), 🚖 CAB-I-NET (Cab aggregator), 🗺️ Travel Itinerary AI, 🎙️ Voice Authentication, 🔓 Jailbreak Web App, 📈 Enterprise Predictor, 💸 PrimeTrade AI, 👕 Clothing Recommendation, 🔬 Cancer Research, 🧠 Brain Stroke Detection, 🏥 CareSync HMS, 📰 Living Newspaper Portfolio, 🤖 AI Agent Architecture, ⚡ Groq RAG Model, 📝 QuizMaker AI, ⚙️ Zorvyn Backend, ⚖️ Legally Web Platform, 💬 Sentiment Analysis, 💼 Full Stack AI Collections, 📱 Legally Mobile App (Flutter Android APK), and 🩺 Jaipur Hospital Booking Chatbot, and many more.",
-  "krugerx": "KrugerX Browser is an AI-powered multi-platform browser ecosystem currently under active development [WIP]. Features a Flutter client (Android, iOS, Windows, macOS, Linux, Web), an async FastAPI backend (Supabase PostgreSQL, Redis, Celery), and a multi-provider AI engine unifying OpenAI, Gemini, Claude, Groq, and local Ollama LLMs.",
-  "pms": "The Enterprise Project Management System is an active [WIP] project where Aryan serves as Backend Team Lead & Developer. Built with FastAPI, PostgreSQL, Redis, Celery, WebSockets, and Docker, featuring role-based access control (RBAC) and async notifications.",
+  "projects": "Aryan has built 40+ unique projects: 🌐 KrugerX Browser (AI-powered browser ecosystem, live at krugerx.tech), 📋 Procksi - Enterprise Project Management System (Backend Lead, https://www.procksi.in), 🚖 CAB-I-NET (Cab aggregator), 🗺️ Travel Itinerary AI, 🎙️ Voice Authentication, 🔓 Jailbreak Web App, 📈 Enterprise Predictor, 💸 PrimeTrade AI, 👕 Clothing Recommendation, 🔬 Cancer Research, 🧠 Brain Stroke Detection, 🏥 CareLink, 📰 Living Newspaper Portfolio, 🤖 AI Agent Architecture, ⚡ Groq RAG Model, 📝 QuizMaker AI, ⚙️ Zorvyn Backend, ⚖️ Legally Web Platform, 💬 Sentiment Analysis, 💼 Full Stack AI Collections, 📱 Legally Mobile App (Flutter Android APK), and 🩺 Jaipur Hospital Booking Chatbot, and many more.",
+  "krugerx": "KrugerX Browser is an AI-powered multi-platform browser ecosystem live at https://www.krugerx.tech. Features a Flutter client (Android, iOS, Windows, macOS, Linux, Web), an async FastAPI backend (Supabase PostgreSQL, Redis, Celery), and a multi-provider AI engine unifying OpenAI, Gemini, Claude, Groq, and local Ollama LLMs.",
+  "pms": "The Enterprise Project Management System is a live project (https://www.procksi.in) where Aryan serves as Backend Team Lead & Developer. Built with FastAPI, PostgreSQL, Redis, Celery, WebSockets, and Docker, featuring role-based access control (RBAC) and async notifications.",
   "cab-i-net": "CAB-I-NET is Aryan's smart cab fare comparison aggregator. It compares fares from Uber, Ola, and Rapido in real-time. Live at cab-i-nit-2025.netlify.app",
   "travel": "The Travel Itinerary AI platform generates personalized travel plans and optimized routes for tourists exploring India. Built with Next.js and AI APIs.",
   "voice": "The AI Voice Authentication System verifies user identities based on voice biometrics, speech patterns, and deep learning models. Built with Python and FastAPI.",
   "enterprise": "The Enterprise Growth Predictor forecasts company revenue, performs risk analysis, and visualizes performance trends using ML and Pandas.",
-  "caresync": "CareSync HMS is an intelligent hospital management system that digitizes clinic workflows, appointments, doctor dashboards, and billing using React and FastAPI.",
+  "caresync": "CareLink is a connected healthcare platform for India with 5 portals (government, hospital, doctor, patient, health creator) on one backend and database. Features emergency routing to nearby hospitals, live bed capacity, appointments and prescriptions. Built with FastAPI, Supabase Postgres, React 19 and Flutter, deployed on AWS. Live: https://d120cq0rom48wn.cloudfront.net",
   "rag": "The Groq RAG system implements high-speed semantic document retrieval pipelines and context-aware responses using LangChain and Vector Databases.",
   "zorvyn": "Zorvyn Backend is a secure, scalable backend core featuring REST APIs, JWT authentication, PostgreSQL, and Docker containerization deployed on AWS.",
   "jailbreak": "The Jailbreak Web App is a security platform built for an IEEE event demonstrating prompt injection simulation, LLM vulnerabilities, and defense strategies.",
   "skills": "Aryan has 13 skill domains: Agentic AI & Multi-Agent Systems, Flutter & Cross-Platform Apps (Mobile & PC), ML/DL/NLP/CV, Full-Stack Dev (React, Python, FastAPI), DevOps (CI/CD, Jenkins, Docker), AWS Cloud (EC2, S3, Lambda), Automation/Scripting, Database Management, Prompt Engineering, Linux, Version Control, API Integration, and UI/UX Design.",
   "contact": "Reach Aryan at: Email — aryansinghjadaun@gmail.com | GitHub — github.com/jadaunaryansingh | LinkedIn — linkedin.com/in/jadaunaryansingh | WhatsApp — +91 98370 39028. Resume on Google Drive and Notion.",
   "resume": "Aryan's PDF resume is at: https://drive.google.com/file/d/19ZoiBLyYThKkgC_hwxmSNl2dKR1TsGR5/view. His interactive Notion E-Resume is at: https://app.notion.com/p/Aryan-Singh-Jadaun-3776bf65d55880a19550e857237863a2?source=copy_link",
-  "github": "Aryan's GitHub: github.com/jadaunaryansingh — Find KrugerX Browser [WIP], Enterprise PMS [WIP], Zorvyn Backend, CareSync, CAB-I-NET, Voice Auth, and 34+ other projects.",
+  "github": "Aryan's GitHub: github.com/jadaunaryansingh — Find KrugerX Browser, Procksi, Zorvyn Backend, CareLink, CAB-I-NET, Voice Auth, and 34+ other projects.",
   "python": "Python is Aryan's primary language — used across all 40+ projects. He specialises in FastAPI, Flask, Streamlit, Pandas, LangChain, PyTorch, and Scikit-Learn.",
   "ai": "Aryan's AI expertise spans: Agentic AI Systems (LangGraph, AutoGen, CrewAI, MCP), LLMs & Prompt Engineering, Groq RAG systems, Speech Recognition, NLP, and medical healthcare AI modeling.",
   "linuxworld": "LinuxWorld Informatics was Aryan's internship — focused on Autonomous Systems, Agentic AI, ML/DL, cloud technologies, and Linux system administration. He earned 3 certifications there.",
@@ -36,7 +36,7 @@ const knowledgeBase: Record<string, string> = {
   "award": "Aryan's premier accolade is winning 1st Prize in the Software Category at the Internal Smart India Hackathon (SIH) 2026 (₹10,000 cash prize) in his very first hackathon appearance! He has also published peer-reviewed research in IJRRR and earned multiple Microsoft certifications.",
   "achievement": "Aryan's crowning achievement is winning 1st Prize in the Software Category at the Internal Smart India Hackathon (SIH) 2026 (₹10,000 cash prize) in his very first hackathon appearance! He has also published peer-reviewed research in IJRRR and earned multiple Microsoft certifications.",
   "agra": "Aryan is from Agra, Uttar Pradesh — the city of the Taj Mahal. He attended St. Peter's College there before moving to GLA University in Mathura for his AIML degree.",
-  "default": "A most intriguing question! I can tell you about Aryan's SIH 2026 1st Prize win, 40+ projects (like KrugerX Browser [WIP], Enterprise PMS [WIP], CAB-I-NET, Voice Auth, CareSync HMS, Zorvyn, Groq RAG), skills, education, or contact details.",
+  "default": "A most intriguing question! I can tell you about Aryan's SIH 2026 1st Prize win, 40+ projects (like KrugerX Browser, Procksi, CAB-I-NET, Voice Auth, CareLink, Zorvyn, Groq RAG), skills, education, or contact details.",
 };
 
 function getResponse(query: string): string {
@@ -58,7 +58,7 @@ Here is the official fact sheet about Aryan Singh Jadaun:
 - Major Achievements & Hackathons:
   - 🏆 1st Prize Winner (Software Category) — Internal Smart India Hackathon (SIH) 2026 held on Sept 11–13, 2026 at GLA University. Endorsed by MoE's Innovation Cell (Govt. of India), AICTE, and Ministry of Education. Awarded ₹10,000 cash prize, memento, and citation. Aryan's milestone quote: "My first-ever hackathon. My first SIH. And We won. 🏆"
 - Professional Internships:
-  1. Backend Developer Intern at Zorvyn FinTech Pvt. Ltd. (April 2026 - Present, ₹40,000/month stipend under CEO Raj Kishor Pattnaik). Architecting Python & FastAPI backend infrastructure, JWT auth, PostgreSQL databases, and AWS EC2 Docker microservices.
+  1. Backend Developer Intern at Zorvyn FinTech Pvt. Ltd. (April 2026 - October 2026, 6 months, ₹40,000/month stipend under CEO Raj Kishor Pattnaik). Architecting Python & FastAPI backend infrastructure, JWT auth, PostgreSQL databases, and AWS EC2 Docker microservices.
   2. Agentic AI & Cloud Intern at LinuxWorld Informatics Pvt. Ltd. (May 2025 - August 2025, 3 months under Vimal Daga). Worked on LangChain + Gemini AI agents, CI/CD pipelines (Jenkins, Docker, AWS EC2), and an Agentic AI Dashboard (Twilio, WhatsApp, LinkedIn APIs).
   3. AI Web Development Intern at InAmigos Foundation Pvt. Ltd. (May 2026 - August 2026, 3 months). Worked on AI web applications, full-stack modules.
 - Leadership & Activities:
@@ -66,13 +66,13 @@ Here is the official fact sheet about Aryan Singh Jadaun:
   2. Member of Entrepreneurship Cell (E-Cell), GLA University.
   3. Campus Ambassador at SmartED Innovations.
 - Key Projects (40+ total):
-  - KrugerX Browser: AI-powered multi-platform browser ecosystem & multi-AI engine [WIP] (Flutter, FastAPI, Supabase, Redis, Celery, Ollama, OpenAI, Gemini, Claude, Groq)
-  - Enterprise Project Management System: Backend Lead & Developer [WIP] (FastAPI, PostgreSQL, Redis, Celery, WebSockets, RBAC, Docker)
+  - KrugerX Browser: AI-powered multi-platform browser ecosystem & multi-AI engine (Live: https://www.krugerx.tech) (Flutter, FastAPI, Supabase, Redis, Celery, Ollama, OpenAI, Gemini, Claude, Groq)
+  - Enterprise Project Management System: Backend Lead & Developer (Live: https://www.procksi.in) (FastAPI, PostgreSQL, Redis, Celery, WebSockets, RBAC, Docker)
   - CAB-I-NET: Real-time Cab aggregator comparing Uber, Ola & Rapido (Live: https://cab-i-net.netlify.app/)
   - Travel Itinerary AI: customized tours of India (Live: https://travelitiniarybyaryan.netlify.app/)
   - Voice Authentication: speech biometrics FastAPI backend (Live: https://mini-project-7k5l.onrender.com)
   - Jailbreak Web App: prompt injection demonstrator for IEEE (Live: https://jailbreaking.netlify.app/)
-  - CareSync HMS: Hospital management system (Live: https://caresync-rhnx.onrender.com)
+  - CareLink: Connected healthcare platform, 5 portals (Live: https://d120cq0rom48wn.cloudfront.net)
   - Research Paper: "RidePulse" published in International Journal of Recent Research and Review (Special Issue-2, 2025), focusing on Real-Time Fare Aggregation and ML Surge Forecasting on AWS.
   - Zorvyn Backend: scalable backend core (Live: https://zorvyn-lkz5.onrender.com)
   - AI Agent Architecture: autonomous workflows (Live: https://web-silk-six-36.vercel.app/)

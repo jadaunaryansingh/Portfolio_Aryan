@@ -11,7 +11,7 @@ const timeline = [
   { year: "2021-2023", event: "Matriculation at RCS Memorial Sr. Secondary School (Completed 11th & 12th Grade in 2023)" },
   { year: "2024", event: "Enrolled at GLA University — B.Tech in AI & Machine Learning (graduating 2028)" },
   { year: "2024", event: "Interned at LinuxWorld Informatics — deep dive into Agentic AI, cloud & autonomous systems" },
-  { year: "2025", event: "Launched CAB-I-NET, CareSync HMS, Voice Auth & other AI systems — 40+ projects" },
+  { year: "2025", event: "Launched CAB-I-NET, CareLink, Voice Auth & other AI systems — 40+ projects" },
   { year: "2025", event: "Led E-Cell entrepreneurship initiatives at GLA University" },
   { year: "2026", event: "🏆 1st Prize Winner — Smart India Hackathon (SIH) Internal 2026 (Software Category, ₹10,000 award) in first-ever hackathon appearance" },
   { year: "2026", event: "Actively seeking full-time AI/ML Engineering & Full-Stack Development roles" },

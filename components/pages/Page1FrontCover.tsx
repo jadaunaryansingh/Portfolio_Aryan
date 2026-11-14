@@ -251,7 +251,7 @@ export default function Page1FrontCover({ onNavigate }: { onNavigate?: (page: nu
             <span className="label-text text-xs text-gold font-bold shrink-0">TODAY IN AI:</span>
             <p className="label-text text-xs text-ink truncate">
               🏆 1st Prize Winners at Smart India Hackathon (SIH) Internal 2026 · CAB-I-NET Reinvents Cab Fare Comparison · Travel Itinerary AI Generates Custom Tours ·
-              AI Voice Authentication Secures Systems · CareSync HMS Digitizes Hospitals ·
+              AI Voice Authentication Secures Systems · CareLink Connects India's Healthcare ·
               RAG with Groq Achieves High Speed · GLA University AIML Student Ships 40+ Projects
             </p>
           </div>

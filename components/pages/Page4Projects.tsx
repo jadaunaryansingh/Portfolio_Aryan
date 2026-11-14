@@ -8,29 +8,27 @@ import AdBlock from "@/components/newspaper/AdBlock";
 const projects = [
   {
     id: "krugerx-browser",
-    label: "FEATURED BROWSER ECOSYSTEM / AI ENGINE · [WIP]",
-    headline: "KrugerX: AI-Powered Multi-Platform Browser & Engine [WIP]",
-    subhead: "Cross-platform Flutter browser client with multi-provider AI backend engine · Work In Progress",
-    body: "KrugerX is a modern AI-powered browser ecosystem currently under active development [WIP]. Features a multi-platform Flutter client (Android, iOS, Windows, macOS, Linux, Web), an async FastAPI backend (Supabase PostgreSQL, Redis, Celery), and a multi-provider AI engine unifying OpenAI, Gemini, Claude, Groq, and local Ollama LLMs.",
-    stack: ["WIP", "Flutter", "Dart", "FastAPI", "Python 3.13", "Supabase", "Redis", "Celery", "OpenAI", "Gemini", "Claude", "Groq", "Ollama"],
-    live: "https://github.com/jadaunaryansingh",
+    label: "FEATURED BROWSER ECOSYSTEM / AI ENGINE · LIVE",
+    headline: "KrugerX: AI-Powered Multi-Platform Browser & Engine",
+    subhead: "Cross-platform Flutter browser client with multi-provider AI backend engine",
+    body: "KrugerX is a modern AI-powered browser ecosystem live at krugerx.tech. Features a multi-platform Flutter client (Android, iOS, Windows, macOS, Linux, Web), an async FastAPI backend (Supabase PostgreSQL, Redis, Celery), and a multi-provider AI engine unifying OpenAI, Gemini, Claude, Groq, and local Ollama LLMs.",
+    stack: ["Flutter", "Dart", "FastAPI", "Python 3.13", "Supabase", "Redis", "Celery", "OpenAI", "Gemini", "Claude", "Groq", "Ollama"],
+    live: "https://www.krugerx.tech/",
     size: "large",
     column: "col-span-12",
     emoji: "🌐",
-    isWip: true,
   },
   {
     id: "project-management-system",
-    label: "ENTERPRISE BACKEND ARCHITECTURE · [WIP]",
-    headline: "Enterprise Project Management System — Backend Lead [WIP]",
+    label: "ENTERPRISE BACKEND ARCHITECTURE · LIVE",
+    headline: "Procksi: Enterprise Project Management System — Backend Lead",
     subhead: "Scalable team task management, role-based RBAC & async notification engine · Backend Lead",
     body: "Architected and led backend development for an enterprise project management platform. Features role-based access control (RBAC), multi-tenant workspace architecture, high-performance FastAPI REST endpoints, real-time WebSocket notifications, PostgreSQL database optimization, Redis caching, and Celery async workers.",
-    stack: ["WIP", "Backend Lead", "FastAPI", "Python 3.13", "PostgreSQL", "Redis", "Celery", "Docker", "WebSockets", "JWT Auth"],
-    live: "https://github.com/jadaunaryansingh",
+    stack: ["Backend Lead", "FastAPI", "Python 3.13", "PostgreSQL", "Redis", "Celery", "Docker", "WebSockets", "JWT Auth"],
+    live: "https://www.procksi.in/",
     size: "large",
     column: "col-span-12",
     emoji: "📋",
-    isWip: true,
   },
   {
     id: "legally-app",
@@ -165,18 +163,6 @@ const projects = [
     emoji: "🧠",
   },
   {
-    id: "caresync-hms",
-    label: "HEALTHCARE WORKFLOWS",
-    headline: "Digitizing Hospital Operations With CareSync HMS",
-    subhead: "Complete cloud hospital management platform and doctor portal",
-    body: "CareSync streamlines modern clinic and hospital operations by organizing patient registration, doctor schedules, appointments, billing cycles, and automated healthcare notifications.",
-    stack: ["React", "FastAPI", "PostgreSQL", "Cloud Infrastructure"],
-    live: "https://caresync-rhnx.onrender.com",
-    size: "large",
-    column: "col-span-12",
-    emoji: "🏥",
-  },
-  {
     id: "newspaper-portfolio",
     label: "CREATIVE TECH",
     headline: "Turning A Developer Portfolio Into A Living Newspaper",
@@ -237,18 +223,6 @@ const projects = [
     emoji: "💬",
   },
   {
-    id: "fullstack-ai",
-    label: "Live NewsPaper Portfolio",
-    headline: "Building AI-Powered Digital Experiences",
-    subhead: "Production-ready templates for generative applications",
-    body: "A portfolio of full-stack templates focusing on RAG, AI automation, predictive analytics, and secure backends utilizing FastAPI, AWS, Azure, Supabase, Neon, and Docker.",
-    stack: ["FastAPI", "AWS", "Azure", "Docker", "Firebase", "Neon", "Supabase", "React", "Next.js"],
-    live: "https://github.com/jadaunaryansingh",
-    size: "medium",
-    column: "col-span-12 md:col-span-6",
-    emoji: "💼",
-  },
-  {
     id: "legally-apk",
     label: "MOBILE TECH / FLUTTER APP",
     headline: "Legally Mobile App — Flutter Android APK Release",
@@ -291,7 +265,7 @@ const projects = [
     subhead: "Government, hospital, doctor, patient and health-creator portals on one backend, one database and one sign-in",
     body: "CareLink connects India's disconnected health system across 5 portals on web and mobile. Patients raise emergencies and nearby approved hospitals must accept within a deadline, or the case escalates to a government coordinator. Hospitals manage wards, beds and admissions with live district-level ICU and ventilator capacity. Patients book real free slots and receive prescriptions. Backed by a FastAPI and Supabase Postgres backend with 72 automated tests, a React 19 web app and a Flutter mobile client, deployed on AWS (CloudFront, S3, EC2) with Docker.",
     stack: ["FastAPI", "Python 3.12", "React 19", "TypeScript", "Vite", "Flutter", "Supabase", "PostgreSQL", "AWS", "Docker"],
-    live: "https://d120cq0rom48wn.cloudfront.net/#portals",
+    live: "https://github.com/jadaunaryansingh/CareLink",
     size: "large",
     column: "col-span-12",
     emoji: "💠",
@@ -310,6 +284,8 @@ const projects = [
   },
 ];
 
+const byId = (id: string) => projects.find((p) => p.id === id)!;
+
 function ProjectThumbnail({ id, size, emoji }: { id: string; size: string; emoji: string }) {
   const palettes: Record<string, [string, string]> = {
     "krugerx-browser":           ["#0f172a", "#00B4AB"],
@@ -323,7 +299,6 @@ function ProjectThumbnail({ id, size, emoji }: { id: string; size: string; emoji
     "clothing-ai":               ["#2a1a2a", "#e8d5b0"],
     "cancer-research":           ["#1a2a3a", "#e8d5b0"],
     "brain-stroke":              ["#2a2a1a", "#e8c04a"],
-    "caresync-hms":              ["#1a3a2a", "#c9a227"],
     "newspaper-portfolio":       ["#1a1a1a", "#f5e9d4"],
     "ai-agent-arch":             ["#2a1a3a", "#e8c04a"],
     "rag-groq":                  ["#1a2a1a", "#c9a227"],
@@ -332,7 +307,6 @@ function ProjectThumbnail({ id, size, emoji }: { id: string; size: string; emoji
     "legally-app":               ["#2a2a1a", "#e8c04a"],
     "legally-apk":               ["#1a2a3a", "#e8c04a"],
     "sentiment-ai":              ["#1a2a2a", "#f5e9d4"],
-    "fullstack-ai":              ["#1a2a1a", "#e8c04a"],
     "jaipur-hospital-chatbot":    ["#1a2a2a", "#e8d5b0"],
     "neuralflow-ai":             ["#0f1a2e", "#7dd3fc"],
     "carelink":                  ["#0b2a2e", "#2dd4bf"],
@@ -363,7 +337,7 @@ function ProjectThumbnail({ id, size, emoji }: { id: string; size: string; emoji
   );
 }
 
-function ProjectCard({ project }: { project: typeof projects[0] }) {
+function ProjectCard({ project }: { project: (typeof projects)[number] }) {
   const [expanded, setExpanded] = useState(false);
 
   return (
@@ -425,7 +399,7 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
           <span
             className="label-text text-xs font-bold border border-ink px-2 py-0.5 hover:bg-ink hover:text-paper transition-colors"
           >
-            {project.isWip ? "WORK IN PROGRESS [WIP] 🛠️" : project.live.includes("github.com") ? "VIEW ON GITHUB ➔" : "LIVE ↗"}
+            {project.live.includes("github.com") ? "VIEW ON GITHUB ➔" : "LIVE ↗"}
           </span>
         </div>
       </div>
@@ -465,15 +439,15 @@ export default function Page4Projects({ onNavigate }: { onNavigate?: (page: numb
           <div className="col-span-12">
             <SectionDivider label="CONSUMER TECHNOLOGY & TRAVEL" />
           </div>
-          <ProjectCard project={projects[2]} />
-          <ProjectCard project={projects[3]} />
+          <ProjectCard project={byId("legally-app")} />
+          <ProjectCard project={byId("ai-agent-arch")} />
 
           {/* Section: AI Security & Biometrics */}
           <div className="col-span-12">
             <SectionDivider label="AI SECURITY & BIOMETRICS" />
           </div>
-          <ProjectCard project={projects[4]} />
-          <ProjectCard project={projects[5]} />
+          <ProjectCard project={byId("voice-auth")} />
+          <ProjectCard project={byId("travel-itinerary")} />
 
           <div className="col-span-12">
             <AdBlock
@@ -489,52 +463,50 @@ export default function Page4Projects({ onNavigate }: { onNavigate?: (page: numb
           <div className="col-span-12">
             <SectionDivider label="ENTERPRISE ANALYTICS & FINANCE" />
           </div>
-          <ProjectCard project={projects[6]} />
-          <ProjectCard project={projects[7]} />
-          <ProjectCard project={projects[8]} />
-          <ProjectCard project={projects[24]} />
+          <ProjectCard project={byId("cab-i-net")} />
+          <ProjectCard project={byId("enterprise-predictor")} />
+          <ProjectCard project={byId("jailbreak")} />
+          <ProjectCard project={byId("fashion-mnist")} />
 
           {/* Section: Medical & Healthcare */}
           <div className="col-span-12">
             <SectionDivider label="MEDICAL RESEARCH & HEALTHCARE AI" />
           </div>
-          <ProjectCard project={projects[23]} />
-          <ProjectCard project={projects[9]} />
-          <ProjectCard project={projects[10]} />
-          <ProjectCard project={projects[11]} />
-          <ProjectCard project={projects[21]} />
+          <ProjectCard project={byId("carelink")} />
+          <ProjectCard project={byId("primetrade")} />
+          <ProjectCard project={byId("clothing-ai")} />
+          <ProjectCard project={byId("cancer-research")} />
+          <ProjectCard project={byId("jaipur-hospital-chatbot")} />
 
           {/* Section: Agentic AI & RAG */}
           <div className="col-span-12">
             <SectionDivider label="AGENTIC AI & RAG ARCHITECTURES" />
           </div>
-          <ProjectCard project={projects[13]} />
-          <ProjectCard project={projects[12]} />
-          <ProjectCard project={projects[14]} />
-          <ProjectCard project={projects[22]} />
+          <ProjectCard project={byId("brain-stroke")} />
+          <ProjectCard project={byId("newspaper-portfolio")} />
+          <ProjectCard project={byId("neuralflow-ai")} />
 
           {/* Section: Education, Backend & Mobile */}
           <div className="col-span-12">
             <SectionDivider label="EDTECH, SYSTEM INFRASTRUCTURE & MOBILE" />
           </div>
-          <ProjectCard project={projects[15]} />
-          <ProjectCard project={projects[16]} />
-          <ProjectCard project={projects[17]} />
-          <ProjectCard project={projects[20]} />
+          <ProjectCard project={byId("rag-groq")} />
+          <ProjectCard project={byId("quizmaker")} />
+          <ProjectCard project={byId("zorvyn-backend")} />
+          <ProjectCard project={byId("legally-apk")} />
 
           {/* Section: NLP & Collections */}
           <div className="col-span-12">
             <SectionDivider label="NATURAL LANGUAGE PROCESSING & PORTFOLIOS" />
           </div>
-          <ProjectCard project={projects[18]} />
-          <ProjectCard project={projects[19]} />
+          <ProjectCard project={byId("sentiment-ai")} />
 
-          {/* Section: Active Initiatives & Work In Progress [WIP] */}
+          {/* Section: Flagship Platforms & Active Products */}
           <div className="col-span-12">
-            <SectionDivider label="ACTIVE INITIATIVES & WORK IN PROGRESS [WIP]" />
+            <SectionDivider label="FLAGSHIP PLATFORMS & ACTIVE PRODUCTS" />
           </div>
-          <ProjectCard project={projects[0]} />
-          <ProjectCard project={projects[1]} />
+          <ProjectCard project={byId("krugerx-browser")} />
+          <ProjectCard project={byId("project-management-system")} />
         </div>
 
         {/* GitHub link note */}

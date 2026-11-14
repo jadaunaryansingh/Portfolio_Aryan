@@ -253,7 +253,7 @@ export default function Page6Certifications({ onNavigate }: { onNavigate?: (page
                   { name: "Zorvyn Backend", host: "AWS / Docker" },
                   { name: "AI Agent Arch", host: "Groq / LangChain" },
                   { name: "RAG System", host: "Groq Vector DB" },
-                  { name: "CareSync HMS", host: "FastAPI / Render" },
+                  { name: "CareLink", host: "FastAPI / AWS" },
                 ].map((proj) => (
                   <div key={proj.name} className="border border-gold p-2">
                     <p className="label-text text-xs font-bold text-ink">{proj.name}</p>

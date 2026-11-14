@@ -10,7 +10,7 @@ const internships = [
   {
     role: "Backend Developer Intern",
     company: "Zorvyn FinTech Pvt. Ltd.",
-    duration: "April 2026 - Present (₹40,000 / Mo)",
+    duration: "April 2026 - October 2026 (6 Months, ₹40,000 / Mo)",
     summary: "Architected scalable backend infrastructure, JWT authentication, PostgreSQL database schemas, and microservices for financial engineering platform.",
     bullets: [
       "Engineered high-performance REST APIs in Python & FastAPI, handling secure transactions and JWT token authentication.",
