@@ -2,6 +2,8 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
+import { usePathname, useRouter } from "next/navigation";
+import { routes, getPageIndex } from "@/lib/routes";
 import VintageLoader from "@/components/ui/VintageLoader";
 import PageNavigator from "@/components/ui/PageNavigator";
 
@@ -86,10 +88,22 @@ function PageCornerHint({ side }: { side: "left" | "right" }) {
 
 
 
-export default function Home() {
+export default function NewspaperApp() {
+  const router = useRouter();
+  const pathname = usePathname();
+  const pageIndex = getPageIndex(pathname);
+  // The URL is the source of truth for which page is showing.
+  const currentPage = Math.max(0, pageIndex);
+
   const [isLoading, setIsLoading] = useState(true);
-  const [currentPage, setCurrentPage] = useState(0);
   const [direction, setDirection] = useState(0);
+  const [prevPage, setPrevPage] = useState(currentPage);
+
+  // Derive the flip direction from URL changes (covers links, swipes AND browser back/forward).
+  if (currentPage !== prevPage) {
+    setDirection(currentPage > prevPage ? 1 : -1);
+    setPrevPage(currentPage);
+  }
   const [isMobile, setIsMobile] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
 
@@ -126,11 +140,10 @@ export default function Home() {
 
   const navigateTo = useCallback(
     (page: number) => {
-      if (page === currentPage) return;
-      setDirection(page > currentPage ? 1 : -1);
-      setCurrentPage(page);
+      if (page === currentPage || !routes[page]) return;
+      router.push(routes[page].path, { scroll: false });
     },
-    [currentPage]
+    [currentPage, router]
   );
 
   // Desktop mouse swipe handlers
@@ -183,6 +196,9 @@ export default function Home() {
   }, []);
 
   const CurrentPage = pages[currentPage].component;
+
+  // Not a newspaper route (e.g. 404): let Next.js render the not-found page instead.
+  if (pageIndex === -1) return null;
 
   return (
     <main

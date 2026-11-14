@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import NewspaperApp from "@/components/NewspaperApp";
 
 export const metadata: Metadata = {
   title: "The Developer Daily — Aryan Singh Jadaun | AI Engineer & Backend Developer",
@@ -28,6 +29,7 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
+        <NewspaperApp />
         {children}
       </body>
     </html>
