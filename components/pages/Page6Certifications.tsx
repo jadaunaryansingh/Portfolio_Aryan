@@ -61,6 +61,30 @@ const certifications = [
     url: "/certifications/Training_Certificate.pdf"
   },
 
+  // --- GLA UNIVERSITY ---
+  {
+    id: "gla-internship",
+    issuer: "GLA University, Mathura",
+    title: "Summer Internship — GLAPMS: AI-Based Project Management System",
+    year: "2026",
+    type: "Internship Completion",
+    rotate: "-1deg",
+    color: "#1f4e79", // University Blue
+    url: "/certifications/GLA_Summer_Internship_2026.pdf"
+  },
+
+  // --- NPTEL CERTIFICATIONS ---
+  {
+    id: "nptel-mis",
+    issuer: "NPTEL · IIT / IISc",
+    title: "Management Information System (12-Week Course, 80%)",
+    year: "2026",
+    type: "NPTEL Certification",
+    rotate: "1.5deg",
+    color: "#b5361f", // NPTEL Red
+    url: "/certifications/NPTEL_Management_Information_System.pdf"
+  },
+
   // --- INDUSTRY JOB SIMULATIONS ---
   {
     id: "aws-solutions-architecture",
@@ -107,6 +131,8 @@ const certifications = [
 const achievements = [
   { label: "Microsoft Credentials", count: "2" },
   { label: "LinuxWorld Achievements", count: "3" },
+  { label: "GLA University Internship", count: "1" },
+  { label: "NPTEL Certifications", count: "1" },
   { label: "Industry Job Simulations", count: "4" },
   { label: "Live Projects Deployed", count: "40+" },
 ];
@@ -199,7 +225,7 @@ export default function Page6Certifications({ onNavigate }: { onNavigate?: (page
           </motion.h2>
           <OrnateRule thick />
           <p className="label-text text-xs text-ink-faded mt-2">
-            OFFICIAL CREDENTIALS OF ARYAN SINGH JADAUN · GLA UNIVERSITY · MICROSOFT · AWS · DELOITTE · J.P. MORGAN
+            OFFICIAL CREDENTIALS OF ARYAN SINGH JADAUN · GLA UNIVERSITY · MICROSOFT · NPTEL · AWS · DELOITTE · J.P. MORGAN
           </p>
         </div>
 
@@ -266,6 +292,8 @@ export default function Page6Certifications({ onNavigate }: { onNavigate?: (page
               <TimelineDot year="2025" event="Microsoft Credentials — Azure AI & Cloud Fundamentals Badges" />
               <TimelineDot year="2025" event="Industry Simulations — AWS, Deloitte, J.P. Morgan Chase Simulations" />
               <TimelineDot year="2025" event="40+ Live AI & System Projects Deployed across GitHub, Render & Netlify" />
+              <TimelineDot year="2026" event="GLA University Summer Internship — Built GLAPMS, AI-Based Project Management System (May–Jul 2026)" />
+              <TimelineDot year="2026" event="NPTEL — Management Information System (Jul–Oct 2026, 80%)" />
               <TimelineDot year="2028" event="B.Tech AIML Graduation — GLA University, Mathura" />
             </div>
 
